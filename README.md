@@ -1,9 +1,9 @@
 ## Overview
 
-This repo contains the code and data for the [CCOSS website](ccoss.org). 
+This repo contains the code and data for the [Code For DEI](https://code4dei.com) 
 
 ## Structure / branching
-* Main branch will be used to keep up-to-date with what is live at https://ccoss.org
+* Main branch will be used to keep up-to-date with what is live at https://code4dei.com
 * If you are not sure of what you are doing, you are welcome to create a branch and submit for review before being merged.
   
 ## Building the site
