@@ -1,0 +1,19 @@
+{{ define "main" }}
+
+<section class="section">
+      
+      <div class="container mb-4">
+        <p class="text-center">
+            {{ .Content }}
+        </p>
+        <div class="row">         
+            <ul class="event-list">
+              {{ range sort .Data.Pages.ByDate.Reverse }}
+                <li><a class="session-title" href="{{.Permalink}}">{{ .Params.title }}</a></li>
+              {{ end }}
+            </ul>
+        </div>
+    </div>
+
+</section>
+{{ end }}

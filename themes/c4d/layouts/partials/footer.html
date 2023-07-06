@@ -1,0 +1,96 @@
+<footer class="section footer">
+
+<!-- Videos -->
+
+<section class="section-sponsors section" style="margin-top: -90px; text-align: center;">
+	<br><br>
+	<div class="container">  
+	  <div class="card-deck">
+		
+
+		<!-- Logo Code For DEI -->
+
+		<div class="card" style="border: none; background-color: transparent; justify-content: center; ">
+			<div>
+				<img src="/images/logo-C4D.png" class="img-fluid">
+			</div>	
+		</div>
+		<!-- /Logo Code For DEI -->
+		
+
+		<!-- Redes sociales -->
+		
+		<div class="card" style="border: none; background-color: transparent; justify-content: center; ">
+			<div>
+				<h3 class="mb-3">{{ .Site.Title | markdownify }}</h3>
+				<ul class="list-inline footer-socials">
+					{{ range .Site.Params.social }}
+					<li class="list-inline-item"><a href="{{ .link | safeURL }}" target="_blank"><i class="{{ .icon }}"></i></a></li>
+					{{ end }}
+				</ul>
+			</div>	
+		</div>
+
+		<!-- /Redes sociales -->
+
+
+		<!-- Código de Conducta -->
+
+	  	<div class="card" style="border: none; background-color: transparent; justify-content: center;">
+		 
+			<div>	
+				{{ range .Site.Params.footer_coc }}
+				<h5><a href="{{ .link | safeURL }}">{{ .name }}</a></h5>
+				{{ end }}
+			</div>  
+		</div>
+
+		<!-- /Código de Conducta -->
+
+
+		<!-- Contactanos -->
+
+		<div class="card" style="border: none; background-color: transparent; justify-content: center;">
+		 
+			<div>	
+				{{ range .Site.Params.footer_contact_us }}
+				<h5><a target="_blank" href="{{ .link | safeURL }}">{{ .name }} </a></h5>
+				{{ end }}
+			</div>
+
+		<!-- Contactanos -->
+
+		
+	  </div>
+	</div>
+  </section>
+  
+  <!-- /Videos -->
+  </section>
+
+	<div class="container">
+
+		{{ with .Site.Params.disclaimer }}
+		<div class="disclaimer text-center">
+			{{ . }}  
+		</div>			
+        {{ end }}
+	</div>
+</footer>
+
+
+{{ "<!-- JS Plugins -->" | safeHTML }}
+{{ range .Site.Params.plugins.js}}
+<script src="{{ .link | relURL }}"></script>
+{{ end }}
+
+{{ "<!-- Main Script -->" | safeHTML }}
+{{ $script := resources.Get "js/script.js" | minify}}
+<script src="{{ $script.Permalink }}"></script>
+
+{{ with .Site.Params.GoogleAnalytics}}
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MXJFH7W"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
+{{ end }}

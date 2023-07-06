@@ -1,0 +1,232 @@
+html, body, .hero { height: 100%; margin: 0; }
+
+.hero {
+  display: grid;
+  grid-template-columns: 45% 1fr;
+  grid-template-rows: 1fr;
+  background: linear-gradient(to right, #3101FF, #5263DD);
+}
+
+.frame1 {
+  justify-self: center; 
+  align-self: end; 
+}
+
+.photo-container {
+  height: 70vh;
+}
+
+.photo {
+  width: auto;
+  height: 100%;
+}
+
+.frame2 {
+  background-image: url("/images/degradados/home.png");
+  background-size: cover;
+  /* Para controlar el layout de este cuadro, volvemos a usar un grid. Es de 2 columnas x 2 renglones. La primer columna es un margen del 10% del ancho de pantalla, y la 2da columna es de ancho flexible, y es donde va el texto. De los renglones, el primer renglón tiene altura flexible mientras que el segundo es del 70% de la altura de la pantalla, este es el mismo valor que se usó para el cuadro con la foto de la chica. */
+  display: grid;  
+  grid-template-columns: 8vw 1fr;
+  grid-template-rows: 1fr 70vh;
+}
+
+.info {
+  color: #ffffff;
+  font-size: 4.4em;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.info p{
+  margin-top: -20px;
+  font-size: 0.6em;
+  
+}
+
+.subtitulo p{
+  margin-top: 12px;
+  font-size: 0.4em;
+  line-height: 1;
+
+}
+
+.subtitulo{
+  margin-top: 50px;
+}
+
+@media only screen and (max-width: 600px) { 
+  /* En pantallas pequeñas esconder la foto
+  y hacer que el frame izquierdo sea de solo 20% del ancho (en lugar del 40%) */
+  .photo {
+    display: none;
+  }
+  .hero {
+    grid-template-columns: 0% 1fr;;
+  }
+
+  .info{
+    font-size: 3.8em;
+    margin-top: -80px;
+  }
+
+  .info p{
+    font-size: 0.5em;
+  }
+
+  
+  .subtitulo p{
+    margin-top: 20px;
+    font-size: 0.4em;;
+  }
+
+
+  .frame2 {
+    /* En pantalls pequeñas hay que ajustar el acomodo de la imagen de background para que no tape tanto. */
+    background-position: bottom right;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+}
+
+
+// Navigation Styles
+.navbar-brand {
+  font-size: 28px;
+  font-weight: 700;
+  color: #A100FF;
+}
+
+.main-nav {
+  transition: all .7s linear;
+
+  .nav-link {
+    font-size: 14px;
+    padding: 10px 18px !important;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: white;
+
+    &:hover {
+      color: #b9b9b9;
+    }
+  
+  }
+}
+
+.btn-sm {
+  padding: 5px 18px;
+  border-radius: 50px;
+}
+
+@media (min-width: 768px) {
+  .top-nav-collapse {
+    text-shadow: none;
+    border-color: transparent;
+    background-color: $white;
+    -webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    -ms-transition: all .2s ease;
+    transition: all .2s ease;
+  }
+}
+
+.dropdown {
+  padding: 0px;
+}
+
+.dropdown-toggle::after {
+  display: none;
+}
+
+.dropdown-item {
+  padding: 10px 12px 10px 25px;
+  border-bottom: 1px dashed $border-color;
+  border-left: 3px solid transparent;
+
+  &:hover {
+    color: $primary-color;
+    background: transparent;
+    border-left: 3px solid $primary-color;
+  }
+}
+
+.dropdown-menu {
+  min-width: 250px;
+  border: 0px;
+  border-radius: 0px;
+  box-shadow: 3px 1px 20px 0 rgba(0, 0, 0, 0.07);
+  visibility: hidden;
+  opacity: 0;
+  overflow: hidden;
+  transition: all .15s ease-out;
+  display: block;
+  padding: 0px !important;
+}
+
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+// page-header
+// 
+.page-header {
+  ul li {
+    color: $white;
+    font-size: 18px;
+
+    a {
+      color: $white;
+    }
+  }
+
+  .divider {
+    width: 100px;
+    height: 4px;
+  }
+}
+
+.error {
+  h2 {
+    font-size: 89px;
+    color: #888;
+  }
+}
+
+@include mobile {
+  .navbar-nav .dropdown-menu {
+    position: absolute;
+  }
+
+}
+
+@include mobile-xs {
+  .navbar-nav .dropdown-menu {
+    position: absolute;
+  }
+
+}
+
+@include tablet {
+  .navbar-nav .dropdown-menu {
+    position: absolute;
+  }
+
+}
+
+@include desktop {
+  .navbar-nav .dropdown-menu {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+#select-language{
+  @include desktop {
+    display: block;
+    margin: auto !important;
+  }
+}

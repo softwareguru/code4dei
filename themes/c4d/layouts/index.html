@@ -1,0 +1,50 @@
+{{ define "main" }}
+
+{{ $data := index .Site.Data }}
+
+<!-- banner -->
+
+{{ with $data.homepage.banner }}
+
+<section class="banner">
+
+    <div class="col-auto img-logo">
+      <br>
+      <img src="{{ .img | markdownify }}" class="img-fluid" width="95%">
+    </div>
+
+</section>
+
+<center>
+<section class="dates">
+    <div class="row container col-auto text-center ">
+      <div class="col-sm-6">
+        <div class="card border-0 bg-transparent">
+          <div class="card-body">
+            <p class="card-text">{{ .venue | markdownify }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6">
+        <div class="card border-0 bg-transparent">
+          <div class="card-body">
+            <p class="card-text">{{ .where | markdownify }}</p>  
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+</center>
+{{ end }}
+<!-- /banner -->
+
+<!-- event_info  -->
+{{ if $data.homepage.event_info.enable }}
+{{ partial "event_info.html" . }}
+{{ end }}
+<!-- /event_info -->
+
+
+{{ end }}
+
