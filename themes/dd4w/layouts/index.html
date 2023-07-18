@@ -11,7 +11,7 @@
     <div class="col-auto img-logo">
       <br>
       <img src="{{ .img | markdownify }}" class="img-fluid" width="95%">
-      <h2 style="font-size: 4.2em; color: black;">CODE 4 DEI</h2>
+      <h2 class="titulo-hero" >CODE 4 DEI</h2>
     </div>
 
 </section>
@@ -52,16 +52,18 @@
 <section class="section-sponsors section" style="margin-top: -65px;">
     <br><br>
     <div class="container">
-      <center>
-        <h1>Patrocinadores</h1>
-      </center>
+ <div class="sec-title text-center mt-4">
+  <h2 class="sponsors">Patrocinadores</h2>
+      
+ </div>
+        
       <br><br>
         {{ $data := index .Site.Data }}
         {{ with $data.sponsors }}
         {{ range .sponsor_group }}
         <div class="row mb-5">
             
-            <br><br><br>
+
             <div class="sponsor-strip {{ .slug }}" >
                 {{ range .sponsor }}
                 <div  class="sponsor-item" >
@@ -86,6 +88,7 @@
         {{ end }}
         {{ end }}
     </div>
+
 </section>
 {{ end }}
 <!-- /sponsor -->

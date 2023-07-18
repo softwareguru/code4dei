@@ -7,6 +7,31 @@ html, body, .hero { height: 100%; margin: 0; }
   background: linear-gradient(to right, #3101FF, #5263DD);
 }
 
+
+.titulo-hero{
+
+	font-size: 4.5em; 
+	color: black;
+
+	@include desktop {
+    font-size: 3.0em; 
+    }
+  
+    @include tablet {
+      font-size: 2.5em; 
+    }
+  
+    @include mobile {
+      font-size: 2.8em; 
+    }
+  
+    @include mobile-xs {
+      font-size: 2.0em;
+    }
+
+
+
+}
 .frame1 {
   justify-self: center; 
   align-self: end; 
@@ -63,6 +88,8 @@ html, body, .hero { height: 100%; margin: 0; }
   .hero {
     grid-template-columns: 0% 1fr;;
   }
+
+
 
   .info{
     font-size: 3.8em;
