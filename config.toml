@@ -120,12 +120,12 @@ link="https://kit.fontawesome.com/a6f10b653b.js"
 
 #################### default parameters ################################
 [params]
-logo = "/images/logo-monochrome.svg"
+logo = "/images/code4dei.jpg"
 home = "Home"
 
 # Meta data
 description = """Code 4 DEI es un evento que busca promover la inclusión en todos los niveles y eliminar barreras para alcanzar todo el potencial de la industria y fomentar la innovación."""
-images = ["/images/blog/dd4w.jpg"]
+images = ["/images/code4dei.jpg"]
 twitter_user = "RevistaSG"
 email = "eventos@sg.com.mx"
 author = "Software Guru"
@@ -145,9 +145,9 @@ preloader = "" # use jpg, png, svg or gif format.
 
 # Navigation button
 [params.navigation_button]
-enable = false
-label = "LIVE"
-link = "https://us.airmeet.com/e/442f8b50-ccef-11ed-a75b-a1f22f0d858d"
+enable = true
+label = "Regístrate"
+link = "registro"
 
 
 ############################# social icon ############################

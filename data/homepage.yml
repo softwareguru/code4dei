@@ -4,8 +4,8 @@ banner:
   title : "DEV DAY 4 WOMEN"
   img: "/images/code4dei-logo.png" 
   date_time: "17 y 18 de Mayo de 2023"
-  venue : "Mujeres que desarrollan Software Grandioso"
-  where : "17 y 18 de Mayo de 2023 | Edicion Online | Gratuito"
+  venue : "Porque el software grandioso es diverso, equitativo e incluyente."
+  where : "31 de agosto de 2023 | Evento online | Gratuito"
   
   button1:
     enable : false
@@ -14,7 +14,7 @@ banner:
   button2:
     enable : false
     label : "Registrate"
-    link : "https://us.airmeet.com/e/442f8b50-ccef-11ed-a75b-a1f22f0d858d"
+    link : "https://us.airmeet.com/e/0fccbff0-19f6-11ee-86ad-7dac8bcc0303"
 ############################## Event ##############################
 event_info:
   enable : true
