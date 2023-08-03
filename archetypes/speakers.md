@@ -1,13 +1,15 @@
 ---
 title: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
-images: 
- - "/images/speakers/{{ .Name }}.png"
+images : 
+ - "images/speakers/{{ .Name }}.jpg"
 designation : ""
-country: "mx"
+country: ""
+facebook: ""
+instagram: ""
 twitter: ""
 linkedin: ""
 github: ""
-year: "2023-h1"
+events: 
+ - "2023"
 ---
-

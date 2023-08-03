@@ -1,28 +1,31 @@
 {{ define "main" }}
 
-<section class="speaker-2 section">
+
+<!-- Speakers Section -->
+<section class="speakers-section-three" id="speakers-section">
   <div class="container">
-    <div class="lead">
-      {{ .Content }}
-    </div>
+    <div class="lead my-3">{{ .Content }}</div>
     <div class="speaker-strip">
-      {{ range where .Data.Pages.ByTitle "Params.year" "2023-h1"}} 
-      <div class="speaker-item">
-        <div class="speaker-block">
-          <div class="headshot-box">
-            <a href="{{.Permalink}}">
-              <img src="{{ with .Params.images }}{{ index . 0 | relURL }}{{ end }}" alt="{{ .Title }}" class="img-fluid rounded-circle shadow">
-            </a>
-          </div>
-          <div class="speaker-info text-center">
-            <h4 class="mb-0 mt-3"><a href="{{.Permalink | relURL }}">{{ .Title }}</a></h4>
-            <p>{{ .Params.Designation}}</p>
-          </div>
+      {{ range .Data.Pages.ByTitle }}
+        {{ if in .Params.events "2023" }}
+      <div class="speaker-item text-center"> 
+        <div class="headshot mb-2">
+          <img src="{{ with .Params.images }}{{ index . 0 | relURL }}{{ end }}" alt="" class="img-fluid rounded-circle">
+          <a href="{{ .Permalink }}">
+            <div class="overlay"></div>
+          </a>
+            
+        </div>
+        <div class="info">
+          <h4 class="name"><a href="{{.Permalink | relURL }}">{{ .Title }}</a></h4>
+          <h6 class="designation">{{ .Params.Designation}}</h6>
         </div>
       </div>
+        {{ end }}
       {{ end }}
     </div>
+    
   </div>
 </section>
- 
+<!-- End Speakers Section -->
 {{ end }}
