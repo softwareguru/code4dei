@@ -51,10 +51,10 @@ link="https://kit.fontawesome.com/a6f10b653b.js"
 ############################## navigation ###############################
 [menu]
 
-  #[[menu.main]]
-  #name = "Sedes Participantes"
-  #url = "/sedes-participantes"
-  #weight = 4
+  [[menu.main]]
+  name = "Acerca de"
+  url = "/acerca-de"
+  weight = 1
 
 
   #[[menu.main]]
