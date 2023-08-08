@@ -22,10 +22,10 @@
    }
 
 
-.mancha-home{
-    @media (max-width: 995px) {
-        display: none;
-        }
+.mancha{
+	@include tablet {
+		display: none;
+	}
 }
 
 .seccion-1{
@@ -35,13 +35,9 @@
     font-size: 1.2em;
     margin-top: -30px;
 
-    @media (max-width: 995px) {
-        padding-right: 0px;
-        padding: 20px;
-        text-align: center;
-        }
 
-    @media (max-width: 575px) {
+
+    @media (max-width: 995px) {
         padding-right: 0px;
         padding: 20px;
         text-align: center;
@@ -57,13 +53,9 @@
     font-size: 1.2em;
     margin-top: -30px;
 
-    @media (max-width: 995px) {
-        padding-left: 0px;
-        padding: 20px;
-        text-align: center;
-        }
 
-    @media (max-width: 575px) {
+
+    @media (max-width: 995px) {
         padding-left: 0px;
         padding: 20px;
         text-align: center;
