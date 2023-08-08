@@ -8,7 +8,6 @@ draft: false
 <h2 class="event-content title1">Eliminando barreras. Desarrollando todo el potencial de la industria</h2>
 
 <br>
-
 Actualmente, la industria de las tecnologías de la información enfrenta un desafío importante: la falta de diversidad y representación equitativa de género, etnias, personas con discapacidad y otros grupos subrepresentados. 
 
 Es por ello que nace Code 4 DEI, iniciativa que busca promover la inclusión y el desarrollo en todos los niveles, concientizando a los que no pertenecen a estos grupos vulnerables y eliminar barreras para alcanzar todo el potencial de la industria y fomentar la innovación.
