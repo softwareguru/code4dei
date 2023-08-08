@@ -25,15 +25,21 @@
     padding-right: 120px;
     line-height: 40px;
     text-align: right;
-   
+    font-size: 1.2em;
     margin-top: -30px;
+
+    @media (max-width: 992px) {
+        padding-right: 0px;
+        padding: 20px;
+        text-align: center;
+        }
 
     @media (max-width: 575px) {
         padding-right: 0px;
         padding: 20px;
         text-align: center;
         font-size: 0.8em;
-        
+         
         }
 }
 
@@ -41,8 +47,14 @@
     padding-left: 120px;
     line-height: 40px;
     text-align: left;
-    
+    font-size: 1.2em;
     margin-top: -30px;
+
+    @media (max-width: 992px) {
+        padding-right: 0px;
+        padding: 20px;
+        text-align: center;
+        }
 
     @media (max-width: 575px) {
         padding-left: 0px;
@@ -53,7 +65,7 @@
 }
 
 .mancha{
-    @media (max-width: 575px) {
+    @media (max-width: 992px) {
     display: none;
     }
 }
