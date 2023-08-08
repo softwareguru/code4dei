@@ -1,7 +1,7 @@
 
 ######################## default configuration ####################
 baseURL = "https://code4dei.com"
-title = "CODE FOR DEI"
+title = "Code 4 DEI"
 enableRobotsTXT = true
 DefaultContentLanguage = "es"
 

@@ -6,12 +6,14 @@ $heading-font             : 'Montserrat Alternates', 'Open Sans', Helvetica, Ari
 $base-font-size           : 16px;
 
 
-
-
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;600&display=swap');
 
 p{
-    font-size: 1.2em;
+    font-size: 1.4em;
+}
+
+li{
+    font-size: 1.4em;
 }
 
 // Variables
