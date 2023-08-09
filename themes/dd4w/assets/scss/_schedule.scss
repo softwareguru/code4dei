@@ -205,18 +205,18 @@
 
 .session-info p {
 	margin: 0;
-}
+} 
 
 .comunidad .session-info {
 	background-color: #2d43e4;
 }
 
 .session .session-info {
-	background-color: #0c1da0;
+	background-color: $primary-color;
 }
 
 .mensaje .session-info {
-	background-color: #4583d9;
+	background-color: $secondary-color;
 }
 
 .adoption .session-info,

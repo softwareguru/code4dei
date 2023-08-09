@@ -1,13 +1,13 @@
 ---
 id: {{ .Name }}
-title: ""
-url: /sessions/mayo-2023/
+title: "{{ replace .Name "-" " " | title }}"
+slug: {{ .Name }}
 speakers:
  - 
 format: session
-block: h1-a-2023
-time_start: 2023-05-17T10:00:00-06:00
-time_end: 2023-05-17T10:30:00-06:00
+block: 2023
+time_start: 2023-08-31T10:00:00-06:00
+time_end: 2023-08-31T10:30:00-06:00
 video:
 slides:
 ---
