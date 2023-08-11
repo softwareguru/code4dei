@@ -1,13 +1,13 @@
 ---
-id: lo-que-he-aprendido-de-la-inclusion
+id: a8
 title: "Lo que he aprendido de la inclusión"
 slug: lo-que-he-aprendido-de-la-inclusion
 speakers:
  - Sol Estrada
 format: session
 block: 2023
-time_start: 2023-08-31T10:00:00-06:00
-time_end: 2023-08-31T10:30:00-06:00
+time_start: 2023-08-31T12:20:00-06:00
+time_end: 2023-08-31T12:55:00-06:00
 video:
 slides:
 ---

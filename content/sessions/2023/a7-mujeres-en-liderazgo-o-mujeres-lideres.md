@@ -1,13 +1,13 @@
 ---
-id: mujeres-en-liderazgo-o-mujeres-lideres
+id: a7
 title: "Mujeres en liderazgo o mujeres líderes? "
 slug: "mujeres-en-liderazgo-o-mujeres-lideres"
 speakers:
  - Karen Avila
 format: mensaje
 block: 2023
-time_start: 2023-08-31T10:00:00-06:00
-time_end: 2023-08-31T10:30:00-06:00
+time_start: 2023-08-31T12:15:00-06:00
+time_end: 2023-08-31T12:20:00-06:00
 video:
 slides:
 ---
