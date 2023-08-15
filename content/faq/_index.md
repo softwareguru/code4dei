@@ -6,11 +6,10 @@ draft: false
 
 ### ¿QUÉ ES CODE 4 DEI?
 
-Code 4 DEI es un evento que busca promover la inclusión en todos los niveles y eliminar barreras para alcanzar todo el potencial de la industria y fomentar la innovación.
+Code 4 DEI es una iniciativa que busca promover la inclusión y el desarrollo en todos los niveles de la industria tecnológica, concientizando a quienes no pertenecen a grupos vulnerables y eliminar barreras para alcanzar todo su potencial y fomentar la innovación.
 
-También es impulsado por SG4Women que, además de apoyar la participación de las mujeres en las tecnologías de la información mediante Dev Day 4 Women, ahora busca impulsar Code 4 DEI para promover las diferentes actividades de inclusión que tanto comunidades como empresas han comenzado a implementar.
+El próximo 31 de agosto de 2023 se llevará a cabo el primer evento de Code 4 DEI, mismo que será el escenario para lanzar la iniciativa.
 
-Acompáñanos en esta primera edición, podrás asistir desde cualquier lugar donde te encuentres.
 <br>
 
 
@@ -20,12 +19,10 @@ Gracias a nuestros patrocinadores, es un evento gratuito.
 
 <br>
 
+
 ### ¿CUÁL ES EL HORARIO DEL EVENTO?
 
-La agenda CODE 4 DEI se compone de un día, de las 10:00 am a 6:00 pm, donde hablaremos de los beneficios de la diversidad, equidad e inclusión.
-
-Todas las sesiones quedan grabadas y disponibles de inmediato, así que si no puedes asistir en vivo, puedes ver las grabaciones.
-
+La agenda CODE 4 DEI se compone de un día, de las 10:00 am a 3:30 pm, donde hablaremos de los beneficios de la diversidad, equidad e inclusión.
 
 <br> 
 

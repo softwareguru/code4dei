@@ -13,3 +13,10 @@ sponsor_group:
         link : "https://www.griddynamics.com/" 
       - logo : "/images/logos/Hexaware.png"
         link : "https://hexaware.com/"
+
+
+  #- title : "Organismos de apoyo"
+  #  slug : "silver"
+  #  sponsor:
+    ##  - logo : "/images/logos/Globant.png"
+    ##    link : "https://www.globant.com/"
