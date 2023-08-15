@@ -77,18 +77,21 @@
 <section class="section-sponsors section" style="margin-top: -65px;">
     <br><br>
     <div class="container">
- <div class="sec-title text-center mt-4">
-  <h2 class="sponsors">Patrocinadores</h2>
-      
- </div>
-        
+      <center>
+        <h1>Patrocinadores</h1>
+      </center>
       <br><br>
         {{ $data := index .Site.Data }}
         {{ with $data.sponsors }}
         {{ range .sponsor_group }}
         <div class="row mb-5">
-            
-
+            <div class="col-lg-12 text-center">
+              {{ with .title }}
+              <h2 style="color: black; ">{{ . }}</h2>
+           
+                {{ end}}
+            </div>
+            <br>
             <div class="sponsor-strip {{ .slug }}" >
                 {{ range .sponsor }}
                 <div  class="sponsor-item" >
@@ -113,7 +116,6 @@
         {{ end }}
         {{ end }}
     </div>
-
 </section>
 {{ end }}
 <!-- /sponsor -->

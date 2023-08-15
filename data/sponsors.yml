@@ -2,7 +2,7 @@ enable :  true
 title : "Apoyado por"
 sponsor_group:
 
-  - title : "Platinum"
+  - title : ""
     slug : "platinum"
     sponsor:
       - logo : "/images/logos/grupo-salinas-web.png"
@@ -15,8 +15,8 @@ sponsor_group:
         link : "https://hexaware.com/"
 
 
-  #- title : "Organismos de apoyo"
-  #  slug : "silver"
-  #  sponsor:
-    ##  - logo : "/images/logos/Globant.png"
-    ##    link : "https://www.globant.com/"
+  - title : "Organismos de apoyo"
+    slug : "gold"
+    sponsor:
+      - logo : "/images/logos/Globant.png"
+        link : "https://www.globant.com/"
