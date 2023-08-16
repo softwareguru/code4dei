@@ -5,7 +5,7 @@ slug: "panel"
 speakers:
  - Diana Martínez
  - Montserrat Morato
- - Carolina
+ - Caroline Maldonado
  - Mara Ruvalcaba
 format: session
 block: 2023

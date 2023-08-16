@@ -1,5 +1,5 @@
 ---
-title: "Carolina"
+title: "Caroline Maldonado"
 date: 2023-08-11T13:40:02-06:00
 images : 
  - "images/speakers/carolina.png"

@@ -171,10 +171,13 @@ link = "https://instagram.com/sg4women?igshid=YjNmNGQ3MDY="
 #name = "?Quién organiza¿"
 #link = "/team/"
 
-
 [[params.footer_coc]]
 name = "Código de Conducta"
 link = "/coc/"
+
+[[params.footer_coc]]
+name = "Media Kit"
+link = "/media-kit/"
 
 [[params.footer_contact_us]] 
 name = "Contáctanos"

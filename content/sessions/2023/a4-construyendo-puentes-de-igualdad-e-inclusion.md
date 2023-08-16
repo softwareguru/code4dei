@@ -3,7 +3,7 @@ id: a4
 title: "Construyendo puentes de igualdad e inclusión: una fórmula para enriquecer la cultura laboral."
 slug: construyendo-puentes-de-igualdad-e-inclusion
 speakers:
- - Grupo Salinas
+ - Montserrat Mercado
 format: session
 block: 2023
 time_start: 2023-08-31T10:50:00-06:00
