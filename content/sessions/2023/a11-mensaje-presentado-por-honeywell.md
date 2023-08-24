@@ -3,6 +3,7 @@ id: a11
 title: "Mensaje presentado por Honeywell"
 slug: mensaje-presentado-por-honeywell
 speakers:
+ - Norma Escalona Beltran
 format: session
 block: 2023
 time_start: 2023-08-31T13:40:00-06:00

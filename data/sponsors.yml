@@ -20,3 +20,7 @@ sponsor_group:
     sponsor:
       - logo : "/images/logos/Globant.png"
         link : "https://www.globant.com/"
+      - logo : "/images/logos/WiDSCommunity.png"
+        link : "https://www.facebook.com/WiDSCommunity"
+      - logo : "/images/logos/WWCode-Merida.png"
+        link : "https://twitter.com/WWCodeMID"
