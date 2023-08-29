@@ -1,6 +1,6 @@
 ---
 id: a9
-title: "5 puntos para fomentar la diversidad, equidad e inclusión"
+title: "5 puntos para fomentar la diversidad, equidad e inclusión, por Gird Dinamics"
 slug: 5-puntos-para-fomentar-la-diversidad-equidad-e-inclusion
 speakers:
  - Sofia Moreno

@@ -1,6 +1,6 @@
 ---
 id: a7
-title: "Mujeres en liderazgo o mujeres líderes? "
+title: "Mujeres en liderazgo o mujeres líderes?, por Tech Mahindra"
 slug: "mujeres-en-liderazgo-o-mujeres-lideres"
 speakers:
  - Karen Avila

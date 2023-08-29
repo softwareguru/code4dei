@@ -1,6 +1,6 @@
 ---
 id: a4
-title: "Construyendo puentes de igualdad e inclusión: una fórmula para enriquecer la cultura laboral."
+title: "Construyendo puentes de igualdad e inclusión: una fórmula para enriquecer la cultura laboral, por Grupo Salinas"
 slug: construyendo-puentes-de-igualdad-e-inclusion
 speakers:
  - Montserrat Mercado

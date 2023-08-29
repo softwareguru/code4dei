@@ -1,16 +1,17 @@
 ---
 id: a14
-title: "El valor del Autismo en la industria TI"
-slug: el-valor-del-autismo-en-la-industria-ti
+title: "Cierre"
+slug: cierre
 speakers:
- - Ruben Romo Esquivel
+ - Mara Ruvalcaba
 format: session
 block: 2023
 time_start: 2023-08-31T15:05:00-06:00
 time_end: 2023-08-31T15:45:00-06:00
 video:
 slides:
+draft: false
 ---
 
-Durante la plática el participante conocerá que significa la neurodiversidad, el tipo de condiciones que pueden englobarse en este concepto, la prevalencia de algunas de estas condiciones y haremos un acercamiento especial a la condición del autismo; los retos a los que se enfrentan, las habilidades que poseen y sobre el valor que las personas dentro del espectro pueden aportar a la industria de TI, para poder aterrizar finalmente en su inclusión al mundo laboral y casos de éxito a nivel mundial.
+
 
