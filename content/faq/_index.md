@@ -67,8 +67,13 @@ En CODE 4 DEI nos preocupamos por la seguridad e integridad de todos los involuc
 
 <br>
 
+### Reporte de Incidentes
 
-### Política de privacidad de datos
+Si sientes que alguien está violando el código, puedes reportar el incidente [aquí.](https://survey.inclusionplusinstitute.com/survey1.aspx?k=SsRTVXTWsTVsPsPsP&lang=0)
+
+<br>
+
+### POLÍTICA DE PRIVACIDAD DE DATOS
 
 Conoce nuestra [política de privacidad de datos](/politica-de-privacidad)
 
