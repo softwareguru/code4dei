@@ -13,6 +13,8 @@ sponsor_group:
         link : "https://www.griddynamics.com/" 
       - logo : "/images/logos/Hexaware.png"
         link : "https://hexaware.com/"
+      - logo : "/images/logos/Honeywell.png"
+        link : "https://careers.honeywell.com/us/en"
 
   - title : "Organismos de apoyo"
     slug : "gold"
