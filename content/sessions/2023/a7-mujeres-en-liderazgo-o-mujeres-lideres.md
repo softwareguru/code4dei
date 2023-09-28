@@ -8,7 +8,7 @@ format: mensaje
 block: 2023
 time_start: 2023-08-31T12:15:00-06:00
 time_end: 2023-08-31T12:20:00-06:00
-video:
+video: https://youtu.be/DoKF_pU-j6g
 slides:
 ---
 

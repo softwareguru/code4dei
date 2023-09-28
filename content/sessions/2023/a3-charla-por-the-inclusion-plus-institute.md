@@ -8,8 +8,8 @@ format: session
 block: 2023
 time_start: 2023-08-31T10:10:00-06:00
 time_end: 2023-08-31T10:50:00-06:00
-video:
-slides:
+video: https://youtu.be/fljWVmP1JRA
+slides: 2023/Liderazgo-Inclusivo_Venus-Pineyro.pdf
 ---
 
 ¿Qué es el liderazgo inclusivo y cómo ponerlo en práctica?
