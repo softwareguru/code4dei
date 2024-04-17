@@ -8,11 +8,29 @@
       <h1 style="color: white; margin-bottom: 30px; text-align: center;">Noticias recientes</h1>
 
 
+      <div class="card mb-3 mx-auto d-block" style="max-width: 540px; border: none;">
+        {{ range first 3 (where .Site.RegularPages "Type" "blog" )}}
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <a href="{{ .Permalink }}">
+            <img src="{{ .Params.Image | absURL }}" class="img-fluid" alt="{{ .Title | markdownify }}">
+          </a>
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title" style="text-align: center;"><a href="{{ .Permalink }}"><strong >{{ .Title | markdownify }}</strong></a></h5>
+              <p class="module line-clamp" style="color: black;">{{ .Summary }}</p>
+            </div>
+          </div>
+        </div>
+        {{ end }}
+      </div>
 
-    <div class="card-deck">
+
+    <!--<div class="card-deck">
       {{ range first 3 (where .Site.RegularPages "Type" "blog" )}}
        
-      <div class="card">
+      <div class="card" >
 
         <img src="{{ .Params.Image | absURL }}" class="img-fluid" alt="{{ .Title | markdownify }}">
         <div class="card-body ">
@@ -33,7 +51,7 @@
       </div>
      
       {{ end }}
-    </div>
+    </div>-->
   
     </div>
 </section>

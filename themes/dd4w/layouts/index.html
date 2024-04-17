@@ -71,6 +71,12 @@
 {{ end }}
 <!-- /event_info -->
 
+<!-- event_info  -->
+{{ if $data.homepage.event_info.enable }}
+{{ partial "blog.html" . }}
+{{ end }}
+<!-- /event_info -->
+
 
 <!-- sponsor -->
 {{ if $data.sponsors }}
