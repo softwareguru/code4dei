@@ -87,8 +87,8 @@ link="https://kit.fontawesome.com/a6f10b653b.js"
   #weight = 2
 
   #[[menu.main]]
-  #name = "Sedes Virtuales"
-  #URL = "/sedes-virtuales/"
+  #name = "Blog"
+  #URL = "/blog/"
   #weight = 4
 
   #[[menu.main]]
@@ -113,10 +113,10 @@ link="https://kit.fontawesome.com/a6f10b653b.js"
   #URL = "/kitvirtual"
   #weight = 5
 
-  [[menu.main]]
-  name = "FAQ"
-  URL = "/faq"
-  weight = 6
+  #[[menu.main]]
+  #name = "FAQ"
+  #URL = "/faq"
+  #weight = 6
 
 
 
@@ -148,24 +148,25 @@ preloader = "" # use jpg, png, svg or gif format.
 # Navigation button
 [params.navigation_button]
 enable = true
-label = "Sesiones"
+label = "Ver conferencias"
 link = "/sessions/2023/"
 
 
 ############################# social icon ############################
 
 [[params.social]]
-icon = "tf-ion-social-twitter"
-link = "https://twitter.com/sg4women"
-
-[[params.social]]
-icon = "tf-ion-social-facebook"
-link = "https://www.facebook.com/sg4women"
+icon = "bi bi-twitter-x"
+link = "https://x.com/code4dei"
 
 
 [[params.social]]
-icon = "tf-ion-social-instagram"
-link = "https://instagram.com/sg4women?igshid=YjNmNGQ3MDY="
+icon = "bi bi-facebook"
+link = "https://www.facebook.com/code4dei"
+
+
+[[params.social]]
+icon = "bi bi-instagram"
+link = "https://www.instagram.com/code4dei"
 
 
 #[[params.footer_resources]]
@@ -176,9 +177,9 @@ link = "https://instagram.com/sg4women?igshid=YjNmNGQ3MDY="
 name = "Código de Conducta"
 link = "/coc/"
 
-[[params.footer_coc]]
-name = "Media Kit"
-link = "/media-kit/"
+#[[params.footer_coc]]
+#name = "Media Kit"
+#link = "/media-kit/"
 
 [[params.footer_contact_us]] 
 name = "Contáctanos"
