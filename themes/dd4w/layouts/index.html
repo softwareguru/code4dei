@@ -8,21 +8,21 @@
 
 <section class="banner">
 
-    <div class="col-auto img-logo">
-      <br>
-      <img src="{{ .img | markdownify }}" class="img-fluid logo-a">
-      <h2 class="titulo-hero" >CODE 4 DEI</h2>
+  <div class="col-auto img-logo">
+    <br>
+    <img src="{{ .img | markdownify }}" class="img-fluid logo-a">
+    <h2 class="titulo-hero">CODE 4 DEI</h2>
 
-      <!--<a href="/sessions/2023/" class="btn btn-banner1 mt-3 ml-4" style="background-color:#E7247B !important; border-radius: 20px; color: white !important;">Sesiones anteriores</a>-->
+    <!--<a href="/sessions/2023/" class="btn btn-banner1 mt-3 ml-4" style="background-color:#E7247B !important; border-radius: 20px; color: white !important;">Sesiones anteriores</a>-->
 
-      <h3 class="card-text">{{ .venue | markdownify }}</h3>
-    </div>
+    <h3 class="card-text">{{ .venue | markdownify }}</h3>
+  </div>
 
 </section>
 
-<center>
+
 <section class="dates">
-  
+
   <!--<div class="row container col-auto text-center ">
       <div class="col-sm-6">
         <div class="card border-0 bg-transparent">
@@ -41,29 +41,62 @@
       </div>
     </div>-->
 
-    <img src="images/linea.png" alt="" class="img-fluid">
+  <img src="images/linea.png" alt="" class="img-fluid">
 
 
 
 
 
-    <div class="event-content section1 text-center container ">
+  <div class="event-content section1 container ">
 
-      <h2 class="event-content title1" style="color: white !important;">¿Qué es Code 4 DEI?</h2>
+
+    <p>En Code 4 DEI creemos que la diversidad impulsa la innovación. Esta iniciativa promueve la inclusión y el
+      desarrollo en todos los niveles de la industria tecnológica, eliminando barreras y empoderando a quienes
+      tradicionalmente han sido excluidos. Aquí, cada persona encuentra un espacio para aprender, conectar y brillar.
+    </p>
+
+    <h2 style="color: white !important;">Visión</h2>
+    <p>En Code 4 DEI impulsamos una industria tecnológica inclusiva, equitativa e innovadora, eliminando barreras y
+      visibilizando a grupos subrepresentados para que todas las personas sin importar su origen o identidad puedan
+      desarrollarse, brillar y transformar el sector. </p>
+
+    <h2 style="color: white !important;">Propositos</h2>
+
+    <p>El proposito de Code 4 DEI es construir una industria tecnológica más equitativa e inclusiva, eliminando
+      barreras estructurales y culturales que limitan el desarrollo de personas subrepresentadas. A través de la
+      educación y la colaboración entre comunidad, empresas y profesionistas, buscamos fomentar la diversidad, la
+      equidad y una representación real en todos los niveles de la industria. Además, nos comprometemos a medir y
+      mejorar continuamente nuestras acciones, aprendiendo en el proceso y adaptándonos a los retos que plantea la
+      transformación hacia un ecosistema más justo y representativo.</p>
+
+
+    <h2 style="color: white !important;">Valores</h2>
+
+    <ul style="color: white; list-style-type: none;">
+      <li>⚪ Inclusión</li>
+      <li>⚪ Respeto</li>
+      <li>⚪ Equidad</li>
+      <li>⚪ Colaboración</li>
+      <li>⚪ Transparencia</li>
+      <li>⚪ Aprendizaje continuo</li>
+    </ul>
+
+
+    <h2 class="event-content title1" style="color: white !important;">¿Qué es Code 4 DEI?</h2>
     <br>
-    <p>Code 4 DEI es una iniciativa que busca promover la inclusión y el desarrollo en todos los niveles de la industria tecnológica, concientizando a quienes no pertenecen a grupos vulnerables y eliminar barreras para alcanzar todo su potencial y fomentar la innovación.</p>
 
+    <p>Code 4 DEI es una iniciativa de Software Guru que impulsa la construcción de una industria tecnológica más inclusiva, equitativa e innovadora. Su propósito es generar conciencia en quienes no forman parte de grupos vulnerables sobre los desafíos reales que enfrentan otros, y eliminar las barreras que limitan el potencial de las personas.</p>
 
-    <p>Como escenario de la iniciativa nuestro, llevamos a cabo el primer evento de Code 4 DEI con el objetivo de impulsar una concientización entre organizaciones y profesionistas, incluso inspirar y empoderar a futuras generaciones que se interesan por las tecnologías de la información para que persigan carreras en el campo, independientemente de su identidad de género, orientación sexual, discapacidad, raza, origen étnico, edad, religión o situación económica u otras características.</p>
-      
-  
-      <a href="/sessions/2023/" class="btn btn-banner1 mt-3 ml-4" style="background-color:#E7247B !important; border-radius: 20px; color: white !important;">Ver conferencias</a>
-  
-      <br><br>
-  
-    </div>
+    <p>A través de espacios de reflexión, aprendizaje y conexión, Code 4 DEI promueve el impacto de la diversidad de género en la innovación y la productividad, creando vínculos entre empresas y talento femenino diverso, y ampliando el acceso a temas tecnológicos de vanguardia.</p>
+
+    <p>En Code 4 DEI promovemos un entorno donde la identidad de género, orientación sexual, discapacidad, raza, etnia, edad, religión o situación económica no sean barreras, sino elementos que enriquecen la diversidad del sector y fortalezca su transformación.</p>
+
+    <p>Más que una iniciativa, Code 4 DEI es un compromiso con el cambio. Es un esfuerzo por transformar la industria desde la base, creando oportunidades reales donde todas las personas puedan aprender, crecer y contribuir activamente a la transformación digital.</p>
+
+    <br>
+  </div>
 </section>
-</center>
+
 {{ end }}
 <!-- /banner -->
 
@@ -73,11 +106,11 @@
 {{ end }}
 <!-- /event_info -->
 
-<!-- event_info  -->
+<!-- blog 
 {{ if $data.homepage.event_info.enable }}
 {{ partial "blog.html" . }}
-{{ end }}
-<!-- /event_info -->
+{{ end }} 
+ /blog -->
 
 
 <!-- sponsor 
@@ -132,4 +165,3 @@
 
 
 {{ end }}
-

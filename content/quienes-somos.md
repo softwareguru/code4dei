@@ -1,8 +1,12 @@
 ---
-title: "ACERCA DE"
+title: "Quiénes somos"
 date: 2022-04-05T13:37:31-05:00
+aliases: acerca-de
 draft: false
+
 ---
+
+Impulsar el crecimiento personal y profesional de personas pertenecientes a las  diversidades, con un enfoque especial en comunidades LGBTQ+, personas con  discapacidad y personas neuro-divergentes generando oportunidades reales de inclusión y  liderazgo en el mundo tecnológico.  Nos dedicamos a derribar barreras, abrir espacios y construir puentes para que cada persona,  sin importar su identidad, origen o condición, pueda aprender, desarrollarse y prosperar en la  industria tecnológica. Creemos en una industria tecnología más justa, diversa, equitativa y  representativa, construida con y para las personas.
 
 
 <h2 class="event-content title1">Eliminando barreras. Desarrollando todo el potencial de la industria</h2>

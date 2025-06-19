@@ -52,44 +52,45 @@ link="https://kit.fontawesome.com/a6f10b653b.js"
 [menu]
 
   [[menu.main]]
-  name = "Acerca de"
-  url = "/acerca-de"
+  name = "Quiénes somos"
+  url = "/quienes-somos"
   weight = 1
 
-  #[[menu.main]]
-  #name = "Agenda"
-  #URL = "/agenda"
-  #weight = 2
+  [[menu.main]]
+  name = "Comité"
+  URL = "/comite"
+  weight = 2
+
+  [[menu.main]]
+  name = "Blog"
+  URL = "/blog"
+  weight = 2
 
 
-  #[[menu.main]]
-  #identifier = "sedes"
-  #name = "Sedes"
-  #weight = 4
+  [[menu.main]]
+  identifier = "eventos"
+  name = "Eventos"
+  weight = 4
 
-  #[[menu.main]]
-  #  identifier = "sedes1"
-  #  name = "Sedes Virtuales"
-  #  URL = "/sedes-virtuales"
-  #  parent = "sedes"
-  #  weight = 1
+  [[menu.main]]
+    identifier = "evento1"
+    name = "Hackeando barreras por la inclusión"
+    URL = "/hackeando-barreras-por-la-inclusión"
+    parent = "eventos"
+    weight = 1
 
-  #[[menu.main]]
-  #  identifier = "sedes2"
-  #  name = "Sedes Participantes"
-  #  url = "/sedes-participantes"
-  #  parent = "sedes"
-  #  weight = 2
+  [[menu.main]]
+    identifier = "evento2"
+    name = "Dev Day 4 Women Monterrey 2025"
+    url = "https://devday4w.com/"
+    parent = "eventos"
+    weight = 2
 
-  #[[menu.main]]
-  #name = "Sesiones"
-  #URL = "/sessions/mayo-2023/"
-  #weight = 2
+  [[menu.main]]
+  name = "Contacto"
+  URL = "/contacto"
+  weight = 5
 
-  #[[menu.main]]
-  #name = "Blog"
-  #URL = "/blog/"
-  #weight = 4
 
   #[[menu.main]]
   #name = "Reconocimientos SG4W"
@@ -97,10 +98,10 @@ link="https://kit.fontawesome.com/a6f10b653b.js"
   #weight = 3
 
 
-  [[menu.main]]
-  name = "Speakers"
-  URL = "/speakers"
-  weight = 2
+  #[[menu.main]]
+  #name = "Speakers"
+  #URL = "/speakers"
+  #weight = 2
 
 
   #[[menu.main]]
@@ -137,7 +138,7 @@ end_date = "2023-07-27T17:00-06:00"
 
 
 
-disclaimer = """Code For DEI es otro fantástico evento de Software Guru."""
+disclaimer = """ El software grandioso es diverso, equitativo e incluyente."""
 
 
 # Preloader
@@ -177,13 +178,30 @@ link = "https://www.instagram.com/code4dei"
 name = "Código de Conducta"
 link = "/coc/"
 
+###### Eventos Previos ######
+
+[[params.footer_eventos_previos]]
+name = "Reconocimientos CODE 4 DEI"
+link = "https://devday4w.com/reconocimientos-2024/"
+
+[[params.footer_eventos_previos]]
+name = "Code 4 DEI 2023"
+link = "/sessions/2023/"
+
+[[params.footer_eventos_previos]]
+name = "Dev Day 4 Women"
+link = "https://devday4w.com/"
+
+
+###### Eventos Previos ######
+
 #[[params.footer_coc]]
 #name = "Media Kit"
 #link = "/media-kit/"
 
-[[params.footer_contact_us]] 
+[[params.footer_coc]] 
 name = "Contáctanos"
-link = "mailto:eventos@sg.com.mx"
+link = "mailto:hola@code4dei.com"
 
 
 

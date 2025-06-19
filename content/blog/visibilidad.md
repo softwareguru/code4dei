@@ -8,6 +8,7 @@ image : "images/blog/visibilidad-trans.png"
 author: "DD4W" 
 botton: Ver más
 slug: /dia-internacional-de-la-visibilidad-transgenero
+summary: "Cada 31 de marzo, el mundo conmemora el Día Internacional de la Visibilidad Transgénero, una fecha dedicada a reconocer y celebrar los logros y contribuciones de las personas trans, al tiempo que se visibilizan los desafíos que continúan enfrentando en la sociedad y en el ámbito laboral. La industria del software y la tecnología no es la excepción: este día cobra especial importancia, ya que la diversidad y la inclusión no solo enriquecen los entornos laborales, sino que también impulsan la innovación."
 ---
 
 Cada 31 de marzo, el mundo conmemora el Día Internacional de la Visibilidad Transgénero, una fecha dedicada a reconocer y celebrar los logros y contribuciones de las personas trans, al tiempo que se visibilizan los desafíos que continúan enfrentando en la sociedad y en el ámbito laboral. La industria del software y la tecnología no es la excepción: este día cobra especial importancia, ya que la diversidad y la inclusión no solo enriquecen los entornos laborales, sino que también impulsan la innovación.

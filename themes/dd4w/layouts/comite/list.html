@@ -1,0 +1,52 @@
+{{ define "main" }}
+
+<!-- Speakers Section -->
+<section class="speakers-section-three" id="speakers-section">
+  <div class="container">
+    <div class="lead my-3 content-speakers">{{ .Content }}</div>
+    <div class="speaker-strip">
+      {{ range .Data.Pages.ByWeight }}
+    {{ if in .Params.especificacion "comite" }}
+      <div class="speaker-item text-center"> 
+        <div class="headshot mb-2">
+          <img src="{{ with .Params.images }}{{ index . 0 | relURL }}{{ end }}" alt="" class="img-fluid rounded-circle">
+          <a href="{{ .Permalink }}">
+            <div class="overlay"></div>
+          </a>
+            
+        </div>
+        <div class="info-speakers">
+          <h4 class="name"><a href="{{.Permalink | relURL }}">{{ .Title }}</a></h4>
+          <h6 class="designation">{{ .Params.Designation}}</h6>
+        </div>
+      </div>
+      {{ end }}
+      {{ end }}
+    </div>
+
+    <h2 class="text-center mt-4 mb-4">Consejeras Code 4 DEI</h2>
+     <div class="speaker-strip">
+      {{ range .Data.Pages.ByWeight }}
+       {{ if in .Params.especificacion "consejera" }}
+      <div class="speaker-item text-center"> 
+        <div class="headshot mb-2">
+          <img src="{{ with .Params.images }}{{ index . 0 | relURL }}{{ end }}" alt="" class="img-fluid rounded-circle">
+          <a href="{{ .Permalink }}">
+            <div class="overlay"></div>
+          </a>
+            
+        </div>
+        <div class="info-speakers">
+          <h4 class="name"><a href="{{.Permalink | relURL }}">{{ .Title }}</a></h4>
+          <h6 class="designation">{{ .Params.Designation}}</h6>
+        </div>
+      </div>
+        {{ end }}
+      {{ end }}
+    </div>
+    
+  </div>
+</section>
+<!-- End Speakers Section -->
+
+{{ end }}

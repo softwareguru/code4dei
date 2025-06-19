@@ -33,32 +33,37 @@
 
 		<!-- /Redes sociales -->
 
-
 		<!-- Código de Conducta -->
 
+		
 	  	<div class="card" style="border: none; background-color: transparent; justify-content: center;">
-		 
+		 <h4>Recursos</h4>
 			<div>	
 				{{ range .Site.Params.footer_coc }}
-				<h5><a href="{{ .link | safeURL }}">{{ .name }}</a></h5>
+				<h6><a href="{{ .link | safeURL }}">{{ .name }}</a></h6>
 				{{ end }}
 			</div>  
 		</div>
 
 		<!-- /Código de Conducta -->
 
+		<!-- Código de Conducta -->
 
-		<!-- Contactanos -->
-
-		<div class="card" style="border: none; background-color: transparent; justify-content: center;">
-		 
+		
+	  	<div class="card" style="border: none; background-color: transparent; justify-content: center;">
+		 <h4>Eventos previos</h4>
 			<div>	
-				{{ range .Site.Params.footer_contact_us }}
-				<h5><a target="_blank" href="{{ .link | safeURL }}">{{ .name }} </a></h5>
+				{{ range .Site.Params.footer_eventos_previos }}
+				<h6><a href="{{ .link | safeURL }}">{{ .name }}</a></h6>
 				{{ end }}
-			</div>
+			</div>  
+		</div>
 
-		<!-- Contactanos -->
+		<!-- /Código de Conducta -->
+
+		
+
+
 
 		
 	  </div>
