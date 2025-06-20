@@ -18,6 +18,7 @@ googleAnalytics = ""
 tag = "tags"
 category = "categories"
 speaker = "speakers"
+comite = "comite"
 
 # output
 [outputs]
@@ -57,7 +58,7 @@ link="https://kit.fontawesome.com/a6f10b653b.js"
   weight = 1
 
   [[menu.main]]
-  name = "Comité"
+  name = "Cómite"
   URL = "/comite"
   weight = 2
 
@@ -148,7 +149,7 @@ preloader = "" # use jpg, png, svg or gif format.
 
 # Navigation button
 [params.navigation_button]
-enable = true
+enable = false
 label = "Ver conferencias"
 link = "/sessions/2023/"
 

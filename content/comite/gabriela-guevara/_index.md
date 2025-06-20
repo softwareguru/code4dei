@@ -13,3 +13,5 @@ github: ""
 weight: 1
 especificacion: consejera
 ---
+
+Especialista en Aceleración Comercial y Transformación Organizacional, con más de 20 años de experiencia en Tecnologías de la Información, incluyendo la implementación de soluciones TIC, ERP y CRM. Ha liderado proyectos en comunidades digitales y consultorías en teletrabajo, aportando una visión estratégica e innovadora. Con una sólida trayectoria como docente en Educación Superior durante más de 12 años.
