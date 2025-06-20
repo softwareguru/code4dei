@@ -128,7 +128,7 @@ logo = "/images/code4dei.jpg"
 home = "Home"
 
 # Meta data
-description = """Code 4 DEI es un evento que busca promover la inclusión en todos los niveles y eliminar barreras para alcanzar todo el potencial de la industria y fomentar la innovación."""
+description = """Code 4 DEI es una iniciativa de Software Guru que impulsa la construcción de una industria tecnológica más inclusiva, equitativa e innovadora. Su propósito es generar conciencia en quienes no forman parte de grupos vulnerables sobre los desafíos reales que enfrentan otros, y eliminar las barreras que limitan el potencial de las personas."""
 images = ["/images/code4dei.jpg"]
 twitter_user = "RevistaSG"
 email = "eventos@sg.com.mx"
