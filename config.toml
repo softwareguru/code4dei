@@ -76,7 +76,7 @@ link="https://kit.fontawesome.com/a6f10b653b.js"
   [[menu.main]]
     identifier = "evento1"
     name = "Hackeando barreras por la inclusión"
-    URL = "/hackeando-barreras-por-la-inclusión"
+    URL = "/hackeando-barreras-por-la-inclusion"
     parent = "eventos"
     weight = 1
 
