@@ -1,5 +1,5 @@
 ---
-title: "Laura Figuera"
+title: "Laura Figueroa"
 images : 
  - "images/comite/laura-figueroa.jpg"
 designation : ""
