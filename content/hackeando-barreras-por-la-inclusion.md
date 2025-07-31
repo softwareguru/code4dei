@@ -28,3 +28,13 @@ Esta es una iniciativa de Impact Click, una fundación sin fines de lucro que im
 ¡No te pierdas esta oportunidad de transformar tu empresa y contribuir a un México más equitativo y próspero!
 
 <a href="https://www.eventbrite.com.mx/e/hackeando-barreras-por-la-inclusion-tickets-1373862101529?aff=oddtdtcreator" target="_black" class="text-center mx-auto d-block"><h3>¡Regístrate ahora y sé parte del cambio!</h3></a>
+
+
+Sé parte de las organizaciones que inspiran y conectan con talento diverso.
+Con tu patrocinio, este evento puede hacerse realidad. 
+
+Consulta nuestro <a href="/files/prospectus-hackeando-barreras-por-la-inclusion.pdf" target="_blank">Prospectus</a> para conocer más sobre las opciones de patrocinio
+
+<p class="text-center"><strong>¿Te interesa apoyar el evento o conocer más detalles?</strong></p>
+
+<p class="text-center">📩 Escríbenos a info@code4dei.com</p>
