@@ -7,7 +7,7 @@ draft: false
 
 **Hackeando barreras por la inclusión** es un congreso donde exploraremos cómo la inclusión laboral de personas con discapacidad no solo es un acto de equidad social, sino una estrategia poderosa para el éxito de tu negocio.
 
-<img src="/images/hackeando-barreras-por-la-inclusion.png" class="img-fluid mx-auto d-block" >
+<img src="/images/hackeando-barreras.png" class="img-fluid mx-auto d-block" >
 <br>
 
 ### Lo que descubrirás:
@@ -33,7 +33,7 @@ Esta es una iniciativa de Impact Click, una fundación sin fines de lucro que im
 Sé parte de las organizaciones que inspiran y conectan con talento diverso.
 Con tu patrocinio, este evento puede hacerse realidad. 
 
-Consulta nuestro <a href="/files/prospectus-hackeando-barreras-por-la-inclusion.pdf" target="_blank">Prospectus</a> para conocer más sobre las opciones de patrocinio
+Consulta nuestro <a href="/files/prospectus_hackeando_barreras_por_la_inclusion_v1.2.pdf" target="_blank">Prospectus</a> para conocer más sobre las opciones de patrocinio
 
 <p class="text-center"><strong>¿Te interesa apoyar el evento o conocer más detalles?</strong></p>
 
