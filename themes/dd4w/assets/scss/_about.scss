@@ -62,11 +62,30 @@
 
 
 .hackeando-hero{
-margin-top: -250px;
+margin-top: -260px;
 	@media (max-width: 555px) {
-		display: none;;
+		display: none;
 	  }
 }
+
+
+.hackeando-hero-mobile{
+
+display: none;
+
+	@media (max-width: 555px) {
+		margin-top: -320px;
+		display: block;
+	}
+
+		@media (max-width: 332px) {
+		margin-top: -390px;
+
+	}
+}
+
+
+
 
 
 .acerca-hackeando{
