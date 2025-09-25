@@ -12,7 +12,6 @@ paginate = "8"
 # Este es el tag normal de analytics
 # googleAnalytics = "G-HV96ZN2N60"
 # Este es el de google tag manager
-googleAnalytics = ""
 
 [taxonomies]
 tag = "tags"
