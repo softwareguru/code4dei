@@ -1,24 +1,29 @@
 {{ define "main" }}
 
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Borel&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
-
 
 <div>
 
   <div class="hackeando-hero">
      <img src="/images/hackeando-hero-2025.png" class="img-fluid mx-auto d-block">
+     <div class="parent">
+        <div class="div1">
+          <a href="https://www.eventbrite.com.mx/e/hackeando-barreras-por-la-inclusion-tickets-1373862101529?aff=oddtdtcreator" target="_blank">
+          <button type="button" class="btn hackeando-registro" style="background-color: #000000 !important;">¡<p class="d-inline borel-regular">Regístrate</p> ahora!</button>
+          </a> 
+        </div>
+      </div>
   </div>
 
-  <div class="hackeando-hero-mobile">
-    <img src="/images/hackeando-hero-mobile.png" class="img-fluid mx-auto">
-  </div>
+      <div class="hackeando-hero-mobile">
+          <a href="https://www.eventbrite.com.mx/e/hackeando-barreras-por-la-inclusion-tickets-1373862101529?aff=oddtdtcreator" target="_blank">
+            <img src="/images/hackeando-hero-mobile-2025.png" class="img-fluid mx-auto">
+          </a>
+      </div>
 
-  
-    
-<br>
+  <br>
 
 <div>
     <h1 class="text-center">¿De qué se trata el <p class="d-inline borel-regular">evento</p>?</h1>
@@ -37,6 +42,7 @@
 
 <br>
 
+<!-- Acordeon 1-->
 <div>
     <h1 class="text-center">¿Qué <p class="d-inline borel-regular">descubrirás</p>?</h1>
     <br>
@@ -100,6 +106,7 @@
   </div>
 </div>
 </div>
+<!-- /Acordeon 1-->
 
 <br>
 
@@ -119,33 +126,53 @@
 
 <br>
 
+<!-- Acordeon 2-->
 <div>
-    <h1 class="text-center"><p class="d-inline borel-regular">Regístrate</p> ahora</h1>
+    <div class="accordion" id="accordionExample">
+  <div class="">
+    <div class="" id="headingFive">
+      <h2 class="mb-0">
+        <button class="btn-block text-center borel-regular" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive" style="background-color: #E12178 !important; padding-top: 40px;">
+          <h1 style="color: #F6F6D6 !important;">Conoce la agenda general:</h1>
+        </button>
+      </h2>
+    </div>
 
-    <div class="container text-center">
+    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+      <div class="card-body">
+      {{ partial "hackeando-schedule.html" . }}
+      </div>
+    </div>
+  </div>
+  <div class="">
+    <div class="" id="headingSix">
+      <h2 class="mb-0">
+        <button class="btn-block text-center collapsed borel-regular" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix" style="background-color: #3C625C !important; padding-top: 40px;">
+          <h1 style="color: #F6F6D6 !important;">Conoce a los speakers confirmados:</h1>
+        </button>
+      </h2>
+    </div>
+    <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
+      <div>
+        {{ partial "speakers-confirmados.html" . }}
+      </div>
+    </div>
+  </div>
 
-   <h4 class="mt-3 mb-3">Sé parte de las organizaciones que inspiran y conectan con talento diverso. Con tu patrocinio, este evento puede hacerse realidad.</h4>
 </div>
 </div>
+<!-- /Acordeon 2-->
 
 <br>
 
+<!-- Sponsors-->
 <div>
-    <h1 class="text-center"><p class="d-inline borel-regular">Agenda</p> general</h1>
+    <h1 class="text-center">Fue posible <p class="d-inline borel-regular">gracias a</p></h1>
 
-    {{ partial "hackeando-schedule.html" . }}
-    
+    {{ partial "sponsor.html" . }}
+
 </div>
-
-
-<!--
-<div>
-    <h1 class="text-center">Fue posible gracias a</h1>
-
-    
-</div>
--->
-
+<!-- /Sponsors-->
 
 <div>
     <h1 class="text-center">Consulta nuesto <p class="d-inline borel-regular">prospectus</p></h1>

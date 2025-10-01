@@ -33,11 +33,6 @@ days:
       - type: timelabel
         label: "9:00"
         gridarea: "3/1/4/2"
-      - type: activity
-        label: "Retos de la inclusión laboral en los espacios de trabajo por Jorge Moreno de Pasión por ganar"
-        gridarea: "3/2/4/6"
-        timelabel: "11:00 - 11:15"
-        gridaream: "3/1/4/2"
 
       - type: timelabel
         label: "11:38"
@@ -51,11 +46,6 @@ days:
       - type: timelabel
         label: "12:01"
         gridarea: "5/1/6/2"
-      - type: activity
-        label: "Activismo y los retos de la inclusión de personas con discapacidad en la vía pública por Martha Garcia de Moviento de Personas con Discapcidad"
-        gridarea: "5/2/6/6"
-        timelabel: "12:01 - 12:24"
-        gridaream: "5/1/6/2"
 
       - type: timelabel
         label: "12:24"
@@ -69,11 +59,6 @@ days:
       - type: timelabel
         label: "12:47"
         gridarea: "7/1/8/2"
-      - type: activity
-        label: "Cómo construir productos digitales accesibles por Belén Ceballos"
-        gridarea: "7/2/8/6"
-        timelabel: "12:47 - 13:10"
-        gridaream: "7/1/8/2"
 
       - type: timelabel
         label: "13:10"
@@ -114,12 +99,7 @@ days:
       - type: timelabel
         label: "14:28"
         gridarea: "12/1/13/2"
-      - type: activity
-        label: "Responsable técnico de la norma NOM-039-SSA-2023 por Manuel Yáñez"
-        gridarea: "12/2/13/6"
-        timelabel: "14:28 - 14:51"
-        gridaream: "12/1/13/2"
-
+        
       - type: timelabel
         label: "14:51"
         gridarea: "13/1/14/2"

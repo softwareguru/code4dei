@@ -84,10 +84,6 @@ display: none;
 	}
 }
 
-
-
-
-
 .acerca-hackeando{
     display: flex; 
     align-items: center;
@@ -101,3 +97,42 @@ display: none;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: black;
 }
+
+.hackeando-registro{
+	border-radius: 40px;
+	color: white; 
+	font-size: 2em;
+	border: none;
+	text-transform: none;
+    &:hover {
+        color: #F6F6D6;
+    }
+	@media (max-width: 814px) {
+		font-size: 1em;
+	}
+}
+
+
+.parent {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+grid-template-rows: repeat(4, 1fr);
+grid-column-gap: 0px;
+grid-row-gap: 0px;
+margin-top: -290px;
+margin-left: 40px;
+
+	@media (max-width: 984px) {
+		margin-left: 20px;
+		margin-top: -240px;
+	}
+
+		@media (max-width: 814px) {
+		margin-top: -170px;
+		
+	}
+}
+
+.div1 { grid-area: 3 / 1 / 4 / 3; }
+
+

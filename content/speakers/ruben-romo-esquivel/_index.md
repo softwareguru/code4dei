@@ -2,7 +2,7 @@
 title: "Rubén Romo Esquivel"
 date: 2023-08-25T13:29:20-06:00
 images : 
- - "images/speakers/ruben-romo-esquivel.jpg"
+ - "images/speakers/ruben_romo.png"
 designation : "LATAM Business Manager"
 country: ""
 facebook: ""
@@ -13,6 +13,7 @@ github: ""
 events: 
  - 2023
  - 2025
+hackeando: true
 ---
 
 Consultor en planeación estratégica, desarrollo comercial, sustentabilidad ESG, transformación digital y nuevos negocios, con más de 20 años de experiencia en el ramo. MBA por parte del Instituto Panamericano de Alta Dirección de Empresa, IPADE. Diplomado en ESG Sustainability por la Universidad de Nueva York, Especialidad en Mercadotecnia por la Universidad de Cambridge y Licenciatura por parte del Instituto Tecnológico de Estudios Superiores de Monterrey.

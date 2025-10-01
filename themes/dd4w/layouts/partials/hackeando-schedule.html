@@ -21,8 +21,8 @@
             {{ range sort (sort (where (where $.Site.Pages "Section" "sessions") ".Params.day" $curr_day )  ".Title") ".Params.time_start" }}
               <div class="session-item track-{{ .Params.track | anchorize }}" {{ with .Params.gridarea }}style="grid-area: {{. | safeCSS}};"{{end}} data-slot='{{.Params.slot}}' data-timestart='{{ with .Params.time_start | time }}{{ .Format "02 Jan 2006 15:04:05 MST" }}{{ end }}' data-timeend='{{ with .Params.time_end | time }}{{ .Format "02 Jan 2006 15:04:05 MST" }}{{ end }}' data-track="{{ .Params.track }}">
                 <div class="session-time hour d-none">{{ with .Params.time_start | time }}{{ .Format "15:04" }}{{ end }}{{ with .Params.time_end | time }} - {{ .Format "15:04" }}{{ end }}. </div>
-                <div class="session-title"><a class="session-title" href="#abs-{{.Params.slug}}" data-toggle="collapse" role="button">{{ .Params.title }}</a></div>
-                <div class="session-speakers names">{{ with .Params.speakers }}Por {{ delimit . ", " " & " }}{{ end }}</div>
+                <div class="session-title"><a class="session-title text-white" href="#abs-{{.Params.slug}}" data-toggle="collapse" role="button">{{ .Params.title }}</a></div>
+                <div class="session-speakers names text-white">{{ with .Params.speakers }}Por {{ delimit . ", " " & " }}{{ end }}</div>
                 <div class="d-flex justify-content-between">
                   <div>
                     <div class="track-name">{{ with .Params.track }}Track: {{ . }}{{ end }}</div>
@@ -40,8 +40,8 @@
                 </div>
 
                 <div class="collapse card-abstract" id="abs-{{.Params.slug}}">
-                  <div class="my-2">{{ .Summary }}</div>
-                  <div><a href="{{.Permalink}}" class="read-more">Ver detalles ...</a></div>
+                  <div class="my-2 text-white">{{ .Summary }}</div>
+                  <div><a href="{{.Permalink}}" class="read-more text-white">Ver detalles ...</a></div>
                 </div>
               </div> 
             {{ end }}
@@ -50,19 +50,19 @@
       <div class="d-block d-sm-none">
         <div class="daygrid-xs">
             {{ range (where .schedule_items ".type" "activity") }}
-              <div class="{{.type}} " {{ with .gridaream }}style="grid-area: {{ . | safeCSS}};"{{end}}><div class="session-time hour">{{.timelabel}}</div>{{.label}}</div>
+              <div class="{{.type}}" {{ with .gridaream }}style="grid-area: {{ . | safeCSS}};"{{end}}><div class="session-time hour text-white">{{.timelabel}}</div>{{.label}}</div>
             {{ end }}
 
             {{ range sort (sort (where (where $.Site.Pages "Section" "sessions") ".Params.day" $curr_day )  ".Title") ".Params.timeslot" }}
-              <div class=" session-item track-{{ .Params.track | anchorize }}" {{ with .Params.gridaream }}style="grid-area: {{. | safeCSS}};"{{end}} data-slot='{{.Params.slot}}' data-timestart='{{ with .Params.time_start | time }}{{ .Format "02 Jan 2006 15:04:05 MST" }}{{ end }}' data-timeend='{{ with .Params.time_end | time }}{{ .Format "02 Jan 2006 15:04:05 MST" }}{{ end }}' data-track="{{ .Params.track }}">
-                <div class="session-time hour">{{ with .Params.time_start | time }}{{ .Format "15:04" }}{{ end }}{{ with .Params.time_end | time }} - {{ .Format "15:04" }}. {{ end }}{{ with .Params.room }}{{.}}{{ end }}</div>
-                <div class="session-title"><a class="session-title" data-toggle="collapse" href="#abs-{{.Params.slug}}">{{ .Params.title }}</a></div>
-                <div class="session-speakers names">{{ with .Params.speakers }}By {{ delimit . ", " " & " }}{{ end }}</div>
+              <div class=" session-item track-{{ .Params.track | anchorize }} text-white" {{ with .Params.gridaream }}style="grid-area: {{. | safeCSS}};"{{end}} data-slot='{{.Params.slot}}' data-timestart='{{ with .Params.time_start | time }}{{ .Format "02 Jan 2006 15:04:05 MST" }}{{ end }}' data-timeend='{{ with .Params.time_end | time }}{{ .Format "02 Jan 2006 15:04:05 MST" }}{{ end }}' data-track="{{ .Params.track }}">
+                <div class="session-time hour text-white">{{ with .Params.time_start | time }}{{ .Format "15:04" }}{{ end }}{{ with .Params.time_end | time }} - {{ .Format "15:04" }}. {{ end }}{{ with .Params.room }}{{.}}{{ end }}</div>
+                <div class="session-title"><a class="session-title text-white" data-toggle="collapse" href="#abs-{{.Params.slug}}">{{ .Params.title }}</a></div>
+                <div class="session-speakers names text-white">{{ with .Params.speakers }}By {{ delimit . ", " " & " }}{{ end }}</div>
                 <div class="track-name">{{ with .Params.track }}Track: {{ . }}{{ end }}</div>
 
                 <div class="collapse card-abstract" id="abs-{{.Params.slug}}">
-                  <div class="my-2">{{ .Summary }}</div>
-                  <div><a href="{{.Permalink}}" class="read-more">Leer más ...</a></div>
+                  <div class="my-2 text-white">{{ .Summary }}</div>
+                  <div><a href="{{.Permalink}}" class="read-more text-white">Leer más ...</a></div>
                 </div>
               </div> 
             {{ end }}

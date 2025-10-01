@@ -2,7 +2,7 @@
 title: "Roman Maldonado"
 date: 2025-09-25T01:18:38-06:00
 images : 
- - "images/speakers/speaker.jpg"
+ - "images/speakers/roman_maldonado.png"
 designation : "Director de FHADI"
 country: ""
 facebook: ""
