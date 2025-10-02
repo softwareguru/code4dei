@@ -37,11 +37,6 @@ days:
       - type: timelabel
         label: "11:38"
         gridarea: "4/1/5/2"
-      - type: activity
-        label: "Capacitar para incluir: habilidades que transforman vidas y abren puertas al mundo digital por Román Maldonado FHADI"
-        gridarea: "4/2/5/6"
-        timelabel: "11:38 - 12:01"
-        gridaream: "4/1/5/2"
 
       - type: timelabel
         label: "12:01"
@@ -103,11 +98,6 @@ days:
       - type: timelabel
         label: "14:51"
         gridarea: "13/1/14/2"
-      - type: activity
-        label: "Testimonios sobre inclusión laboral en la industria tecnológica por Sonia Rodríguez y Santiago Almeida"
-        gridarea: "13/2/14/6"
-        timelabel: "14:51 - 15:14"
-        gridaream: "13/1/14/2"
 
       - type: timelabel
         label: "15:14"

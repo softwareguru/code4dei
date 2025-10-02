@@ -16,8 +16,7 @@ slides:
 video:
 ---
 
-
-"En esta charla hablaremos para abrir espacios laborales inclusivos como: 
+En esta charla hablaremos para abrir espacios laborales inclusivos como: 
 
 - La importancia de abrir espacios laborales inclusivos 
 - El paso a paso para que tu empresa se convierta en un lugar que integra talento con discapacidad
@@ -30,4 +29,3 @@ video:
 
 Beneficios de la inclusión
  - Cuáles son los beneficios que se pueden obtener con la inclusión laboral de Personas con Discapacidad (Legales, de productividad, etc)
-"
