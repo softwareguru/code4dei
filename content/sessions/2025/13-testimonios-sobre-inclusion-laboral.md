@@ -17,4 +17,6 @@ video:
 images:
 ---
 
-La presentación abordará la Norma Oficial Mexicana NOM-039-SSA-2023 en materia de certificación de la discapacidad. Se explicarán los elementos fundamentales de la Norma, su relevancia en la garantía de derechos de las personas con discapacidad y su impacto en los procesos de certificación a nivel nacional. Asimismo, se presentarán los principales retos y oportunidades que implica su implementación, haciendo énfasis en la importancia de la interoperabilidad de los sistemas de información en salud y el fortalecimiento de la infraestructura institucional.
+En esta plática, Santiago compartirá su experiencia personal tras participar en el curso de herramientas digitales impartido por Impact Click. Esta capacitación le permitió adquirir nuevos conocimientos en marketing digital y descubrir que la tecnología puede ser una poderosa aliada para eliminar barreras.
+
+Gracias al curso, Santiago consiguió un empleo remoto, bien remunerado, que le brindó independencia económica, mejor calidad de vida y reconocimiento por sus habilidades. En pocas palabras, esta formación representó un cambio profundo y positivo: pasó de la duda a la confianza, de la falta de oportunidades a tener un trabajo digno, y de sentirse limitado a demostrar su verdadero potencial.
