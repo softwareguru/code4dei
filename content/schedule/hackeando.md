@@ -58,20 +58,10 @@ days:
       - type: timelabel
         label: "13:10"
         gridarea: "8/1/9/2"
-      - type: activity
-        label: "Sesión por confirmar"
-        gridarea: "8/2/9/6"
-        timelabel: "13:10 - 13:30"
-        gridaream: "8/1/9/2"
 
       - type: timelabel
         label: "13:30"
         gridarea: "9/1/10/2"
-      - type: activity
-        label: "Inclusión y negocio: cómo medir el impacto en tu empresa por Fernando Estrada, CEO de Éntrale"
-        gridarea: "9/2/10/6"
-        timelabel: "13:30 - 13:50"
-        gridaream: "9/1/10/2"
 
       - type: timelabel
         label: "13:50"
