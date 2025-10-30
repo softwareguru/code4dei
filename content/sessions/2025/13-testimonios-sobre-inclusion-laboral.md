@@ -3,6 +3,7 @@ id: testimonios-sobre-inclusion-laboral
 title: "Testimonios sobre inclusión laboral en la industria tecnológica por  Santiago Almeida"
 slug: testimonios-sobre-inclusion-laboral
 speakers:
+ - Sonia Rodriguez
  - Santiago Almeida
 time_start: 2025-11-19T14:51:00-06:00
 time_end: 2025-11-19T15:34:00-06:00
