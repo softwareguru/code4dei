@@ -2,7 +2,7 @@ enable :  true
 title : "Apoyado por"
 sponsor_group:
 
-  - title : "Fundaciones participantes"
+  - title : "Empresas y Fundaciones participantes"
     slug : "gold"
     sponsor:
 
@@ -14,6 +14,8 @@ sponsor_group:
         link : "https://www.facebook.com/MovimientoPcD/"
       - logo : "/images/logos/entrale.png"
         link : "https://entrale.org.mx/"
+      - logo : "/images/logos/mobik.png"
+        link : "https://www.mobiik.com/"
 
   - title : "Organizado por"
     slug : "gold"
