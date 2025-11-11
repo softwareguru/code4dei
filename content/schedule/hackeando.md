@@ -31,7 +31,7 @@ days:
         gridaream: "2/1/3/2"
 
       - type: timelabel
-        label: "9:00"
+        label: "11:10"
         gridarea: "3/1/4/2"
 
       - type: timelabel
@@ -93,7 +93,7 @@ days:
         label: "15:14"
         gridarea: "14/1/15/2"
       - type: activity
-        label: "Clausura"
+        label: "Clausura Por Laura Figueroa, CEO de Impact Click"
         gridarea: "14/2/15/6"
         timelabel: "15:14 - 15:34"
         gridaream: "14/1/15/2"

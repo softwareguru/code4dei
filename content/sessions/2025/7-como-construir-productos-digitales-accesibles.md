@@ -1,7 +1,8 @@
 ---
 id: como-construir-productos-digitales-accesibles
-title: "Como Construir Productos Digitales Accesibles"
-slug: como-construir-productos-digitales-accesibles
+title: "Cómo Diseñar Productos Digitales Accesibles"
+slug: como-disenar-productos-digitales-accesibles
+aliases: como-construir-productos-digitales-accesibles 
 speakers:
  - Belén Ceballos
 time_start: 2025-11-19T12:47:00-06:00
