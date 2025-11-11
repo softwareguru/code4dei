@@ -1,15 +1,16 @@
 ---
-id: responsable-tecnico-de-la-norma
-title: "Responsable técnico de la norma NOM-039-SSA-2023"
-slug: responsable-tecnico-de-la-norma
+id: norma-mexicana-que-establece-los-criterios-y-procedimientos-para-la-certificacion-de-la-discapacidad-en-mexico
+title: "Norma Mexicana que establece los criterios y procedimientos para la certificación de la discapacidad en México NOM-039-SSA-2023"
+slug: norma-mexicana-que-establece-los-criterios-y-procedimientos-para-la-certificacion-de-la-discapacidad-en-mexico
+aliases: responsable-tecnico-de-la-norma
 speakers:
  - Manuel Yáñez
-time_start: 2025-11-19T14:28:00-06:00
-time_end: 2025-11-19T14:51:00-06:00
+time_start: 2025-11-19T14:30:00-06:00
+time_end: 2025-11-19T14:50:00-06:00
 day: h1-2025
-gridarea: "12/2/13/6"
+gridarea: "13/2/14/6"
 room: Auditorio
-timeslot: 12
+timeslot: 13
 track: Charla
 tags:
 slides: 

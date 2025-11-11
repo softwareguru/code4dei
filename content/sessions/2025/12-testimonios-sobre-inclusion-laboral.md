@@ -5,13 +5,13 @@ slug: testimonios-sobre-inclusion-laboral
 speakers:
  - Sonia Rodriguez
  - Santiago Almeida
-# - Britanny Pérez
-time_start: 2025-11-19T14:51:00-06:00
-time_end: 2025-11-19T15:34:00-06:00
+ - Britanny Perez
+time_start: 2025-11-19T14:10:00-06:00
+time_end: 2025-11-19T14:30:00-06:00
 day: h1-2025
-gridarea: "13/2/14/6"
+gridarea: "12/2/13/6"
 room: Auditorio
-timeslot: 13
+timeslot: 12
 track: Charla
 tags:
 slides: 

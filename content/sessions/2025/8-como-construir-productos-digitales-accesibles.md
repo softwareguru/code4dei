@@ -5,12 +5,12 @@ slug: como-disenar-productos-digitales-accesibles
 aliases: como-construir-productos-digitales-accesibles 
 speakers:
  - Belén Ceballos
-time_start: 2025-11-19T12:47:00-06:00
-time_end: 2025-11-19T13:10:00-06:00
+time_start: 2025-11-19T12:40:00-06:00
+time_end: 2025-11-19T13:00:00-06:00
 day: h1-2025
-gridarea: "7/2/8/6"
+gridarea: "8/2/9/6"
 room: Auditorio
-timeslot: 7
+timeslot: 8
 track: Charla
 tags:
 slides: 

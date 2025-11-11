@@ -1,15 +1,15 @@
 ---
-id: activismo-y-los-retos-de-la-inclusion
-title: "Activismo y los retos de la inclusión de personas con discapacidad en la vía pública"
-slug: activismo-y-los-retos-de-la-inclusion
+id: incluir-en-remoto
+title: "Incluir en remoto: el futuro del trabajo diverso"
+slug: incluir-en-remoto
 speakers:
- - Martha Garcia
-time_start: 2025-11-19T11:50:00-06:00
-time_end: 2025-11-19T12:10:00-06:00
+ - Omar Sandoval
+time_start: 2025-11-19T12:10:00-06:00
+time_end: 2025-11-19T12:25:00-06:00
 day: h1-2025
-gridarea: "5/2/6/6"
+gridarea: "6/2/7/6"
 room: Auditorio
-timeslot: 5
+timeslot: 6
 track: Charla
 tags:
 slides: 

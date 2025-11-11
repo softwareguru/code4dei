@@ -4,12 +4,12 @@ title: "Inclusión y negocio: cómo medir el impacto en tu empresa por Fernando 
 slug: inclusion-y-negocio
 speakers:
  - Fernando Estrada
-time_start: 2025-11-19T13:30:00-06:00
-time_end: 2025-11-19T13:50:00-06:00
+time_start: 2025-11-19T13:20:00-06:00
+time_end: 2025-11-19T13:40:00-06:00
 day: h1-2025
-gridarea: "9/2/10/6"
+gridarea: "10/2/11/6"
 room: Auditorio
-timeslot: 9
+timeslot: 10
 track: Charla
 tags:
 slides: 

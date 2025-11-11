@@ -4,8 +4,8 @@ title: "Retos de la inclusión laboral en los espacios de trabajo"
 slug: retos-de-la-inclusion-laboral-en-los-espacios-de-trabajo
 speakers:
  - Jorge Moreno
-time_start: 2023-08-31T11:15:00-06:00
-time_end: 2023-08-31T11:38:00-06:00
+time_start: 2023-08-31T11:10:00-06:00
+time_end: 2023-08-31T11:30:00-06:00
 day: h1-2025
 gridarea: "3/2/4/6"
 room: Auditorio
