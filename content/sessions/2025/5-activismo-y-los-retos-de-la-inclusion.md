@@ -4,8 +4,8 @@ title: "Activismo y los retos de la inclusión de personas con discapacidad en l
 slug: activismo-y-los-retos-de-la-inclusion
 speakers:
  - Martha Garcia
-time_start: 2025-11-19T11:50:00-06:00
-time_end: 2025-11-19T12:10:00-06:00
+time_start: 2025-11-19T12:00:00-06:00
+time_end: 2025-11-19T12:20:00-06:00
 day: h1-2025
 gridarea: "5/2/6/6"
 room: Auditorio

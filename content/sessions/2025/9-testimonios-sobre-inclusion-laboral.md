@@ -6,12 +6,12 @@ speakers:
  - Sonia Rodriguez
  - Santiago Almeida
  - Britanny Perez
-time_start: 2025-11-19T14:10:00-06:00
-time_end: 2025-11-19T14:30:00-06:00
+time_start: 2025-11-19T13:20:00-06:00
+time_end: 2025-11-19T13:40:00-06:00
 day: h1-2025
-gridarea: "12/2/13/6"
+gridarea: "9/2/10/6"
 room: Auditorio
-timeslot: 12
+timeslot: 9
 track: Charla
 tags:
 slides: 

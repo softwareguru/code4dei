@@ -4,8 +4,8 @@ title: "Incluir en remoto: el futuro del trabajo diverso"
 slug: incluir-en-remoto
 speakers:
  - Omar Sandoval
-time_start: 2025-11-19T12:10:00-06:00
-time_end: 2025-11-19T12:25:00-06:00
+time_start: 2025-11-19T12:20:00-06:00
+time_end: 2025-11-19T12:40:00-06:00
 day: h1-2025
 gridarea: "6/2/7/6"
 room: Auditorio

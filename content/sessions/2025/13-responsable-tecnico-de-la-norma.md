@@ -5,8 +5,8 @@ slug: norma-mexicana-que-establece-los-criterios-y-procedimientos-para-la-certif
 aliases: responsable-tecnico-de-la-norma
 speakers:
  - Manuel Yáñez
-time_start: 2025-11-19T14:30:00-06:00
-time_end: 2025-11-19T14:50:00-06:00
+time_start: 2025-11-19T14:55:00-06:00
+time_end: 2025-11-19T15:15:00-06:00
 day: h1-2025
 gridarea: "13/2/14/6"
 room: Auditorio

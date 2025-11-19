@@ -4,8 +4,8 @@ title: "Capacitar para incluir: habilidades que transforman vidas y abren puerta
 slug: capacitar-para-incluir
 speakers:
  - Roman Maldonado
-time_start: 2023-08-31T11:30:00-06:00
-time_end: 2023-08-31T11:50:00-06:00
+time_start: 2023-08-31T11:40:00-06:00
+time_end: 2023-08-31T12:00:00-06:00
 day: h1-2025
 gridarea: "4/2/5/6"
 room: Auditorio
