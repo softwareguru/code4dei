@@ -8,6 +8,7 @@ image : "images/blog/equidad.png"
 author: "DD4W" 
 botton: Ver más
 slug: /la-equidad-como-bandera-de-la-diversidad-e-inclusion
+summary: "La industria de la tecnología en México y América Latina se enfrenta a diversos retos en materia de inclusión y equidad laboral. A pesar de los avances en la promoción de políticas de diversidad, la implementación efectiva de estas políticas sigue siendo un desafío. Desde discrepancias entre la retórica y la realidad hasta obstáculos en las contrataciones y la promoción, es crucial abordar estos problemas para crear entornos laborales más inclusivos y equitativos."
 ---
 
 La industria de la tecnología en México y América Latina se enfrenta a diversos retos en materia de inclusión y equidad laboral. A pesar de los avances en la promoción de políticas de diversidad, la implementación efectiva de estas políticas sigue siendo un desafío. Desde discrepancias entre la retórica y la realidad hasta obstáculos en las contrataciones y la promoción, es crucial abordar estos problemas para crear entornos laborales más inclusivos y equitativos.

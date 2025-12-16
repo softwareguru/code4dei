@@ -8,6 +8,7 @@ image : "images/blog/inclusion-laboral.png"
 author: "DD4W" 
 botton: Ver más
 slug: /inclusion-laboral-como-motor-de-innovacion-y-crecimiento-de-la-industria-de-ti
+summary: "El reciente congreso organizado por [Impact Click](https://www.impactclick.org/) en colaboración con [Code 4 DEI](https://code4dei.com/) y [Woman Diversity](https://www.linkedin.com/company/womandiversity/) reunió a líderes empresariales, especialistas en diversidad e inclusión, organizaciones civiles y profesionales del sector tecnológico para analizar un tema urgente y lleno de oportunidad: **incluir a personas con discapacidades físicas en la industria de TI.**"
 ---
 
 El reciente congreso organizado por [Impact Click](https://www.impactclick.org/) en colaboración con [Code 4 DEI](https://code4dei.com/) y [Woman Diversity](https://www.linkedin.com/company/womandiversity/) reunió a líderes empresariales, especialistas en diversidad e inclusión, organizaciones civiles y profesionales del sector tecnológico para analizar un tema urgente y lleno de oportunidad: **incluir a personas con discapacidades físicas en la industria de TI.**
