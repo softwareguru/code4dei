@@ -21,7 +21,7 @@
   --linea: rgba(29, 29, 27, .12);
   --display: "Montserrat Alternates", "Trebuchet MS", sans-serif;
   --body: "Hanken Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
-  --maxw: 1180px;
+  --maxw: 1440px;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -390,3 +390,31 @@ p { margin: 0; }
 .rejilla { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 @media (max-width: 900px) { .rejilla { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; } }
 @media (max-width: 560px) { .rejilla { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; } }
+
+/* Pantallas anchas: la columna llega a 1440 px y el contenido escala con
+   ella para no verse chico en monitores grandes. */
+@media (min-width: 1280px) {
+  .wrap { padding-inline: 40px; }
+  .hero { padding-block: 64px 88px; }
+  .hero__grid { grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.9fr); gap: 64px; }
+  .hero h1 { font-size: clamp(56px, 3.9vw, 70px); }
+  .hero__txt { gap: 20px; }
+  .hero .lead { font-size: 21px; max-width: 56ch; }
+  .hero__logo { padding: 56px; border-radius: 32px; }
+  .hero__logo .chip { font-size: 15px; padding: 9px 16px; }
+  .sig { max-width: 520px; }
+  .head h2 { font-size: clamp(42px, 3.2vw, 52px); }
+  .head__txt { max-width: 820px; }
+  .head p { font-size: 19px; }
+  .sec { padding-block: 112px; }
+}
+@media (min-width: 1600px) {
+  body { font-size: 18px; }
+  .feat h3 { font-size: 24px; }
+  .metrica b { font-size: 52px; }
+  .split__txt h2 { font-size: 48px; }
+  .split__txt p { font-size: 20px; }
+  .prog__txt h3 { font-size: 34px; }
+  .prog__txt p { font-size: 19px; }
+  .persona img { width: min(156px, 100%); }
+}
