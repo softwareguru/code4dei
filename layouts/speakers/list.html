@@ -1,0 +1,36 @@
+{{- /* /speakers/ · ponentes de los eventos de Code 4 DEI, agrupados por edición. */ -}}
+{{- $todas := where .Data.Pages "Params.images" "!=" nil -}}
+{{- $grupos := slice
+    (dict "clave" "2025" "titulo" "Hackeando barreras por la inclusión 2025")
+    (dict "clave" "2023" "titulo" "Code 4 DEI 2023") -}}
+{{ partial "c4d/head.html" . }}
+<body>
+{{ partial "c4d/header.html" . }}
+<main id="contenido">
+  <section class="ph">
+    <div class="wrap ph__in">
+      <nav class="migas" aria-label="Ruta"><a href="{{ "/" | relURL }}">Inicio</a><span>›</span><span>Ponentes</span></nav>
+      <span class="kicker">Ponentes</span>
+      <h1>Voces que nos han acompañado</h1>
+      <p class="ph__lead">Personas que han compartido su experiencia en los escenarios de Code 4 DEI. Entra a cada perfil para conocer su trayectoria y sus sesiones.</p>
+    </div>
+  </section>
+  <section style="padding-bottom: 96px">
+    <div class="wrap">
+      {{- range $grupos }}
+      {{- $clave := .clave }}
+      {{- $gente := slice }}
+      {{- range $todas.ByTitle }}{{ $ev := apply (.Params.events | default slice) "string" "." }}{{ if in $ev $clave }}{{ $gente = $gente | append . }}{{ end }}{{ end }}
+      {{- with $gente }}
+      <div class="edicion stack" style="gap: 24px">
+        <div class="head"><div class="head__txt"><h2>{{ (index (where $grupos "clave" $clave) 0).titulo }}</h2></div></div>
+        <div class="personas">{{ range . }}{{ partial "c4d/persona.html" . }}{{ end }}</div>
+      </div>
+      {{- end }}
+      {{- end }}
+    </div>
+  </section>
+</main>
+{{ partial "c4d/footer.html" . }}
+</body>
+</html>

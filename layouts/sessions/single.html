@@ -1,0 +1,39 @@
+{{- /* Detalle de una sesión. */ -}}
+{{- $edicion := path.Base .File.Dir -}}
+{{- $nombres := dict "2023" "Code 4 DEI 2023" "2025" "Hackeando barreras 2025" -}}
+{{ partial "c4d/head.html" . }}
+<body>
+{{ partial "c4d/header.html" . }}
+<main id="contenido">
+  <section class="ph">
+    <div class="wrap ph__in">
+      <nav class="migas" aria-label="Ruta"><a href="{{ "/" | relURL }}">Inicio</a><span>›</span><a href="{{ "sessions/" | relURL }}">Sesiones</a><span>›</span><a href="{{ .Parent.RelPermalink }}">{{ index $nombres $edicion | default .Parent.Title }}</a></nav>
+      <span class="kicker">{{ index $nombres $edicion | default "Sesión" }}{{ with .Params.track }} · {{ . }}{{ end }}</span>
+      <h1 style="font-size: clamp(30px, 4vw, 46px)">{{ .Title }}</h1>
+    </div>
+  </section>
+
+  <section style="padding-bottom: 96px">
+    <div class="wrap sesion">
+      <div class="stack" style="gap: 28px">
+        {{- with .Params.video }}
+        <div class="video"><iframe src="{{ replace . "https://youtu.be/" "https://www.youtube-nocookie.com/embed/" }}" title="Grabación de la sesión" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        {{- end }}
+        <article class="prosa">{{ .Content }}</article>
+        {{- with .Params.slides }}<a class="btn btn--borde" style="align-self: flex-start" href="{{ if hasPrefix . "http" }}{{ . }}{{ else }}{{ printf "slides/%s" . | relURL }}{{ end }}" target="_blank" rel="noopener noreferrer">Descargar slides</a>{{ end }}
+      </div>
+      <aside class="sesion__lado">
+        {{- with .GetTerms "speakers" }}
+        <h2>{{ if gt (len .) 1 }}Ponentes{{ else }}Ponente{{ end }}</h2>
+        {{- range . }}
+        <a class="mini" href="{{ .RelPermalink }}"><img src="{{ partial "c4d/foto-persona.html" . }}" alt="" width="56" height="56" loading="lazy"><span><b>{{ .Title }}</b>{{ with .Params.designation }}<span>{{ . }}</span>{{ end }}</span></a>
+        {{- end }}
+        {{- end }}
+        <a class="volver" href="{{ .Parent.RelPermalink }}">← Todas las sesiones de {{ index $nombres $edicion | default "esta edición" }}</a>
+      </aside>
+    </div>
+  </section>
+</main>
+{{ partial "c4d/footer.html" . }}
+</body>
+</html>

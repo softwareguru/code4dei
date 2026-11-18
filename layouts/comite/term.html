@@ -1,0 +1,29 @@
+{{- /* Perfil de integrante del comité. */ -}}
+{{ partial "c4d/head.html" . }}
+<body>
+{{ partial "c4d/header.html" . }}
+<main id="contenido">
+  <section class="ph" style="padding-bottom: 24px">
+    <div class="wrap ph__in">
+      <nav class="migas" aria-label="Ruta"><a href="{{ "/" | relURL }}">Inicio</a><span>›</span><a href="{{ "comite/" | relURL }}">Comité</a></nav>
+    </div>
+  </section>
+  <section style="padding-bottom: 96px">
+    <div class="wrap perfil">
+      <div class="perfil__foto">
+        <img src="{{ partial "c4d/foto-persona.html" . }}" alt="{{ .Title }}" width="320" height="320">
+        {{ partial "c4d/redes-persona.html" . }}
+      </div>
+      <div class="perfil__txt">
+        <span class="kicker">{{ if in (.Params.especificacion | default "") "consejera" }}Consejera{{ else }}Comité{{ end }} · Code 4 DEI</span>
+        <h1 style="font-size: clamp(32px, 4.4vw, 52px)">{{ .Title }}</h1>
+        {{- with .Params.designation }}<p class="perfil__cargo">{{ . }}</p>{{ end }}
+        <div class="prosa">{{ .Content }}</div>
+        <a class="volver" href="{{ "comite/" | relURL }}">← Todo el comité</a>
+      </div>
+    </div>
+  </section>
+</main>
+{{ partial "c4d/footer.html" . }}
+</body>
+</html>

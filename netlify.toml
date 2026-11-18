@@ -35,3 +35,66 @@ HUGO_ENABLEGITINFO = "true"
   to = "/"
   status = 301
   force = true
+
+# Páginas heredadas de otros eventos (DD4W 2023, CCOSS, SG Virtual), retiradas
+# en el rediseño 2026. Sus URLs llevan a la página vigente más cercana.
+[[redirects]]
+  from = "/agenda"
+  to = "/hackeando-barreras-por-la-inclusion/#agenda"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/agenda-code4dei"
+  to = "/hackeando-barreras-por-la-inclusion/#agenda"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/speakers/archive/"
+  to = "/speakers/"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/faq/*"
+  to = "/"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/live/*"
+  to = "/"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/program/*"
+  to = "/"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/registro/*"
+  to = "/"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/swag/*"
+  to = "/"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/sponsors/*"
+  to = "/"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/workshops/*"
+  to = "/"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/team/*"
+  to = "/"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/sedes-participantes/*"
+  to = "/"
+  status = 301
+  force = true

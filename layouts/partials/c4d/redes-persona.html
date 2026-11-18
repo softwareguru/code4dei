@@ -1,0 +1,11 @@
+{{- /* Botones a LinkedIn / X / GitHub de una persona, si los tiene. */ -}}
+{{- $p := . -}}
+{{- $redes := slice -}}
+{{- with $p.Params.linkedin }}{{ $redes = $redes | append (dict "n" "LinkedIn" "u" .) }}{{ end -}}
+{{- with $p.Params.twitter }}{{ $redes = $redes | append (dict "n" "X" "u" .) }}{{ end -}}
+{{- with $p.Params.github }}{{ $redes = $redes | append (dict "n" "GitHub" "u" .) }}{{ end -}}
+{{- with $redes }}
+<div class="perfil__redes">
+  {{- range . }}<a href="{{ .u }}" target="_blank" rel="noopener noreferrer">{{ .n }}<span class="sr"> de {{ $p.Title }} (pestaña nueva)</span></a>{{ end }}
+</div>
+{{- end }}

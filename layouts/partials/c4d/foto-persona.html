@@ -1,0 +1,10 @@
+{{- /* Devuelve la URL de la foto de una persona (ponente o comité).
+       En el comité usa static/images/c4d/comite/<slug>.jpg si existe. */ -}}
+{{- $p := . -}}
+{{- $url := "images/code4dei-logo.png" | relURL -}}
+{{- with $p.Params.images }}{{ $url = index . 0 | relURL }}{{ end -}}
+{{- if eq $p.Section "comite" -}}
+  {{- $nueva := printf "images/c4d/comite/%s.jpg" (path.Base $p.File.Dir) -}}
+  {{- if fileExists (printf "static/%s" $nueva) }}{{ $url = $nueva | relURL }}{{ end -}}
+{{- end -}}
+{{- return $url -}}

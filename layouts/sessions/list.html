@@ -1,0 +1,41 @@
+{{- /* /sessions/ (todas las ediciones) y /sessions/2023/, /sessions/2025/. */ -}}
+{{- $nombres := dict "2023" "Code 4 DEI 2023 · Conferencias de diversidad, equidad e inclusión" "2025" "Hackeando barreras por la inclusión 2025" -}}
+{{ partial "c4d/head.html" . }}
+<body>
+{{ partial "c4d/header.html" . }}
+<main id="contenido">
+  <section class="ph">
+    <div class="wrap ph__in">
+      <nav class="migas" aria-label="Ruta"><a href="{{ "/" | relURL }}">Inicio</a><span>›</span>{{ if .Sections }}<span>Sesiones</span>{{ else }}<a href="{{ "sessions/" | relURL }}">Sesiones</a>{{ end }}</nav>
+      <span class="kicker">Sesiones</span>
+      {{- if .Sections }}
+      <h1>Conferencias de ediciones pasadas</h1>
+      <p class="ph__lead">Charlas, paneles y testimonios de los eventos de Code 4 DEI. Entra a cada sesión para ver el resumen, la grabación y las slides cuando estén disponibles.</p>
+      {{- else }}
+      <h1>{{ index $nombres .File.ContentBaseName | default (index $nombres (path.Base .File.Dir)) | default .Title }}</h1>
+      {{- end }}
+    </div>
+  </section>
+
+  <section style="padding-bottom: 96px">
+    <div class="wrap">
+      {{- if .Sections }}
+        {{- range sort .Sections "File.Dir" "desc" }}
+        {{- $clave := path.Base .File.Dir }}
+        <div class="edicion stack" style="gap: 24px">
+          <div class="head">
+            <div class="head__txt"><h2>{{ index $nombres $clave | default .Title }}</h2></div>
+            <a class="btn btn--borde" href="{{ .RelPermalink }}">Ver solo esta edición</a>
+          </div>
+          <div class="agenda">{{ range partial "c4d/ordenar-sesiones.html" .RegularPages }}{{ partial "c4d/sesion.html" . }}{{ end }}</div>
+        </div>
+        {{- end }}
+      {{- else }}
+        <div class="agenda">{{ range partial "c4d/ordenar-sesiones.html" .RegularPages }}{{ partial "c4d/sesion.html" . }}{{ end }}</div>
+      {{- end }}
+    </div>
+  </section>
+</main>
+{{ partial "c4d/footer.html" . }}
+</body>
+</html>

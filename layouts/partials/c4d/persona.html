@@ -1,0 +1,10 @@
+{{- /* Tarjeta de persona (ponente o comité). Recibe la página de la persona.
+       Usa la foto de static/images/c4d/comite/<slug>.jpg si existe (fotos
+       actualizadas del comité); si no, la de su ficha. */ -}}
+{{- $p := . -}}
+{{- $foto := partial "c4d/foto-persona.html" $p -}}
+<a class="pcard" href="{{ $p.RelPermalink }}">
+  <img src="{{ $foto }}" alt="" width="120" height="120" loading="lazy">
+  <b>{{ $p.Title }}</b>
+  {{- with $p.Params.designation }}<span>{{ . }}</span>{{ end }}
+</a>

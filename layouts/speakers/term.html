@@ -1,0 +1,32 @@
+{{- /* Perfil de ponente con sus sesiones. */ -}}
+{{ partial "c4d/head.html" . }}
+<body>
+{{ partial "c4d/header.html" . }}
+<main id="contenido">
+  <section class="ph" style="padding-bottom: 24px">
+    <div class="wrap ph__in">
+      <nav class="migas" aria-label="Ruta"><a href="{{ "/" | relURL }}">Inicio</a><span>›</span><a href="{{ "speakers/" | relURL }}">Ponentes</a></nav>
+    </div>
+  </section>
+  <section style="padding-bottom: 96px">
+    <div class="wrap perfil">
+      <div class="perfil__foto">
+        <img src="{{ partial "c4d/foto-persona.html" . }}" alt="{{ .Title }}" width="320" height="320">
+        {{ partial "c4d/redes-persona.html" . }}
+      </div>
+      <div class="perfil__txt">
+        <span class="kicker">Ponente</span>
+        <h1 style="font-size: clamp(32px, 4.4vw, 52px)">{{ .Title }}</h1>
+        {{- with .Params.designation }}<p class="perfil__cargo">{{ . }}</p>{{ end }}
+        {{- with .Content }}<div class="prosa">{{ . }}</div>{{ end }}
+        {{- with .Data.Pages }}
+        <h2 style="font-size: 26px; margin-top: 12px">{{ if gt (len .) 1 }}Sus sesiones{{ else }}Su sesión{{ end }}</h2>
+        <div class="agenda">{{ range . }}{{ partial "c4d/sesion.html" . }}{{ end }}</div>
+        {{- end }}
+      </div>
+    </div>
+  </section>
+</main>
+{{ partial "c4d/footer.html" . }}
+</body>
+</html>

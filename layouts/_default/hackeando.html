@@ -1,0 +1,119 @@
+{{- /* Hackeando barreras por la inclusión · edición 2025 (layout: hackeando).
+       Contenido en data/c4d/hackeando.yml. */ -}}
+{{- $d := site.Data.c4d.hackeando -}}
+{{- $ses := where site.RegularPages "Section" "sessions" -}}
+{{- $ses = where $ses "Params.day" "h1-2025" -}}
+{{- $agenda := slice -}}
+{{- range $p := $ses }}{{ with $p.Params.time_start }}{{ $agenda = $agenda | append (dict "hora" ((time .).Format "15:04") "p" $p) }}{{ end }}{{ end -}}
+{{- range $d.logistica }}{{ $agenda = $agenda | append (dict "hora" .hora "t" .titulo) }}{{ end -}}
+{{- $agenda = sort $agenda "hora" -}}
+{{- $ponentes := slice -}}
+{{- with site.GetPage "/speakers" }}{{ range .Pages.ByTitle }}{{ $ev := apply (.Params.events | default slice) "string" "." }}{{ if in $ev "2025" }}{{ $ponentes = $ponentes | append . }}{{ end }}{{ end }}{{ end -}}
+{{ partial "c4d/head.html" . }}
+<body>
+{{ partial "c4d/header.html" . }}
+<main id="contenido">
+
+  <section class="hb-hero">
+    <div class="wrap hb-hero__grid">
+      <div class="hero__txt">
+        <nav class="migas" aria-label="Ruta"><a href="{{ "/" | relURL }}">Inicio</a><span>›</span><a href="{{ "/" | relURL }}#eventos">Eventos</a></nav>
+        <span class="kicker">1.ª edición · {{ $d.edicion.fecha }}</span>
+        <h1 style="font-size: clamp(38px, 5vw, 64px); line-height: 1.06">Hackeando barreras por la <span class="hl">inclusión</span></h1>
+        <p class="lead" style="font-size: 20px; color: var(--tinta-2)">{{ $d.descripcion }}</p>
+        <div class="chips"><span class="chip" style="background: var(--blanco)">{{ $d.edicion.fecha }}</span><span class="chip" style="background: var(--blanco)">{{ $d.edicion.lugar }}</span></div>
+        {{- with $d.siguiente }}
+        <div class="hb-aviso"><p><b>Ya viene la siguiente.</b> {{ .texto }}</p><a class="btn btn--primario" href="{{ .url }}" target="_blank" rel="noopener noreferrer">{{ .cta }}</a></div>
+        {{- end }}
+      </div>
+      <img class="hb-hero__img" src="{{ "images/c4d/hackeando-ilustracion.jpg" | relURL }}" alt="Ilustración del evento: personas con discapacidad y manos encajando piezas de rompecabezas" width="1066" height="1080">
+    </div>
+  </section>
+
+  <section class="sec sec--blanco">
+    <div class="wrap stack">
+      <div class="head"><div class="head__txt"><span class="kicker">Qué descubrirás</span><h2>La inclusión también es estrategia de negocio</h2></div></div>
+      <div class="grid grid--4">
+        {{- range $d.descubre }}
+        <article class="feat bg-{{ .tono }}"><h3>{{ .titulo }}</h3><p>{{ .texto }}</p></article>
+        {{- end }}
+      </div>
+    </div>
+  </section>
+
+  {{- with $d.edicion.video }}
+  <section class="sec">
+    <div class="wrap split">
+      <div class="split__txt">
+        <span class="kicker">Revive el congreso</span>
+        <h2>Expertos, organizaciones y personas con discapacidad en un mismo escenario</h2>
+        <p>Un espacio de diálogo para analizar los beneficios económicos, sociales y organizacionales de construir equipos más inclusivos.</p>
+        <a class="btn btn--borde" style="align-self: flex-start" href="https://www.youtube.com/watch?v={{ . }}" target="_blank" rel="noopener noreferrer">Ver en YouTube</a>
+      </div>
+      <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/{{ . }}" title="Congreso Hackeando barreras por la inclusión 2025" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+    </div>
+  </section>
+  {{- end }}
+
+  <section class="sec sec--blanco" id="agenda">
+    <div class="wrap stack">
+      <div class="head">
+        <div class="head__txt"><span class="kicker">Agenda</span><h2>Así fue el {{ $d.edicion.fecha }}</h2></div>
+        <a class="btn btn--borde" href="{{ "sessions/2025/" | relURL }}">Todas las sesiones</a>
+      </div>
+      <div class="agenda">
+        {{- range $agenda }}
+        {{- if .p }}{{ partial "c4d/sesion.html" .p }}
+        {{- else }}<div class="ses ses--log"><div class="ses__hora">{{ .hora }}</div><div class="ses__body"><p style="font-weight: 600">{{ .t }}</p></div></div>
+        {{- end }}
+        {{- end }}
+      </div>
+    </div>
+  </section>
+
+  {{- with $ponentes }}
+  <section class="sec">
+    <div class="wrap stack">
+      <div class="head"><div class="head__txt"><span class="kicker">Ponentes</span><h2>Quienes compartieron su experiencia</h2></div></div>
+      <div class="personas">{{ range . }}{{ partial "c4d/persona.html" . }}{{ end }}</div>
+    </div>
+  </section>
+  {{- end }}
+
+  {{- with site.Data.sponsors.sponsor_group }}
+  <section class="sec sec--blanco">
+    <div class="wrap stack">
+      <div class="head"><div class="head__txt"><span class="kicker">Aliados</span><h2>Fue posible gracias a</h2></div></div>
+      {{- range . }}
+      <div>
+        <h3 class="logos__t">{{ .title }}</h3>
+        <div class="logos">
+          {{- range .sponsor }}
+          {{- if and .link (ne .link "#") }}<a href="{{ .link }}" target="_blank" rel="noopener noreferrer"><img src="{{ .logo | relURL }}" alt="{{ path.BaseName .logo | humanize }}" loading="lazy"></a>
+          {{- else }}<span><img src="{{ .logo | relURL }}" alt="{{ path.BaseName .logo | humanize }}" loading="lazy"></span>{{ end }}
+          {{- end }}
+        </div>
+      </div>
+      {{- end }}
+      <p style="color: var(--tinta-2); max-width: 70ch">{{ $d.organizan }}</p>
+    </div>
+  </section>
+  {{- end }}
+
+  <section class="sec" style="padding-top: 72px">
+    <div class="wrap">
+      <div class="sumate">
+        <div class="head__txt"><span class="kicker">Súmate</span><h2>¿Te interesa apoyar el evento?</h2></div>
+        <div class="grid grid--3" style="gap: 18px">
+          <div class="sumate__card"><h3>Consulta el prospectus</h3><p>Paquetes de patrocinio y alcance del evento.</p><a href="{{ $d.edicion.prospectus | relURL }}" target="_blank" rel="noopener noreferrer">Descargar PDF</a></div>
+          <div class="sumate__card"><h3>Escríbenos</h3><p>{{ $d.edicion.correo }}</p><a href="mailto:{{ $d.edicion.correo }}">Mandar correo</a></div>
+          {{- with $d.siguiente }}<div class="sumate__card"><h3>Asiste a la 2.ª edición</h3><p>{{ .texto }}</p><a href="{{ .url }}" target="_blank" rel="noopener noreferrer">{{ .cta }}</a></div>{{ end }}
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+{{ partial "c4d/footer.html" . }}
+</body>
+</html>
