@@ -1,0 +1,10 @@
+{{- /* Visor de fotos a pantalla completa. Uno por página; lo controla c4d/scripts.html. */ -}}
+<div class="visor" role="dialog" aria-modal="true" aria-label="Foto ampliada" data-visor hidden>
+  <button class="visor__btn visor__cerrar" type="button" aria-label="Cerrar" data-visor-cerrar>{{ partial "c4d/icono.html" "cerrar" }}</button>
+  <div class="visor__fila">
+    <button class="visor__btn" type="button" aria-label="Foto anterior" data-visor-ant>{{ partial "c4d/icono.html" "anterior" }}</button>
+    <img src="" alt="" data-visor-img>
+    <button class="visor__btn" type="button" aria-label="Foto siguiente" data-visor-sig>{{ partial "c4d/icono.html" "siguiente" }}</button>
+  </div>
+  <p class="visor__pie"><span class="chip" data-visor-tag></span><span data-visor-alt></span><span data-visor-pos></span></p>
+</div>

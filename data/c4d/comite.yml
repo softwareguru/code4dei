@@ -1,0 +1,10 @@
+### Comité de Code 4 DEI (portada)
+# Fotos en static/images/c4d/comite/, cuadradas, 400 px.
+
+personas:
+  - { nombre: "Cristina Nistor", foto: "cristina-nistor.jpg" }
+  - { nombre: "Gabriela Guevara", foto: "gabriela-guevara.jpg" }
+  - { nombre: "Hanna Oktaba", foto: "hanna-oktaba.jpg" }
+  - { nombre: "Laura Figueroa", foto: "laura-figueroa.jpg" }
+  - { nombre: "Mara Ruvalcaba", foto: "mara-ruvalcaba.jpg" }
+  - { nombre: "Ximena Cruz", foto: "ximena-cruz.jpg" }

@@ -1,0 +1,38 @@
+{{- /* <head> del rediseño 2026. Lo usan la portada, /galeria/ y las páginas de texto.
+       Las páginas heredadas (sessions, speakers, schedule…) siguen con el tema dd4w. */ -}}
+{{- $css := resources.Get "css/c4d.css" | minify | fingerprint -}}
+{{- $titulo := cond .IsHome (printf "%s · %s" site.Title "El software grandioso es diverso, equitativo e incluyente") (printf "%s · %s" .Title site.Title) -}}
+{{- $desc := .Description | default site.Params.description -}}
+{{- $img := index (.Params.images | default site.Params.images) 0 -}}
+<!doctype html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ $titulo }}</title>
+<meta name="description" content="{{ $desc | plainify | strings.TrimSpace }}">
+<meta name="theme-color" content="#F6F6D6">
+<link rel="canonical" href="{{ .Permalink }}">
+<link rel="icon" href="{{ "favicon.ico" | relURL }}" type="image/x-icon">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="{{ site.Title }}">
+<meta property="og:title" content="{{ $titulo }}">
+<meta property="og:description" content="{{ $desc | plainify | strings.TrimSpace }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:locale" content="es_MX">
+{{- with $img }}
+<meta property="og:image" content="{{ . | absURL }}">
+{{- end }}
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500;600;700&family=Hanken+Grotesk:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+
+{{- if hugo.IsProduction }}
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7XSYNH098S"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-7XSYNH098S');</script>
+{{- end }}
+</head>

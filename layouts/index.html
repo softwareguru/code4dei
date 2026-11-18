@@ -1,0 +1,228 @@
+{{- /* Portada · rediseño 2026. Contenido editable en data/c4d/*.yml. */ -}}
+{{- $ev := site.Data.c4d.eventos -}}
+{{- $gal := site.Data.c4d.galeria -}}
+{{- $meses := slice "ENE" "FEB" "MAR" "ABR" "MAY" "JUN" "JUL" "AGO" "SEP" "OCT" "NOV" "DIC" -}}
+{{- $proximos := first 3 (sort ($ev.proximos | default slice) "fecha") -}}
+{{ partial "c4d/head.html" . }}
+<body>
+{{ partial "c4d/header.html" . }}
+<main id="contenido">
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="wrap hero__grid">
+      <div class="hero__txt">
+        <span class="pill">Una iniciativa de Software Guru</span>
+        <h1>El software grandioso es diverso, equitativo e <span class="hl">incluyente</span>.</h1>
+        <p class="lead">Abrimos espacios en la industria tecnológica para mujeres, personas LGBTQ+, con discapacidad y neurodivergentes. Organizamos Dev Day 4 Women y Hackeando barreras por la inclusión.</p>
+        <div class="acciones">
+          <a class="btn btn--primario" href="#eventos">Ver próximos eventos</a>
+          <a class="btn btn--borde" href="#iniciativa">Conoce la iniciativa</a>
+        </div>
+        {{- with index $proximos 0 }}
+        {{- $f := time.AsTime .fecha }}
+        <a class="sig" href="{{ .url }}" target="_blank" rel="noopener noreferrer">
+          <span class="fecha fecha--llena"><small>{{ index $meses (sub $f.Month 1) }}</small><b>{{ $f.Day }}</b></span>
+          <span class="sig__txt"><em>Siguiente evento</em><b>{{ .titulo }}</b><span>{{ .lugar }}{{ with .etiqueta }} · {{ . }}{{ end }}</span></span>
+        </a>
+        {{- end }}
+      </div>
+      <div class="hero__logo">
+        <img src="{{ "images/code4dei-logo.png" | relURL }}" alt="Logo de Code 4 DEI: cuatro brazos de colores que se abrazan alrededor de las iniciales C4D" width="1102" height="620">
+        <span class="chip c1">LGBTQ+</span>
+        <span class="chip c2">Discapacidad</span>
+        <span class="chip c3">Neurodivergencia</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Qué es · dd4w2026/feature-card -->
+  <section class="sec sec--blanco" id="iniciativa">
+    <div class="wrap stack">
+      <div class="head"><div class="head__txt">
+        <span class="kicker">Qué es Code 4 DEI</span>
+        <h2>Eliminamos barreras para que todo el talento llegue a la industria</h2>
+        <p>Impulsamos el crecimiento personal y profesional de comunidades que la industria tecnológica todavía deja fuera.</p>
+      </div></div>
+      <div class="grid grid--4">
+        <article class="feat bg-morado"><span class="feat__ic">{{ partial "c4d/icono.html" "mujer" }}</span><h3>Mujeres en STEM</h3><p>Comunidad, mentoras y escenario para crecer, a través de Dev Day 4 Women.</p></article>
+        <article class="feat bg-rosa"><span class="feat__ic">{{ partial "c4d/icono.html" "corazon" }}</span><h3>Comunidad LGBTQ+</h3><p>Espacios seguros para crecer, liderar y ser visibles en equipos de tecnología.</p></article>
+        <article class="feat bg-amarillo"><span class="feat__ic">{{ partial "c4d/icono.html" "accesible" }}</span><h3>Personas con discapacidad</h3><p>Productos, oficinas y procesos de contratación pensados para que nadie se quede afuera.</p></article>
+        <article class="feat bg-verde"><span class="feat__ic">{{ partial "c4d/icono.html" "destello" }}</span><h3>Personas neurodivergentes</h3><p>Formas de trabajar que aprovechan cada manera de pensar en lugar de castigarla.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Próximos eventos · Luma -->
+  <section class="sec" id="eventos">
+    <div class="wrap stack">
+      <div class="head">
+        <div class="head__txt"><span class="kicker">Próximos eventos</span><h2>Nos vemos pronto</h2></div>
+        {{- with $ev.calendario }}<a class="btn btn--borde" href="{{ . }}" target="_blank" rel="noopener noreferrer">Ver calendario en Luma {{ partial "c4d/icono.html" "externo" }}</a>{{ end }}
+      </div>
+      {{- if $proximos }}
+      <div class="grid grid--3">
+        {{- range $proximos }}
+        {{- $f := time.AsTime .fecha }}
+        <article class="ev">
+          {{- with .imagen }}<img class="ev__img" src="{{ . | relURL }}" alt="" loading="lazy">{{ else }}<div class="ev__img" aria-hidden="true"></div>{{ end }}
+          <div class="ev__body">
+            <div class="ev__top">
+              <span class="fecha"><small>{{ index $meses (sub $f.Month 1) }}</small><b>{{ $f.Day }}</b></span>
+              <div><h3>{{ .titulo }}</h3><p class="ev__meta">{{ with .hora }}{{ . }} · {{ end }}{{ .lugar }}</p></div>
+            </div>
+            <div class="chips">{{ with .modalidad }}<span class="chip">{{ . }}</span>{{ end }}{{ with .etiqueta }}<span class="chip bg-verde">{{ . }}</span>{{ end }}</div>
+            <a class="btn btn--primario" href="{{ .url }}" target="_blank" rel="noopener noreferrer">Regístrate<span class="sr"> en {{ .titulo }} (Luma, pestaña nueva)</span></a>
+          </div>
+        </article>
+        {{- end }}
+      </div>
+      {{- else }}
+      <div class="vacio">
+        <h3>Estamos preparando las próximas fechas</h3>
+        <p>Síguenos en Instagram para enterarte primero de los próximos eventos de Code 4 DEI y Dev Day 4 Women.</p>
+        <a class="btn btn--primario" href="{{ $ev.calendario | default "https://www.instagram.com/code4dei/" }}" target="_blank" rel="noopener noreferrer">{{ if $ev.calendario }}Suscríbete al calendario{{ else }}Síguenos en Instagram{{ end }}</a>
+      </div>
+      {{- end }}
+    </div>
+  </section>
+
+  <!-- Nuestros eventos -->
+  <section class="sec sec--blanco">
+    <div class="wrap stack">
+      <div class="head"><div class="head__txt"><span class="kicker">Nuestros eventos</span><h2>Dos encuentros, una misma causa</h2></div></div>
+      <article class="prog prog--dd4w">
+        <img class="prog__img" src="{{ "images/c4d/dd4w-cdmx-2026-grupal.jpg" | relURL }}" alt="Foto grupal de Dev Day 4 Women CDMX 2026: más de cien mujeres en la terraza de Novartis" loading="lazy">
+        <div class="prog__txt">
+          <img class="prog__logo" src="{{ "images/c4d/dd4w-logo.png" | relURL }}" alt="Dev Day 4 Women" width="1000" height="350">
+          <p>El evento de Code 4 DEI para mujeres en STEM. Un día gratuito de conferencias, talleres y networking que en 2026 se realizó en Ciudad de México y Monterrey.</p>
+          <div class="chips"><span class="chip">CDMX · 31 jul 2026</span><span class="chip">Monterrey · 31 oct 2026</span></div>
+          <a class="btn btn--morado" href="https://devday4w.com/" target="_blank" rel="noopener noreferrer">Conoce Dev Day 4 Women {{ partial "c4d/icono.html" "flecha" }}</a>
+        </div>
+      </article>
+      <article class="prog prog--hb">
+        <div class="prog__txt">
+          <h3>Hackeando barreras por la inclusión</h3>
+          <p>Un día para hablar de discapacidad, neurodivergencia y diversidad en tecnología, con quienes las viven y con quienes deciden en las empresas.</p>
+          <div class="chips"><span class="chip">CDMX · 19 nov 2025</span><span class="chip">Centro de Cultura Digital</span></div>
+          <a class="btn btn--borde" href="{{ "hackeando-barreras-por-la-inclusion/" | relURL }}">Ver la edición 2025</a>
+        </div>
+        <img class="prog__img" src="{{ "images/c4d/hackeando-ilustracion.jpg" | relURL }}" alt="Ilustración de Hackeando barreras por la inclusión" loading="lazy">
+      </article>
+    </div>
+  </section>
+
+  <!-- Comunidad · DD4W 2026 consolidado · dd4w2026/metric -->
+  <section class="sec sec--verde">
+    <div class="wrap stack" style="gap: 36px">
+      <div class="head"><div class="head__txt">
+        <span class="kicker">Comunidad</span>
+        <h2>Dev Day 4 Women 2026 en números</h2>
+        <p>Consolidado de las sedes Ciudad de México y Monterrey.</p>
+      </div></div>
+      <div class="metricas">
+        <div class="metrica"><b>+400</b><span>asistentes</span></div>
+        <div class="metrica"><b>60</b><span>ponentes</span></div>
+        <div class="metrica"><b>47</b><span>conferencias y talleres</span></div>
+        <div class="metrica"><b>6</b><span>empresas patrocinadoras</span></div>
+        <div class="metrica"><b>21</b><span>comunidades y aliados</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Eventos que ya pasaron · dd4w2026/sede-card -->
+  <section class="sec" id="pasados">
+    <div class="wrap stack">
+      <div class="head"><div class="head__txt"><span class="kicker">Eventos que ya pasaron</span><h2>Dev Day 4 Women 2026</h2></div></div>
+      <div class="grid grid--2">
+        {{- range $ev.pasados }}
+        <a class="sede sede--{{ .tono }}" href="{{ .url }}" target="_blank" rel="noopener noreferrer">
+          <img src="{{ .imagen | relURL }}" alt="{{ .alt }}" loading="lazy">
+          <span class="sede__badge">{{ .etiqueta }}</span>
+          <span class="sede__txt">
+            <b>{{ .titulo }}</b>
+            <span>{{ .fecha }}</span>
+            <span class="chips">{{ range .datos }}<span class="chip">{{ . }}</span>{{ end }}</span>
+            <span class="sede__cta">{{ .cta }} {{ partial "c4d/icono.html" "flecha" }}</span>
+          </span>
+        </a>
+        {{- end }}
+      </div>
+    </div>
+  </section>
+
+  <!-- Por qué lo hacemos -->
+  <section class="sec" style="padding-top: 0">
+    <div class="wrap split">
+      <div class="split__txt">
+        <span class="kicker">Por qué lo hacemos</span>
+        <h2>Una industria más justa se construye con y para las personas</h2>
+        <p>Buscamos que quienes no pertenecen a un grupo vulnerable entiendan los retos que otras personas enfrentan todos los días, y que usen su lugar en la industria para abrir puertas.</p>
+        <blockquote>Cada persona, sin importar su identidad, origen o condición, debe poder aprender, desarrollarse y prosperar en tecnología.</blockquote>
+      </div>
+      <img class="split__img" src="{{ "images/c4d/hackeando-ilustracion.jpg" | relURL }}" alt="Ilustración de Hackeando barreras: manos y personas encajando piezas de rompecabezas" loading="lazy">
+    </div>
+  </section>
+
+  <!-- Así se vive · dd4w2026/gallery -->
+  <section class="sec sec--blanco" id="galeria">
+    <div class="wrap stack">
+      <div class="head">
+        <div class="head__txt"><span class="kicker">Así se vive</span><h2>Así se vivió Dev Day 4 Women 2026</h2></div>
+        <a class="btn btn--borde" href="{{ "galeria/" | relURL }}">Ver galería completa</a>
+      </div>
+      <div class="filtros" role="group" aria-label="Filtrar fotos por evento">
+        <button class="filtro" type="button" data-filtro="todas" aria-pressed="true">Todas</button>
+        {{- range $gal.eventos }}<button class="filtro" type="button" data-filtro="{{ .clave }}" aria-pressed="false">{{ .nombre }}</button>{{ end }}
+      </div>
+      <div class="mosaico">
+        {{- range sort (where $gal.fotos "portada" "!=" nil) "portada" }}{{ partial "c4d/foto.html" . }}{{ end }}
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonios · dd4w2026/testimonios-video -->
+  <section class="sec sec--morado">
+    <div class="wrap stack">
+      <div class="head">
+        <div class="head__txt"><span class="kicker">Voces de la comunidad</span><h2>Ellas lo vivieron y lo cuentan</h2><p>Entrevistas de Dev Day 4 Women CDMX 2026 sobre lo que se llevaron del día.</p></div>
+        <a class="btn btn--claro" href="https://www.instagram.com/code4dei/" target="_blank" rel="noopener noreferrer">Más en Instagram</a>
+      </div>
+      {{ partial "c4d/testimonios.html" . }}
+    </div>
+  </section>
+
+  <!-- Comité · dd4w2026/team-grid -->
+  <section class="sec">
+    <div class="wrap stack">
+      <div class="head">
+        <div class="head__txt"><span class="kicker">Comité</span><h2>Quiénes impulsan Code 4 DEI</h2></div>
+        <a class="btn btn--borde" href="{{ "comite/" | relURL }}">Conoce al comité</a>
+      </div>
+      <div class="comite">
+        {{- range site.Data.c4d.comite.personas }}
+        <div class="persona"><img src="{{ printf "images/c4d/comite/%s" .foto | relURL }}" alt="" width="132" height="132" loading="lazy">{{ .nombre }}</div>
+        {{- end }}
+      </div>
+    </div>
+  </section>
+
+  <!-- Súmate · dd4w2026/participate -->
+  <section class="sec" id="sumate" style="padding-top: 0">
+    <div class="wrap">
+      <div class="sumate">
+        <div class="head__txt"><span class="kicker">Súmate</span><h2>La inclusión se hace en equipo</h2></div>
+        <div class="grid grid--3" style="gap: 18px">
+          <div class="sumate__card"><h3>Patrocina o sé aliada</h3><p>Lleva Code 4 DEI a tu empresa o apoya el próximo evento.</p><a href="{{ "contacto/" | relURL }}">Conoce cómo</a></div>
+          <div class="sumate__card"><h3>Propón una charla</h3><p>Comparte tu experiencia o la de tu comunidad en un escenario.</p><a href="{{ "contacto/" | relURL }}">Envía tu propuesta</a></div>
+          <div class="sumate__card"><h3>Escríbenos</h3><p>hola@code4dei.com</p><a href="mailto:hola@code4dei.com">Mandar correo</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+{{ partial "c4d/visor.html" . }}
+{{ partial "c4d/footer.html" . }}
+</body>
+</html>

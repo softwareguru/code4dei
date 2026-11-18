@@ -1,0 +1,37 @@
+{{- /* Footer (estructura de dd4w2026/footer) + scripts del sitio. */ -}}
+{{- $base := cond .IsHome "" ("/" | relURL) -}}
+<footer class="pie">
+  <div class="wrap">
+    <div class="pie__grid">
+      <div class="pie__col">
+        <span class="pie__marca">CODE 4 DEI</span>
+        <p class="pie__lema">El software grandioso es diverso, equitativo e incluyente.</p>
+      </div>
+      <nav class="pie__col" aria-label="Sitio">
+        <span class="pie__t">Sitio</span>
+        <a href="{{ $base }}#iniciativa">La iniciativa</a>
+        <a href="{{ $base }}#eventos">Eventos</a>
+        <a href="{{ "galeria/" | relURL }}">Galería</a>
+        <a href="{{ $base }}#sumate">Súmate</a>
+      </nav>
+      <nav class="pie__col" aria-label="Comunidad">
+        <span class="pie__t">Comunidad</span>
+        <a href="{{ "coc/" | relURL }}">Código de conducta</a>
+        <a href="{{ "politica-de-privacidad/" | relURL }}">Aviso de privacidad</a>
+        <a href="https://devday4w.com/" target="_blank" rel="noopener noreferrer">Dev Day 4 Women</a>
+      </nav>
+      <div class="pie__col">
+        <span class="pie__t">Síguenos</span>
+        <div class="redes">
+          <a href="https://www.instagram.com/code4dei/" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Code 4 DEI">{{ partial "c4d/icono.html" "instagram" }}</a>
+          <a href="https://www.youtube.com/softwareguru" target="_blank" rel="noopener noreferrer" aria-label="YouTube de Software Guru">{{ partial "c4d/icono.html" "youtube" }}</a>
+        </div>
+      </div>
+    </div>
+    <div class="pie__base">
+      <span>Una iniciativa de Software Guru</span>
+      <span>© {{ now.Year }} Code 4 DEI</span>
+    </div>
+  </div>
+</footer>
+{{ partial "c4d/scripts.html" . }}

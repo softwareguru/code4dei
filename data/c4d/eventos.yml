@@ -1,0 +1,35 @@
+### Eventos de Code 4 DEI
+#
+# proximos: tarjetas de "Próximos eventos" en la portada (máximo 3 se muestran).
+#   Mientras la lista esté vacía, la portada invita a seguir el calendario y
+#   no muestra la tarjeta de "Siguiente evento" en el hero.
+#   Campos: titulo, fecha (AAAA-MM-DD), hora, lugar, modalidad, url (Luma),
+#           imagen (opcional, dentro de /static), etiqueta (opcional, p. ej. "Gratuito").
+#
+# calendario: link al calendario público de Luma (botón "Ver calendario").
+#
+# pasados: tarjetas de "Eventos que ya pasaron".
+
+calendario: ""
+
+proximos: []
+
+pasados:
+  - titulo: "Ciudad de México"
+    etiqueta: "CDMX"
+    fecha: "31 de julio de 2026 · Novartis"
+    imagen: "/images/c4d/galeria/cdmx-2026-01.jpg"
+    alt: "Auditorio lleno durante una conferencia de Dev Day 4 Women CDMX 2026"
+    datos: ["27 ponentes", "24 sesiones", "Fotos"]
+    url: "https://devday4w.com/sede/"
+    cta: "Ver fotos y sesiones"
+    tono: morado
+  - titulo: "Monterrey"
+    etiqueta: "MTY"
+    fecha: "31 de octubre de 2026 · Tecnológico de Monterrey"
+    imagen: "/images/c4d/galeria/mty-2026-13.jpg"
+    alt: "Foto grupal de las asistentes de Dev Day 4 Women Monterrey 2026 en el auditorio del Tec"
+    datos: ["36 ponentes", "23 sesiones", "7 talleres", "Fotos"]
+    url: "https://devday4w.com/sede-monterrey/"
+    cta: "Ver fotos y sesiones"
+    tono: verde

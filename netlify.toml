@@ -28,3 +28,10 @@ HUGO_VERSION = "0.142.0"
 
 [context.next.environment]
 HUGO_ENABLEGITINFO = "true"
+
+# El blog sale del sitio en el rediseño 2026: sus URLs llevan a la portada.
+[[redirects]]
+  from = "/blog/*"
+  to = "/"
+  status = 301
+  force = true
