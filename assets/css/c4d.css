@@ -132,6 +132,13 @@ p { margin: 0; }
 /* Próximos eventos (Luma) */
 .ev { background: var(--blanco); border: 1px solid var(--linea); border-radius: 20px; overflow: hidden; display: flex; flex-direction: column; }
 .ev__img { aspect-ratio: 16 / 9; object-fit: cover; width: 100%; background: var(--azul); }
+.ev__img--contain { object-fit: contain; background: var(--blanco); border-bottom: 1px solid var(--linea); }
+/* Un solo próximo evento: tarjeta horizontal, póster a la izquierda */
+.ev-uno .ev { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); }
+.ev-uno .ev__img { aspect-ratio: 1 / 1; height: 100%; max-height: 460px; border-bottom: 0; border-right: 1px solid var(--linea); }
+.ev-uno .ev__body { padding: clamp(24px, 4vw, 44px); justify-content: center; gap: 18px; }
+.ev-uno .ev h3 { font-family: var(--display); font-weight: 600; font-size: clamp(24px, 3vw, 32px); }
+.ev-uno .ev .btn { margin-top: 8px; align-self: flex-start; }
 .ev__body { padding: 22px; display: flex; flex-direction: column; gap: 14px; flex-grow: 1; }
 .ev__top { display: flex; gap: 14px; align-items: flex-start; }
 .ev h3 { font-family: var(--body); font-size: 19px; font-weight: 700; line-height: 1.3; }

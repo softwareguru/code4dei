@@ -2,7 +2,9 @@
 {{- $ev := site.Data.c4d.eventos -}}
 {{- $gal := site.Data.c4d.galeria -}}
 {{- $meses := slice "ENE" "FEB" "MAR" "ABR" "MAY" "JUN" "JUL" "AGO" "SEP" "OCT" "NOV" "DIC" -}}
-{{- $proximos := first 3 (sort ($ev.proximos | default slice) "fecha") -}}
+{{- /* Solo eventos de hoy en adelante (se evalúa en cada build de Netlify). */ -}}
+{{- $hoy := now.Format "2006-01-02" -}}
+{{- $proximos := first 3 (sort (where ($ev.proximos | default slice) "fecha" "ge" $hoy) "fecha") -}}
 {{ partial "c4d/head.html" . }}
 <body>
 {{ partial "c4d/header.html" . }}
@@ -61,17 +63,18 @@
         {{- with $ev.calendario }}<a class="btn btn--borde" href="{{ . }}" target="_blank" rel="noopener noreferrer">Ver calendario en Luma {{ partial "c4d/icono.html" "externo" }}</a>{{ end }}
       </div>
       {{- if $proximos }}
-      <div class="grid grid--3">
+      <div class="grid {{ if eq (len $proximos) 1 }}ev-uno{{ else }}grid--3{{ end }}">
         {{- range $proximos }}
         {{- $f := time.AsTime .fecha }}
         <article class="ev">
-          {{- with .imagen }}<img class="ev__img" src="{{ . | relURL }}" alt="" loading="lazy">{{ else }}<div class="ev__img" aria-hidden="true"></div>{{ end }}
+          {{- $ajuste := .ajuste }}
+          {{- with .imagen }}<img class="ev__img{{ if eq $ajuste "contain" }} ev__img--contain{{ end }}" src="{{ . | relURL }}" alt="" loading="lazy">{{ else }}<div class="ev__img" aria-hidden="true"></div>{{ end }}
           <div class="ev__body">
             <div class="ev__top">
               <span class="fecha"><small>{{ index $meses (sub $f.Month 1) }}</small><b>{{ $f.Day }}</b></span>
               <div><h3>{{ .titulo }}</h3><p class="ev__meta">{{ with .hora }}{{ . }} · {{ end }}{{ .lugar }}</p></div>
             </div>
-            <div class="chips">{{ with .modalidad }}<span class="chip">{{ . }}</span>{{ end }}{{ with .etiqueta }}<span class="chip bg-verde">{{ . }}</span>{{ end }}</div>
+            <div class="chips">{{ with .modalidad }}<span class="chip">{{ . }}</span>{{ end }}{{ with .etiqueta }}<span class="chip bg-verde">{{ . }}</span>{{ end }}{{ range .extras }}<span class="chip bg-amarillo">{{ . }}</span>{{ end }}</div>
             <a class="btn btn--primario" href="{{ .url }}" target="_blank" rel="noopener noreferrer">Regístrate<span class="sr"> en {{ .titulo }} (Luma, pestaña nueva)</span></a>
           </div>
         </article>
@@ -103,9 +106,12 @@
       <article class="prog prog--hb">
         <div class="prog__txt">
           <h3>Hackeando barreras por la inclusión</h3>
-          <p>Un día para hablar de discapacidad, neurodivergencia y diversidad en tecnología, con quienes las viven y con quienes deciden en las empresas.</p>
-          <div class="chips"><span class="chip">CDMX · 19 nov 2025</span><span class="chip">Centro de Cultura Digital</span></div>
-          <a class="btn btn--borde" href="{{ "hackeando-barreras-por-la-inclusion/" | relURL }}">Ver la edición 2025</a>
+          <p>Congreso, conversatorio y comunidad para hacer de la inclusión laboral de personas con discapacidad una práctica en la industria tecnológica. Lo organizan Impact Click y Code 4 DEI.</p>
+          <div class="chips"><span class="chip">2.ª edición · 9 dic 2026</span><span class="chip">BBVA Open Space México</span><span class="chip">1.ª edición · 19 nov 2025</span></div>
+          <div class="acciones">
+            <a class="btn btn--primario" href="https://luma.com/iii3nod0" target="_blank" rel="noopener noreferrer">Regístrate a la 2.ª edición</a>
+            <a class="btn btn--borde" href="{{ "hackeando-barreras-por-la-inclusion/" | relURL }}">Ver la edición 2025</a>
+          </div>
         </div>
         <img class="prog__img" src="{{ "images/c4d/hackeando-ilustracion.jpg" | relURL }}" alt="Ilustración de Hackeando barreras por la inclusión" loading="lazy">
       </article>
