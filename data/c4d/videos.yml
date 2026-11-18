@@ -1,0 +1,40 @@
+### Videos (portada y /galeria/)
+#
+# testimonios: entrevistas publicadas en Instagram. La tarjeta muestra la
+#   portada y abre el post en una pestaña nueva; no se carga ningún script de
+#   Instagram. Portadas en static/images/c4d/testimonios/.
+# conferencias: videos de YouTube. Miniaturas en static/images/c4d/videos/<id>.jpg.
+
+testimonios:
+  - nombre: "Gabriela Guevara"
+    cargo: "Directora y fundadora de El Tren de la Tecnología"
+    url: "https://www.instagram.com/p/DcUyteMDn39/"
+    poster: "gabriela-guevara.jpg"
+    frase: "El triunfo de una es el triunfo de todas."
+  - nombre: "Montserrat Montejo"
+    cargo: "Asistente"
+    url: "https://www.instagram.com/p/DcfGDLkALy_/"
+    poster: "montserrat-montejo.jpg"
+    frase: "Apoyarnos unas a otras nos ha ido fortaleciendo."
+  - nombre: "Amisaday Hernández"
+    cargo: "Instructora líder en Generation México"
+    url: "https://www.instagram.com/p/DcCxXcZAkse/"
+    poster: "amisaday-hernandez.jpg"
+    frase: "A veces el siguiente paso no requiere saberlo todo."
+
+conferencias:
+  - id: "7SWuE2pN2E4"
+    evento: "DD4W MTY 2026"
+    tono: verde
+    titulo: "DD4W Monterrey 2026 · Sala 1"
+    detalle: "Transmisión completa de la sala plenaria"
+  - id: "oF8DkLD4nJ4"
+    evento: "DD4W CDMX 2026"
+    tono: morado
+    titulo: "Panel She Leads: Shaping STEM’s Future with AI"
+    detalle: "Elsa Ramírez, Gabriela Guevara, Patricia Skroche y Mara Ruvalcaba"
+  - id: "JZVTkpyu3es"
+    evento: "Hackeando barreras 2025"
+    tono: amarillo
+    titulo: "Congreso: Hackeando barreras por la inclusión"
+    detalle: "Centro de Cultura Digital, CDMX"

@@ -1,4 +1,12 @@
 ---
+# Retirada en el rediseño 2026: no se publica y su URL redirige (netlify.toml).
+build:
+  render: never
+  list: never
+cascade:
+  build:
+    render: never
+    list: never
 title: "Registro"
 date: 2022-07-25T13:51:25+06:00
 draft: false

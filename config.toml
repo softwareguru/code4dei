@@ -51,45 +51,28 @@ link="https://kit.fontawesome.com/a6f10b653b.js"
 ############################## navigation ###############################
 [menu]
 
+  # Menú de las páginas que siguen con el tema dd4w (comité, sesiones,
+  # Hackeando barreras…). La portada, /galeria/ y las páginas de texto usan
+  # layouts/partials/c4d/header.html, con estos mismos destinos.
   [[menu.main]]
-  name = "Quiénes somos"
-  url = "/quienes-somos"
+  name = "La iniciativa"
+  url = "/#iniciativa"
   weight = 1
 
   [[menu.main]]
-  name = "Cómite"
-  URL = "/comite"
-  weight = 2
-
-  [[menu.main]]
-  name = "Blog"
-  URL = "/blog"
-  weight = 2
-
-
-  [[menu.main]]
-  identifier = "eventos"
   name = "Eventos"
+  url = "/#eventos"
+  weight = 2
+
+  [[menu.main]]
+  name = "Galería"
+  url = "/galeria/"
+  weight = 3
+
+  [[menu.main]]
+  name = "Súmate"
+  url = "/#sumate"
   weight = 4
-
-  [[menu.main]]
-    identifier = "evento1"
-    name = "Hackeando barreras por la inclusión"
-    URL = "/hackeando-barreras-por-la-inclusion"
-    parent = "eventos"
-    weight = 1
-
-  [[menu.main]]
-    identifier = "evento2"
-    name = "Dev Day 4 Women Monterrey 2025"
-    url = "https://devday4w.com/"
-    parent = "eventos"
-    weight = 2
-
-  [[menu.main]]
-  name = "Contacto"
-  URL = "/contacto"
-  weight = 5
 
 
   #[[menu.main]]

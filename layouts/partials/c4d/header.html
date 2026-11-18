@@ -1,0 +1,21 @@
+{{- /* Header (estructura de dd4w2026/header). Recibe el contexto de la página.
+       En la portada los enlaces son anclas; en otras páginas apuntan a /#…. */ -}}
+{{- $base := cond .IsHome "" ("/" | relURL) -}}
+{{- $enGaleria := eq .Section "galeria" -}}
+<a class="skip" href="#contenido">Saltar al contenido</a>
+<header class="top">
+  <div class="wrap top__in">
+    <a class="marca" href="{{ "/" | relURL }}">
+      <img src="{{ "images/code4dei-logo.png" | relURL }}" alt="" width="71" height="40">
+      <span>CODE 4 DEI</span>
+    </a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav-principal" data-menu>Menú</button>
+    <nav class="nav" id="nav-principal" aria-label="Principal">
+      <a href="{{ $base }}#iniciativa">La iniciativa</a>
+      <a href="{{ $base }}#eventos">Eventos</a>
+      <a href="{{ "galeria/" | relURL }}"{{ if $enGaleria }} aria-current="page"{{ end }}>Galería</a>
+      <a href="{{ $base }}#sumate">Súmate</a>
+      <a class="btn btn--tinta" href="{{ $base }}#eventos">Próximos eventos</a>
+    </nav>
+  </div>
+</header>

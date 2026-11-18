@@ -1,0 +1,48 @@
+### Hackeando barreras por la inclusión (/hackeando-barreras-por-la-inclusion/)
+# Página de la 1.ª edición (2025) con aviso de la siguiente.
+# Las sesiones salen de content/sessions/2025/ y los ponentes de las fichas
+# en content/speakers/ con `events: [2025]`. Los aliados, de data/sponsors.yml.
+
+edicion:
+  fecha: "19 de noviembre de 2025"
+  lugar: "Centro de Cultura Digital, CDMX"
+  video: "JZVTkpyu3es"
+  prospectus: "/files/prospectus_hackeando_barreras_por_la_inclusion_v1.3.pdf"
+  correo: "info@code4dei.com"
+
+siguiente:
+  texto: "La 2.ª edición es el 9 de diciembre de 2026 en BBVA Open Space México."
+  url: "https://luma.com/iii3nod0"
+  cta: "Regístrate gratis"
+
+descripcion: >-
+  Hackeando barreras por la inclusión es un congreso donde exploramos cómo la
+  inclusión laboral de personas con discapacidad no solo es un acto de equidad
+  social, sino una estrategia poderosa para el éxito de tu negocio.
+
+organizan: >-
+  Una iniciativa de Impact Click, fundación sin fines de lucro que impulsa
+  proyectos tecnológicos con impacto social, y de Code 4 DEI, iniciativa de
+  Software Guru que promueve una industria tecnológica diversa e incluyente.
+
+descubre:
+  - titulo: "Acceso a una fuerza laboral talentosa"
+    texto: "Cómo las personas con discapacidad aportan habilidades únicas, como creatividad y resolución de problemas, que enriquecen cualquier equipo."
+    tono: rosa
+  - titulo: "Impacto económico"
+    texto: "Cómo la inclusión contribuye al crecimiento económico, aumenta la productividad y dinamiza la economía local y nacional."
+    tono: verde
+  - titulo: "Mejor clima laboral"
+    texto: "Cómo la diversidad aumenta la motivación y la satisfacción del personal, y crea un ambiente de trabajo más colaborativo."
+    tono: amarillo
+  - titulo: "Incentivos fiscales"
+    texto: "Los beneficios fiscales, deducciones y subvenciones disponibles para las empresas que apuestan por la inclusión."
+    tono: morado
+
+# Momentos de la agenda que no son sesiones (se mezclan con las sesiones por hora).
+logistica:
+  - { hora: "10:30", titulo: "Registro" }
+  - { hora: "11:00", titulo: "Bienvenida de apertura (Impact Click, Code 4 DEI y Woman Diversity)" }
+  - { hora: "12:40", titulo: "Break" }
+  - { hora: "14:00", titulo: "Comida" }
+  - { hora: "15:15", titulo: "Clausura, por Laura Figueroa, CEO de Impact Click" }

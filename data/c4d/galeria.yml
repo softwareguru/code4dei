@@ -1,0 +1,59 @@
+### Galería de fotos (portada y /galeria/)
+#
+# Cada foto vive en static/images/c4d/galeria/ en dos tamaños:
+#   <archivo>.jpg     grande, para la vista ampliada (1400 px)
+#   <archivo>-sm.jpg  miniatura, para la rejilla (640 px)
+#
+# Campos:
+#   archivo  nombre sin extensión
+#   evento   clave del evento (ver `eventos` abajo); define el filtro y la etiqueta
+#   alt      descripción de la foto para lectores de pantalla
+#   portada  número de orden si la foto aparece en la portada (la 1 va en grande)
+#
+# El orden de la lista es el orden en /galeria/.
+
+eventos:
+  - clave: dd4w-cdmx-2026
+    nombre: "Dev Day 4 Women CDMX 2026"
+    etiqueta: "CDMX"
+  - clave: dd4w-mty-2026
+    nombre: "Dev Day 4 Women MTY 2026"
+    etiqueta: "MTY"
+
+fotos:
+  - { archivo: cdmx-2026-02, evento: dd4w-cdmx-2026, alt: "Foto grupal de la comunidad en la terraza de Novartis" }
+  - { archivo: mty-2026-13, evento: dd4w-mty-2026, alt: "Foto grupal de las asistentes en el auditorio del Tec de Monterrey" }
+  - { archivo: cdmx-2026-01, evento: dd4w-cdmx-2026, alt: "Auditorio lleno durante una conferencia" }
+  - { archivo: mty-2026-14, evento: dd4w-mty-2026, alt: "Ponente presentando la brecha salarial de género en tecnología", portada: 2 }
+  - { archivo: cdmx-2026-05, evento: dd4w-cdmx-2026, alt: "Ponente preguntando al público si confiaría en sus propios ojos", portada: 3 }
+  - { archivo: mty-2026-05, evento: dd4w-mty-2026, alt: "Panel de cinco ponentes sentadas en el escenario", portada: 4 }
+  - { archivo: cdmx-2026-08, evento: dd4w-cdmx-2026, alt: "Equipo organizador posando frente al mural", portada: 5 }
+  - { archivo: mty-2026-01, evento: dd4w-mty-2026, alt: "Organizadoras en la bienvenida: ¡Nos encanta estar aquí!" }
+  - { archivo: cdmx-2026-06, evento: dd4w-cdmx-2026, alt: "Taller patrocinado por SimplePractice" }
+  - { archivo: mty-2026-18, evento: dd4w-mty-2026, alt: "Círculo de mentoría con mentoras invitadas", portada: 6 }
+  - { archivo: cdmx-2026-13, evento: dd4w-cdmx-2026, alt: "Ponente con micrófono frente al mural de colores", portada: 7 }
+  - { archivo: mty-2026-09, evento: dd4w-mty-2026, alt: "Ponente con el brazo en alto frente a la pantalla", portada: 1 }
+  - { archivo: cdmx-2026-07, evento: dd4w-cdmx-2026, alt: "Asistentes con laptops durante un taller técnico" }
+  - { archivo: mty-2026-15, evento: dd4w-mty-2026, alt: "Asistentes haciendo networking en los stands", portada: 8 }
+  - { archivo: cdmx-2026-12, evento: dd4w-cdmx-2026, alt: "Ponentes posando juntas después de su sesión", portada: 9 }
+  - { archivo: mty-2026-10, evento: dd4w-mty-2026, alt: "Ponentes en el escenario frente a la pantalla de bienvenida", portada: 10 }
+  - { archivo: cdmx-2026-16, evento: dd4w-cdmx-2026, alt: "Cinco mujeres frente a la pantalla de la sesión She leads" }
+  - { archivo: mty-2026-11, evento: dd4w-mty-2026, alt: "Cuatro ponentes conversando en el cierre del día" }
+  - { archivo: cdmx-2026-04, evento: dd4w-cdmx-2026, alt: "Asistentes en una sala de taller" }
+  - { archivo: mty-2026-12, evento: dd4w-mty-2026, alt: "Foto grupal de pie en el auditorio" }
+  - { archivo: cdmx-2026-09, evento: dd4w-cdmx-2026, alt: "Mesa de registro con el banner Lo hicimos posible" }
+  - { archivo: mty-2026-02, evento: dd4w-mty-2026, alt: "Dos ponentes frente a la pantalla Contáctame" }
+  - { archivo: cdmx-2026-14, evento: dd4w-cdmx-2026, alt: "Asistentes conversando en una mesa de trabajo", portada: 11 }
+  - { archivo: mty-2026-03, evento: dd4w-mty-2026, alt: "Ponente sentada respondiendo preguntas" }
+  - { archivo: cdmx-2026-10, evento: dd4w-cdmx-2026, alt: "Público atento en el auditorio" }
+  - { archivo: mty-2026-04, evento: dd4w-mty-2026, alt: "Asistente haciendo una pregunta desde el público" }
+  - { archivo: cdmx-2026-03, evento: dd4w-cdmx-2026, alt: "Ponente junto al banner ¡Qué gusto verte aquí!" }
+  - { archivo: mty-2026-16, evento: dd4w-mty-2026, alt: "Ponente frente a la pantalla ¡Ya viene la próxima dosis de inspiración!" }
+  - { archivo: cdmx-2026-11, evento: dd4w-cdmx-2026, alt: "Vista del auditorio desde el fondo" }
+  - { archivo: mty-2026-17, evento: dd4w-mty-2026, alt: "Ponente en el escenario del Tec de Monterrey" }
+  - { archivo: cdmx-2026-15, evento: dd4w-cdmx-2026, alt: "Ponente junto al equipo de audio" }
+  - { archivo: mty-2026-20, evento: dd4w-mty-2026, alt: "Ponente presentando Las cuatro voces del mago" }
+  - { archivo: mty-2026-19, evento: dd4w-mty-2026, alt: "Asistentes en una actividad en equipo" }
+  - { archivo: mty-2026-08, evento: dd4w-mty-2026, alt: "Ponente hablando en el escenario" }
+  - { archivo: mty-2026-06, evento: dd4w-mty-2026, alt: "Asistentes conversando sentadas entre sesiones" }
+  - { archivo: mty-2026-07, evento: dd4w-mty-2026, alt: "Dos asistentes escuchando una conferencia" }

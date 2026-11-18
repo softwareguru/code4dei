@@ -1,4 +1,12 @@
 ---
+# Retirada en el rediseño 2026: no se publica y su URL redirige (netlify.toml).
+build:
+  render: never
+  list: never
+cascade:
+  build:
+    render: never
+    list: never
 title: "AGENDA NOVIEMBRE 2025"
 date: 2023-04-07T14:08:36-06:00
 draft: false

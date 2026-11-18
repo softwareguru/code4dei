@@ -1,4 +1,12 @@
 ---
+# Retirada en el rediseño 2026: no se publica y su URL redirige (netlify.toml).
+build:
+  render: never
+  list: never
+cascade:
+  build:
+    render: never
+    list: never
 title: "SPEAKERS ANTERIORES"
 date: 2021-01-06T14:03:13-06:00
 draft: false

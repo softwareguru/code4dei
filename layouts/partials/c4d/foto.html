@@ -1,0 +1,11 @@
+{{- /* Una foto de la galería. Recibe un registro de data/c4d/galeria.yml (fotos).
+       Es un botón: abre la foto grande en el visor (ver c4d/scripts.html). */ -}}
+{{- $f := . -}}
+{{- $ev := index (where site.Data.c4d.galeria.eventos "clave" $f.evento) 0 -}}
+{{- $dir := "images/c4d/galeria/" -}}
+<button class="foto" type="button" data-foto data-evento="{{ $f.evento }}"
+  data-grande="{{ printf "%s%s.jpg" $dir $f.archivo | relURL }}" data-alt="{{ $f.alt }}" data-tag="{{ $ev.etiqueta }}"
+  aria-label="Ver en grande: {{ $f.alt }}">
+  <img src="{{ printf "%s%s-sm.jpg" $dir $f.archivo | relURL }}" alt="" loading="lazy" decoding="async">
+  <span class="foto__tag">{{ $ev.etiqueta }}</span>
+</button>

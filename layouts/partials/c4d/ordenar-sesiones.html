@@ -1,0 +1,11 @@
+{{- /* Ordena sesiones: por `timeslot` si lo tienen (2025) y, si no, por el
+       número del nombre de archivo (a1, a2 … a14 en 2023). */ -}}
+{{- $items := slice -}}
+{{- range . -}}
+  {{- $k := 999 -}}
+  {{- with .Params.timeslot }}{{ $k = int . }}{{ else }}{{ with findRESubmatch `(\d+)` .File.ContentBaseName 1 }}{{ $k = int (index (index . 0) 1) }}{{ end }}{{ end -}}
+  {{- $items = $items | append (dict "k" $k "p" .) -}}
+{{- end -}}
+{{- $orden := slice -}}
+{{- range sort $items "k" }}{{ $orden = $orden | append .p }}{{ end -}}
+{{- return $orden -}}

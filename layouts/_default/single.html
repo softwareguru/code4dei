@@ -1,0 +1,20 @@
+{{- /* Páginas de texto (código de conducta, privacidad, quiénes somos, contacto…)
+       con el diseño 2026. Las secciones con plantilla propia en el tema
+       (sessions, speakers, schedule…) no pasan por aquí. */ -}}
+{{ partial "c4d/head.html" . }}
+<body>
+{{ partial "c4d/header.html" . }}
+<main id="contenido" class="pagina">
+  <div class="wrap">
+    <div class="pagina__head">
+      <a class="volver" href="{{ "/" | relURL }}">← Inicio</a>
+      <h1>{{ .Title }}</h1>
+    </div>
+    <article class="prosa">
+      {{ .Content }}
+    </article>
+  </div>
+</main>
+{{ partial "c4d/footer.html" . }}
+</body>
+</html>

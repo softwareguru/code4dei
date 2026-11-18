@@ -1,0 +1,35 @@
+{{- /* /comite/ · comité y consejeras de Code 4 DEI. */ -}}
+{{ partial "c4d/head.html" . }}
+<body>
+{{ partial "c4d/header.html" . }}
+<main id="contenido">
+  <section class="ph">
+    <div class="wrap ph__in">
+      <nav class="migas" aria-label="Ruta"><a href="{{ "/" | relURL }}">Inicio</a><span>›</span><span>Comité</span></nav>
+      <span class="kicker">Comité</span>
+      <h1>Liderazgo desde la diversidad</h1>
+    </div>
+  </section>
+  <section style="padding-bottom: 40px">
+    <div class="wrap"><div class="prosa">{{ replaceRE `(?s)<h2[^>]*>.*?</h2>` "" .Content | safeHTML }}</div></div>
+  </section>
+  <section style="padding-bottom: 96px">
+    <div class="wrap">
+      {{- $grupos := slice (dict "k" "comite" "t" "Comité") (dict "k" "consejera" "t" "Consejeras") }}
+      {{- range $grupos }}
+      {{- $k := .k }}
+      {{- $gente := slice }}
+      {{- range $.Data.Pages.ByWeight }}{{ if in (.Params.especificacion | default "") $k }}{{ $gente = $gente | append . }}{{ end }}{{ end }}
+      {{- with $gente }}
+      <div class="edicion stack" style="gap: 24px">
+        <div class="head"><div class="head__txt"><h2>{{ (index (where $grupos "k" $k) 0).t }}</h2></div></div>
+        <div class="personas">{{ range . }}{{ partial "c4d/persona.html" . }}{{ end }}</div>
+      </div>
+      {{- end }}
+      {{- end }}
+    </div>
+  </section>
+</main>
+{{ partial "c4d/footer.html" . }}
+</body>
+</html>

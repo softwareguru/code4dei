@@ -1,0 +1,17 @@
+{{- /* Tarjetas de videos de YouTube. Lee data/c4d/videos.yml (conferencias). */ -}}
+<div class="grid grid--3">
+  {{- range site.Data.c4d.videos.conferencias }}
+  <a class="vid" href="https://www.youtube.com/watch?v={{ .id }}" target="_blank" rel="noopener noreferrer">
+    <span class="vid__media vid__media--yt">
+      <img src="{{ printf "images/c4d/videos/%s.jpg" .id | relURL }}" alt="" loading="lazy">
+      <span class="vid__play vid__play--yt"><span>{{ partial "c4d/icono.html" "play" }}</span></span>
+    </span>
+    <span class="vid__body">
+      <span class="chip chip--{{ .tono }}">{{ .evento }}</span>
+      <span class="vid__t">{{ .titulo }}</span>
+      <span class="vid__rol">{{ .detalle }}</span>
+      <span class="sr">Ver en YouTube (se abre en una pestaña nueva)</span>
+    </span>
+  </a>
+  {{- end }}
+</div>

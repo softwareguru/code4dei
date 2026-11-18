@@ -1,0 +1,18 @@
+{{- /* Tarjetas de testimonios en Instagram (dd4w2026/testimonios-video). Lee data/c4d/videos.yml. */ -}}
+<div class="grid grid--3">
+  {{- range site.Data.c4d.videos.testimonios }}
+  <a class="vid" href="{{ .url }}" target="_blank" rel="noopener noreferrer">
+    <span class="vid__media vid__media--ig">
+      <img src="{{ printf "images/c4d/testimonios/%s" .poster | relURL }}" alt="" loading="lazy">
+      <span class="vid__play vid__play--ig"><span>{{ partial "c4d/icono.html" "play" }}</span></span>
+      <span class="vid__ig">{{ partial "c4d/icono.html" "instagram" }}</span>
+    </span>
+    <span class="vid__body">
+      <span class="vid__q">“{{ .frase }}”</span>
+      <b>{{ .nombre }}</b>
+      <span class="vid__rol">{{ .cargo }}</span>
+      <span class="sr">Ver la entrevista en Instagram (se abre en una pestaña nueva)</span>
+    </span>
+  </a>
+  {{- end }}
+</div>

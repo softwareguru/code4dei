@@ -1,0 +1,31 @@
+{{- /* Listados genéricos (etiquetas, categorías y cualquier sección sin
+       plantilla propia) con el diseño 2026. */ -}}
+{{ partial "c4d/head.html" . }}
+<body>
+{{ partial "c4d/header.html" . }}
+<main id="contenido" class="pagina">
+  <div class="wrap">
+    <div class="pagina__head">
+      <a class="volver" href="{{ "/" | relURL }}">← Inicio</a>
+      <h1>{{ .Title }}</h1>
+    </div>
+    {{- with .Content }}<article class="prosa" style="margin-bottom: 32px">{{ . }}</article>{{ end }}
+    {{- with .Pages }}
+    <div class="agenda" style="max-width: 860px">
+      {{- range .ByTitle }}
+      <article class="ses" style="grid-template-columns: minmax(0, 1fr)">
+        <div class="ses__body">
+          <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+          {{- with .Summary }}<p class="ses__res">{{ . | plainify }}</p>{{ end }}
+        </div>
+      </article>
+      {{- end }}
+    </div>
+    {{- else }}
+    {{- if not .Content }}<p class="ph__lead">Todavía no hay contenido en esta sección. <a href="{{ "/" | relURL }}" style="color: var(--magenta); font-weight: 600">Volver al inicio</a></p>{{ end }}
+    {{- end }}
+  </div>
+</main>
+{{ partial "c4d/footer.html" . }}
+</body>
+</html>

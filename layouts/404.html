@@ -1,0 +1,21 @@
+{{ partial "c4d/head.html" . }}
+<body>
+{{ partial "c4d/header.html" . }}
+<main id="contenido" class="hero">
+  <div class="wrap hero__grid">
+    <div class="hero__txt">
+      <span class="kicker">Error 404</span>
+      <h1>Esta página no existe o cambió de lugar</h1>
+      <p class="lead">Rediseñamos el sitio y algunas direcciones cambiaron. Desde aquí puedes llegar a todo.</p>
+      <div class="acciones">
+        <a class="btn btn--primario" href="{{ "/" | relURL }}">Ir al inicio</a>
+        <a class="btn btn--borde" href="{{ "/" | relURL }}#eventos">Próximos eventos</a>
+        <a class="btn btn--borde" href="{{ "galeria/" | relURL }}">Galería</a>
+      </div>
+    </div>
+    <div class="hero__logo"><img src="{{ "images/code4dei-logo.png" | relURL }}" alt="" width="1102" height="620"></div>
+  </div>
+</main>
+{{ partial "c4d/footer.html" . }}
+</body>
+</html>

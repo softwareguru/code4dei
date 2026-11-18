@@ -1,0 +1,20 @@
+{{- /* Renglón de agenda/sesión. Recibe la página de la sesión. */ -}}
+{{- $s := . -}}
+{{- $hora := "" -}}
+{{- with $s.Params.time_start }}{{ $hora = (time .).Format "15:04" }}{{ end -}}
+<article class="ses">
+  <div class="ses__hora">{{ $hora | default $s.Params.track }}</div>
+  <div class="ses__body">
+    <h3><a href="{{ $s.RelPermalink }}">{{ $s.Title }}</a></h3>
+    {{- with $s.GetTerms "speakers" }}
+    <p class="ses__por">Por {{ range $i, $t := . }}{{ if $i }}, {{ end }}<a href="{{ $t.RelPermalink }}">{{ $t.Title }}</a>{{ end }}</p>
+    {{- else }}{{ $sp := slice }}{{ range $s.Params.speakers }}{{ with . }}{{ $sp = $sp | append . }}{{ end }}{{ end }}{{ with $sp }}<p class="ses__por">Por {{ delimit . ", " " y " }}</p>{{ end }}
+    {{- end }}
+    {{- with $s.Summary }}<p class="ses__res">{{ . | plainify }}</p>{{ end }}
+    <div class="ses__links">
+      <a href="{{ $s.RelPermalink }}">Ver sesión</a>
+      {{- with $s.Params.video }}<a href="{{ replace . "https://www.youtube.com/embed" "https://youtu.be" }}" target="_blank" rel="noopener noreferrer">Ver grabación</a>{{ end }}
+      {{- with $s.Params.slides }}<a href="{{ if hasPrefix . "http" }}{{ . }}{{ else }}{{ printf "slides/%s" . | relURL }}{{ end }}" target="_blank" rel="noopener noreferrer">Slides</a>{{ end }}
+    </div>
+  </div>
+</article>

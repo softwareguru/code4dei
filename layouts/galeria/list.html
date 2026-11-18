@@ -1,0 +1,52 @@
+{{- /* /galeria/ · todas las fotos (data/c4d/galeria.yml) y videos (data/c4d/videos.yml). */ -}}
+{{- $gal := site.Data.c4d.galeria -}}
+{{ partial "c4d/head.html" . }}
+<body>
+{{ partial "c4d/header.html" . }}
+<main id="contenido">
+
+  <section class="pagina" style="padding-bottom: 28px">
+    <div class="wrap"><div class="pagina__head" style="margin: 0">
+      <a class="volver" href="{{ "/" | relURL }}">← Inicio</a>
+      <span class="kicker">Galería</span>
+      <h1>{{ .Title }}</h1>
+      <p style="font-size: 19px; color: var(--tinta-2); max-width: 56ch">{{ .Description }}</p>
+    </div></div>
+  </section>
+
+  <section style="padding-bottom: 96px">
+    <div class="wrap stack" style="gap: 24px">
+      <div class="filtros" role="group" aria-label="Filtrar fotos por evento">
+        <button class="filtro" type="button" data-filtro="todas" aria-pressed="true">Todas <small>{{ len $gal.fotos }}</small></button>
+        {{- range $gal.eventos }}
+        <button class="filtro" type="button" data-filtro="{{ .clave }}" aria-pressed="false">{{ .nombre }} <small>{{ len (where $gal.fotos "evento" .clave) }}</small></button>
+        {{- end }}
+        <span class="filtros__n" data-contador aria-live="polite">{{ len $gal.fotos }} fotos</span>
+      </div>
+      <div class="rejilla">
+        {{- range $gal.fotos }}{{ partial "c4d/foto.html" . }}{{ end }}
+      </div>
+    </div>
+  </section>
+
+  <section class="sec sec--morado" id="videos">
+    <div class="wrap stack">
+      <div class="head">
+        <div class="head__txt"><span class="kicker">Videos</span><h2>Revive nuestros eventos</h2></div>
+        <div class="acciones">
+          <a class="btn btn--claro" href="https://www.instagram.com/code4dei/" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a class="btn btn--blanco" href="https://www.youtube.com/softwareguru" target="_blank" rel="noopener noreferrer">Conferencias en YouTube</a>
+        </div>
+      </div>
+      <h3 class="subt">Conferencias en YouTube</h3>
+      {{ partial "c4d/conferencias.html" . }}
+      <h3 class="subt" style="margin-top: 16px">Testimonios en Instagram</h3>
+      {{ partial "c4d/testimonios.html" . }}
+    </div>
+  </section>
+
+</main>
+{{ partial "c4d/visor.html" . }}
+{{ partial "c4d/footer.html" . }}
+</body>
+</html>

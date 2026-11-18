@@ -1,4 +1,12 @@
 ---
+# Retirada en el rediseño 2026: no se publica y su URL redirige (netlify.toml).
+build:
+  render: never
+  list: never
+cascade:
+  build:
+    render: never
+    list: never
 title: "Patrocinadores"
 
 ---
