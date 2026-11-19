@@ -4,6 +4,7 @@
 #   Mientras la lista esté vacía, la portada invita a seguir el calendario y
 #   no muestra la tarjeta de "Siguiente evento" en el hero.
 #   Campos: titulo, fecha (AAAA-MM-DD), hora, lugar, modalidad, url (Luma),
+#           landing (opcional, la página del evento en este sitio),
 #           imagen (opcional, dentro de /static), etiqueta (opcional, p. ej. "Gratuito"),
 #           extras (opcional, lista de chips), ajuste: contain (opcional, para
 #           pósters cuadrados que no deben recortarse).
@@ -18,12 +19,13 @@ calendario: ""
 proximos:
   - titulo: "Hackeando barreras por la inclusión · 2.ª edición"
     fecha: "2026-12-09"
-    hora: "Miércoles · 8:00 a 14:00 h"
+    hora: "Miércoles · 9:00 a 15:00 h"
     lugar: "BBVA Open Space México, CDMX"
     modalidad: "Presencial"
     etiqueta: "Gratuito"
     extras: ["LSM y subtítulos en vivo"]
     url: "https://luma.com/iii3nod0"
+    landing: "/hackeando-barreras-2026/"
     imagen: "/images/c4d/eventos/hackeando-barreras-2026.jpg"
     ajuste: contain
 

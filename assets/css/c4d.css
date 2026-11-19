@@ -501,3 +501,28 @@ p { margin: 0; }
 .hb-aviso p { flex: 1 1 260px; font-size: 16px; }
 .hb-aviso b { color: var(--magenta); }
 @media (max-width: 900px) { .hb-hero__grid { grid-template-columns: minmax(0, 1fr); gap: 36px; } .hb-hero__img { aspect-ratio: 16 / 10; max-height: 420px; } }
+
+/* Hackeando barreras · 2.ª edición (layout hackeando2026) */
+/* Tira con los datos duros del evento: fecha, horario, sede y acceso. */
+.datos { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr)); gap: 16px; }
+.dato { background: var(--blanco); border: 1px solid var(--linea); border-radius: 18px; padding: 20px 22px; display: flex; flex-direction: column; gap: 5px; }
+.dato b { font-family: var(--body); font-size: 13px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--gris); }
+.dato span { font-size: 17px; font-weight: 600; line-height: 1.35; }
+.dato small { font-size: 14px; font-weight: 400; color: var(--tinta-2); line-height: 1.45; }
+.dato a { color: var(--magenta); font-size: 14px; font-weight: 700; text-decoration: none; }
+.dato a:hover { text-decoration: underline; }
+
+/* El rótulo de la agenda: PONENCIA, CONFERENCIA, CONVERSATORIO… */
+.ses__tipo { font-family: var(--body); font-size: 12px; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; color: var(--magenta); }
+/* Las sesiones largas —conferencia, conversatorio y sesión especial— se
+   distinguen con el verde de la marca, no con otro tamaño de tarjeta. */
+.ses--destacada { border-left: 4px solid var(--verde); }
+.ses--destacada .ses__tipo { color: var(--verde); }
+
+/* Las dos notas del pie de la agenda: accesibilidad y formato. */
+.notas { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 18px; }
+.nota { border-top: 3px solid var(--verde); padding-top: 16px; display: flex; flex-direction: column; gap: 8px; }
+.nota h3 { font-family: var(--body); font-size: 13px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--gris); }
+.nota p { color: var(--tinta-2); font-size: 16px; }
+
+@media (max-width: 620px) { .ses { grid-template-columns: minmax(0, 1fr); gap: 10px; } }

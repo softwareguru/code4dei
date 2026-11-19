@@ -75,7 +75,10 @@
               <div><h3>{{ .titulo }}</h3><p class="ev__meta">{{ with .hora }}{{ . }} · {{ end }}{{ .lugar }}</p></div>
             </div>
             <div class="chips">{{ with .modalidad }}<span class="chip">{{ . }}</span>{{ end }}{{ with .etiqueta }}<span class="chip bg-verde">{{ . }}</span>{{ end }}{{ range .extras }}<span class="chip bg-amarillo">{{ . }}</span>{{ end }}</div>
-            <a class="btn btn--primario" href="{{ .url }}" target="_blank" rel="noopener noreferrer">Regístrate<span class="sr"> en {{ .titulo }} (Luma, pestaña nueva)</span></a>
+            <div class="acciones">
+              <a class="btn btn--primario" href="{{ .url }}" target="_blank" rel="noopener noreferrer">Regístrate<span class="sr"> en {{ .titulo }} (Luma, pestaña nueva)</span></a>
+              {{- $t := .titulo }}{{ with .landing }}<a class="btn btn--borde" href="{{ . | relURL }}">Ver la agenda<span class="sr"> de {{ $t }}</span></a>{{ end }}
+            </div>
           </div>
         </article>
         {{- end }}
