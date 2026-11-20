@@ -8,10 +8,10 @@ image : "images/blog/inclusion-laboral.png"
 author: "DD4W" 
 botton: Ver más
 slug: /inclusion-laboral-como-motor-de-innovacion-y-crecimiento-de-la-industria-de-ti
-summary: "El reciente congreso organizado por [Impact Click](https://www.impactclick.org/) en colaboración con [Code 4 DEI](https://code4dei.com/) y [Woman Diversity](https://www.linkedin.com/company/womandiversity/) reunió a líderes empresariales, especialistas en diversidad e inclusión, organizaciones civiles y profesionales del sector tecnológico para analizar un tema urgente y lleno de oportunidad: **incluir a personas con discapacidades físicas en la industria de TI.**"
+summary: "El reciente congreso organizado por [Impact Click](https://www.impactclick.org/) en colaboración con [Code 4 DEI](https://code4dei.com/) reunió a líderes empresariales, especialistas en diversidad e inclusión, organizaciones civiles y profesionales del sector tecnológico para analizar un tema urgente y lleno de oportunidad: **incluir a personas con discapacidades físicas en la industria de TI.**"
 ---
 
-El reciente congreso organizado por [Impact Click](https://www.impactclick.org/) en colaboración con [Code 4 DEI](https://code4dei.com/) y [Woman Diversity](https://www.linkedin.com/company/womandiversity/) reunió a líderes empresariales, especialistas en diversidad e inclusión, organizaciones civiles y profesionales del sector tecnológico para analizar un tema urgente y lleno de oportunidad: **incluir a personas con discapacidades físicas en la industria de TI.**
+El reciente congreso organizado por [Impact Click](https://www.impactclick.org/) en colaboración con [Code 4 DEI](https://code4dei.com/) reunió a líderes empresariales, especialistas en diversidad e inclusión, organizaciones civiles y profesionales del sector tecnológico para analizar un tema urgente y lleno de oportunidad: **incluir a personas con discapacidades físicas en la industria de TI.**
 
 Durante el evento, se destacó un dato contundente: **menos del 40% de las personas con discapacidad en México cuentan con empleo formal.** A partir de esta cifra, los ponentes enfatizaron que la inclusión no es únicamente un compromiso social, sino una estrategia empresarial con beneficios tangibles. 
 
@@ -29,6 +29,6 @@ La jornada concluyó con un llamado a la acción:
 
 "Reconocer que el talento existe, que las capacidades son diversas y que la inclusión laboral representa una oportunidad estratégica para empresas comprometidas con el futuro."
 
-El evento reafirmó el compromiso de [Impact Click](https://www.impactclick.org/), [Code 4 DEI](https://code4dei.com/) y [Woman Diversity](https://www.linkedin.com/company/womandiversity/) de seguir impulsando proyectos tecnológicos y de sensibilización que promuevan una industria más diversa, equitativa e incluyente.
+El evento reafirmó el compromiso de [Impact Click](https://www.impactclick.org/) y [Code 4 DEI](https://code4dei.com/) de seguir impulsando proyectos tecnológicos y de sensibilización que promuevan una industria más diversa, equitativa e incluyente.
 
 Autor: Mara Ruvalcaba

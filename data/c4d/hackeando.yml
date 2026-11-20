@@ -42,7 +42,7 @@ descubre:
 # Momentos de la agenda que no son sesiones (se mezclan con las sesiones por hora).
 logistica:
   - { hora: "10:30", titulo: "Registro" }
-  - { hora: "11:00", titulo: "Bienvenida de apertura (Impact Click, Code 4 DEI y Woman Diversity)" }
+  - { hora: "11:00", titulo: "Bienvenida de apertura (Impact Click y Code 4 DEI)" }
   - { hora: "12:40", titulo: "Break" }
   - { hora: "14:00", titulo: "Comida" }
   - { hora: "15:15", titulo: "Clausura, por Laura Figueroa, CEO de Impact Click" }
