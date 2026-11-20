@@ -519,8 +519,19 @@ p { margin: 0; }
 .ses--destacada { border-left: 4px solid var(--verde); }
 .ses--destacada .ses__tipo { color: var(--verde); }
 
-/* Las dos notas del pie de la agenda: accesibilidad y formato. */
+/* La nota del pie de la agenda. La rejilla sirve por si vuelve a haber
+   más de una; con una sola, no se estira a todo el ancho. */
 .notas { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 18px; }
+.notas:has(> .nota:only-child) { grid-template-columns: minmax(0, min(100%, 560px)); }
+
+/* Aliados y patrocinadores. Cada nivel va en su propio renglón, con su
+   rótulo encima, porque patrocinador y aliado no son lo mismo y una rejilla
+   corrida los dejaba parejos. El renglón de arriba lleva más peso: tarjeta
+   más alta y logo más grande. */
+.nivel + .nivel { margin-top: 28px; }
+.logos--aliados { grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 300px)); justify-content: start; }
+.logos--destacado a { height: 150px; border-width: 2px; }
+.logos--destacado img { max-height: 100px; }
 .nota { border-top: 3px solid var(--verde); padding-top: 16px; display: flex; flex-direction: column; gap: 8px; }
 .nota h3 { font-family: var(--body); font-size: 13px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--gris); }
 .nota p { color: var(--tinta-2); font-size: 16px; }

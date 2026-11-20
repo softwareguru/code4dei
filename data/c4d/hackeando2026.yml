@@ -34,16 +34,31 @@ organizan: >-
   Una iniciativa de Impact Click, fundación sin fines de lucro que impulsa
   proyectos tecnológicos con impacto social, y de Code 4 DEI, iniciativa de
   Software Guru que promueve una industria tecnológica diversa e incluyente.
-  Aliado y sede: BBVA.
+  Sede: BBVA.
 
-# Las dos notas del pie del PDF, que son parte de la propuesta del evento.
+# Aliados y patrocinadores. Cada grupo es su propio renglón, con su rótulo
+# encima; el orden de los grupos es el que se pinta. `destacado` da tarjeta
+# más alta y logo más grande, para el nivel que encabeza.
+# BBVA no va aquí: participa como sede y así se nombra, en la tira de datos
+# y en el párrafo de quiénes organizan.
+aliados:
+  - titulo: "Patrocinador oficial"
+    destacado: true
+    logos:
+      - nombre: "CleverClick 360"
+        logo: "/images/logos/cleverclick360.png"
+        url: "https://cleverclick360.com/"
+  - titulo: "Aliado estratégico"
+    logos:
+      - nombre: "Mobiik"
+        logo: "/images/logos/mobik.png"
+        url: "https://www.mobiik.com/"
+
+# La nota de accesibilidad del pie del PDF.
 accesibilidad: >-
   Interpretación en Lengua de Señas Mexicana y subtitulado en vivo durante
   todo el programa.
 
-formato: >-
-  Ponencias de 10 minutos más 5 de preguntas. Conferencia y conversatorio de
-  40 minutos; sesión especial de 90.
 
 # tipo: el rótulo que va arriba del título. Sin tipo, la fila se pinta como
 # logística (registro, break, networking): sin tarjeta y con borde punteado.

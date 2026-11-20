@@ -1,5 +1,5 @@
 {{- /* Hackeando barreras por la inclusión · 2.ª edición (layout: hackeando2026).
-       Contenido en data/c4d/hackeando-2026.yml.
+       Contenido en data/c4d/hackeando2026.yml.
 
        La estructura sigue a la página de sede de dd4w —hero, tira de datos,
        agenda y cierre— pero con los componentes y los colores de Code 4 DEI,
@@ -88,12 +88,31 @@
 
       <div class="notas">
         <div class="nota"><h3>Accesibilidad</h3><p>{{ $d.accesibilidad }}</p></div>
-        <div class="nota"><h3>Formato</h3><p>{{ $d.formato }}</p></div>
       </div>
     </div>
   </section>
 
+  {{- with $d.aliados }}
   <section class="sec sec--blanco">
+    <div class="wrap stack">
+      <div class="head"><div class="head__txt"><span class="kicker">Aliados y patrocinadores</span><h2>Quienes hacen posible esta edición</h2></div></div>
+      {{- range . }}
+      <div class="nivel">
+        <h3 class="logos__t">{{ .titulo }}</h3>
+        <div class="logos logos--aliados{{ if .destacado }} logos--destacado{{ end }}">
+          {{- range .logos }}
+          <a href="{{ .url }}" target="_blank" rel="noopener noreferrer">
+            <img src="{{ .logo | relURL }}" alt="{{ .nombre }}" loading="lazy">
+          </a>
+          {{- end }}
+        </div>
+      </div>
+      {{- end }}
+    </div>
+  </section>
+  {{- end }}
+
+  <section class="sec">
     <div class="wrap stack">
       <div class="head"><div class="head__txt"><span class="kicker">Organizan</span><h2>Quiénes están detrás</h2></div></div>
       <p style="color: var(--tinta-2); max-width: 70ch; font-size: 18px">{{ $d.organizan }}</p>
