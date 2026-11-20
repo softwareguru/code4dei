@@ -1,0 +1,140 @@
+{{- /* Hackeando barreras por la inclusión · 2.ª edición (layout: hackeando2026).
+       Contenido en data/c4d/hackeando2026.yml.
+
+       La estructura sigue a la página de sede de dd4w —hero, tira de datos,
+       agenda y cierre— pero con los componentes y los colores de Code 4 DEI,
+       así que no trae css propio salvo .datos, .ses__tipo y .notas.
+
+       La edición de 2025 tiene su propio layout (hackeando.html) y su propia
+       página: esta no la sustituye. La diferencia de fondo es que allá la
+       agenda se arma de content/sessions/ y aquí va completa en el yml,
+       porque esta edición no publica una ficha por sesión. */ -}}
+{{- $d := site.Data.c4d.hackeando2026 -}}
+{{- $e := $d.edicion -}}
+{{ partial "c4d/head.html" . }}
+<body>
+{{ partial "c4d/header.html" . }}
+<main id="contenido">
+
+  <section class="hb-hero">
+    <div class="wrap hb-hero__grid">
+      <div class="hero__txt">
+        <nav class="migas" aria-label="Ruta"><a href="{{ "/" | relURL }}">Inicio</a><span>›</span><a href="{{ "/" | relURL }}#eventos">Eventos</a></nav>
+        <span class="kicker">{{ $e.numero }} · {{ $e.fecha_corta }}</span>
+        <h1 style="font-size: clamp(38px, 5vw, 64px); line-height: 1.06">Hackeando barreras por la <span class="hl">inclusión</span></h1>
+        <p class="lead" style="font-size: 20px; color: var(--tinta-2)">{{ $d.descripcion }}</p>
+        <div class="chips">
+          <span class="chip" style="background: var(--blanco)">{{ $e.acceso }}</span>
+          <span class="chip" style="background: var(--blanco)">LSM y subtítulos en vivo</span>
+        </div>
+        <div class="acciones">
+          <a class="btn btn--primario" href="{{ $e.registro }}" target="_blank" rel="noopener noreferrer">{{ $e.cta }}</a>
+          <a class="btn btn--borde" href="#agenda">Ver la agenda</a>
+        </div>
+      </div>
+      <img class="hb-hero__img" src="{{ "images/c4d/eventos/hackeando-barreras-2026.jpg" | relURL }}" alt="Cartel de Hackeando barreras por la inclusión, 2.ª edición, el 9 de diciembre de 2026 en BBVA Open Space México" width="1080" height="1080" style="object-fit: contain; background: var(--blanco)">
+    </div>
+  </section>
+
+  {{- /* Los datos duros, lo primero que alguien viene a buscar. */}}
+  <section class="sec sec--blanco">
+    <div class="wrap">
+      <div class="datos">
+        <div class="dato"><b>Fecha</b><span>{{ $e.fecha }}</span></div>
+        <div class="dato"><b>Horario</b><span>{{ $e.horario }}</span></div>
+        <div class="dato">
+          <b>Sede</b><span>{{ $e.sede }}</span>
+          <small>{{ $e.sede_detalle }}</small>
+          {{- with $e.sede_mapa }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer">Ver en el mapa</a>{{ end }}
+        </div>
+        <div class="dato"><b>Acceso</b><span>{{ $e.acceso }}</span><small>Cupo limitado. El registro se hace en Luma.</small></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="agenda">
+    <div class="wrap stack">
+      <div class="head">
+        <div class="head__txt">
+          <span class="kicker">Agenda</span>
+          <h2>Seis horas, de los ajustes razonables al empleo real</h2>
+        </div>
+        <a class="btn btn--primario" href="{{ $e.registro }}" target="_blank" rel="noopener noreferrer">{{ $e.cta }}</a>
+      </div>
+
+      <div class="agenda">
+        {{- range $d.agenda }}
+        {{- /* Sin `tipo` la fila es logística: registro, break, networking. */}}
+        {{- if .tipo }}
+        <div class="ses{{ if .destacada }} ses--destacada{{ end }}">
+          <div class="ses__hora">{{ .hora }}</div>
+          <div class="ses__body">
+            <span class="ses__tipo">{{ .tipo }}</span>
+            <h3>{{ if .slug }}<a href="{{ .slug | relURL }}">{{ .titulo }}</a>{{ else }}{{ .titulo }}{{ end }}</h3>
+            {{- with .por }}<p class="ses__por">{{ . }}</p>{{ end }}
+          </div>
+        </div>
+        {{- else }}
+        <div class="ses ses--log">
+          <div class="ses__hora">{{ .hora }}</div>
+          <div class="ses__body">
+            <p style="font-weight: 600">{{ .titulo }}</p>
+            {{- with .por }}<p class="ses__por">{{ . }}</p>{{ end }}
+          </div>
+        </div>
+        {{- end }}
+        {{- end }}
+      </div>
+
+      <div class="notas">
+        <div class="nota"><h3>Accesibilidad</h3><p>{{ $d.accesibilidad }}</p></div>
+      </div>
+    </div>
+  </section>
+
+  {{- with $d.aliados }}
+  <section class="sec sec--blanco">
+    <div class="wrap stack">
+      <div class="head"><div class="head__txt"><span class="kicker">Aliados y patrocinadores</span><h2>Quienes hacen posible esta edición</h2></div></div>
+      {{- range . }}
+      <div class="nivel">
+        <h3 class="logos__t">{{ .titulo }}</h3>
+        <div class="logos logos--aliados{{ if .destacado }} logos--destacado{{ end }}">
+          {{- range .logos }}
+          <a href="{{ .url }}" target="_blank" rel="noopener noreferrer">
+            <img src="{{ .logo | relURL }}" alt="{{ .nombre }}" loading="lazy">
+          </a>
+          {{- end }}
+        </div>
+      </div>
+      {{- end }}
+    </div>
+  </section>
+  {{- end }}
+
+  <section class="sec">
+    <div class="wrap stack">
+      <div class="head"><div class="head__txt"><span class="kicker">Organizan</span><h2>Quiénes están detrás</h2></div></div>
+      <p style="color: var(--tinta-2); max-width: 70ch; font-size: 18px">{{ $d.organizan }}</p>
+      <div class="grid grid--3" style="gap: 18px">
+        <div class="sumate__card"><h3>Consulta el prospectus</h3><p>Paquetes de patrocinio y alcance del evento.</p><a href="{{ $e.prospectus | relURL }}" target="_blank" rel="noopener noreferrer">Descargar PDF</a></div>
+        <div class="sumate__card"><h3>Informes del evento</h3><p>{{ $e.informes }}</p><a href="mailto:{{ $e.informes }}">Mandar correo</a></div>
+        <div class="sumate__card"><h3>Escríbele a Code 4 DEI</h3><p>{{ $e.correo }}</p><a href="mailto:{{ $e.correo }}">Mandar correo</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" style="padding-top: 56px">
+    <div class="wrap">
+      <div class="hb-aviso">
+        <p><b>El registro es gratuito.</b> El cupo de la sede es limitado y se llena por orden de registro.</p>
+        <a class="btn btn--primario" href="{{ $e.registro }}" target="_blank" rel="noopener noreferrer">{{ $e.cta }}</a>
+      </div>
+      <p style="margin-top: 28px; color: var(--gris); font-size: 16px">¿Buscabas la edición pasada? <a href="{{ "hackeando-barreras-por-la-inclusion/" | relURL }}" style="color: var(--magenta); font-weight: 600">Mira cómo fue la 1.ª edición, en noviembre de 2025</a>.</p>
+    </div>
+  </section>
+
+</main>
+{{ partial "c4d/footer.html" . }}
+</body>
+</html>

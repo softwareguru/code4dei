@@ -1,0 +1,121 @@
+### Hackeando barreras por la inclusión · 2.ª edición (/hackeando-barreras-2026/)
+#
+# Landing del evento del 9 de diciembre de 2026. La edición de 2025 vive
+# aparte, en /hackeando-barreras-por-la-inclusion/ con data/c4d/hackeando.yml.
+#
+# La agenda va completa en este archivo, no en content/sessions/, porque esta
+# edición no publica una página por sesión: el PDF de agenda trae el título y
+# quién la da, y nada más. Si alguna sesión llega a tener su propia ficha, se
+# le agrega `slug` a la fila y la plantilla la enlaza.
+#
+# Fuente: «Agenda_Hackeando-Barreras-2026.pdf», Impact Click.
+
+edicion:
+  numero: "2.ª edición"
+  fecha: "Miércoles 9 de diciembre de 2026"
+  fecha_corta: "9 de diciembre de 2026"
+  horario: "9:00 a 15:00 h"
+  sede: "BBVA Open Space México"
+  sede_detalle: "Torre BBVA Bancomer, piso 33. Av. Paseo de la Reforma 510, Col. Juárez, Cuauhtémoc, Ciudad de México"
+  sede_mapa: "https://maps.google.com/?q=Torre+BBVA+Bancomer+Paseo+de+la+Reforma+510+Ciudad+de+Mexico"
+  acceso: "Gratuito · presencial"
+  registro: "https://luma.com/iii3nod0"
+  cta: "Regístrate gratis"
+  correo: "info@code4dei.com"
+  informes: "laura@impactclick.org"
+  prospectus: "/files/prospectus_hackeando_barreras_por_la_inclusion_v1.3.pdf"
+
+descripcion: >-
+  Un congreso para pasar del discurso a la práctica: qué implican los ajustes
+  razonables, cómo se recluta sin barreras y qué cambia en una empresa cuando
+  contrata talento con discapacidad. Lo cuentan quienes ya lo hicieron.
+
+organizan: >-
+  Una iniciativa de Impact Click, fundación sin fines de lucro que impulsa
+  proyectos tecnológicos con impacto social, y de Code 4 DEI, iniciativa de
+  Software Guru que promueve una industria tecnológica diversa e incluyente.
+  Sede: BBVA.
+
+# Aliados y patrocinadores. Cada grupo es su propio renglón, con su rótulo
+# encima; el orden de los grupos es el que se pinta. `destacado` da tarjeta
+# más alta y logo más grande, para el nivel que encabeza.
+# BBVA no va aquí: participa como sede y así se nombra, en la tira de datos
+# y en el párrafo de quiénes organizan.
+aliados:
+  - titulo: "Patrocinador oficial"
+    destacado: true
+    logos:
+      - nombre: "CleverClick 360"
+        logo: "/images/logos/cleverclick360.png"
+        url: "https://cleverclick360.com/"
+  - titulo: "Aliado estratégico"
+    logos:
+      - nombre: "Mobiik"
+        logo: "/images/logos/mobik.png"
+        url: "https://www.mobiik.com/"
+
+# La nota de accesibilidad del pie del PDF.
+accesibilidad: >-
+  Interpretación en Lengua de Señas Mexicana y subtitulado en vivo durante
+  todo el programa.
+
+
+# tipo: el rótulo que va arriba del título. Sin tipo, la fila se pinta como
+# logística (registro, break, networking): sin tarjeta y con borde punteado.
+agenda:
+  - hora: "9:00 a 9:20"
+    titulo: "Bienvenida"
+    por: "Impact Click, Code4DEI y BBVA"
+
+  - hora: "9:20 a 9:35"
+    tipo: "Ponencia"
+    titulo: "Más allá del acceso: presencia, participación y pertenencia en la educación incluyente"
+    por: "Francesca Munda · Directora del CEIDI, Universidad Anáhuac México"
+
+  - hora: "9:35 a 9:50"
+    tipo: "Ponencia"
+    titulo: "La accesibilidad no es una fase: cómo integrarla al diseño de software desde el primer día"
+    por: "Itzel Molina · Especialista en accesibilidad digital y DesignOps"
+
+  - hora: "9:50 a 10:05"
+    tipo: "Ponencia"
+    titulo: "Publicar sin excluir: buenas prácticas, lineamientos y consejos para redes sociales accesibles"
+    por: "Karina Bárcena Anguiano · Libre Acceso A.C."
+
+  - hora: "10:05 a 10:45"
+    tipo: "Conferencia"
+    destacada: true
+    titulo: "Ajustes razonables: qué implican, qué le devuelven a la empresa y cómo la tecnología asistiva los hace posibles"
+    por: "Jacques Matthias Tapie Amione · Grupo CREATA"
+
+  - hora: "10:45 a 11:00"
+    tipo: "Ponencia"
+    titulo: "Reclutar sin barreras: consejos para cada etapa del proceso. Más talento, mejores equipos, cero barreras"
+    por: "Lou Arreola · Linkenium Consulting"
+
+  - hora: "11:00 a 11:15"
+    tipo: "Ponencia"
+    titulo: "Inclusión laboral real: retos, oportunidades y el salto del discurso a la práctica"
+    por: "Martha Gabriela García · com-une"
+
+  - hora: "11:15 a 11:35"
+    titulo: "Break"
+
+  - hora: "11:35 a 11:50"
+    tipo: "Ponencia"
+    titulo: "Nos cambió como empresa: lo que CleverClick 360 aprendió al contratar talento con discapacidad"
+    por: "Carolina Salinas · CleverClick 360"
+
+  - hora: "11:50 a 12:30"
+    tipo: "Conversatorio"
+    destacada: true
+    titulo: "De la formación al empleo: egresados de Impact Click cuentan su experiencia"
+    por: "Egresadas y egresados de Impact Click que hoy trabajan en empresas de enfoque digital"
+
+  - hora: "12:30 a 14:00"
+    tipo: "Sesión especial"
+    destacada: true
+    titulo: "Claude Conversations for Disability Inclusion"
+
+  - hora: "14:00 a 15:00"
+    titulo: "Networking"
