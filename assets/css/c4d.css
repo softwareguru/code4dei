@@ -518,6 +518,18 @@ p { margin: 0; }
    distinguen con el verde de la marca, no con otro tamaño de tarjeta. */
 .ses--destacada { border-left: 4px solid var(--verde); }
 .ses--destacada .ses__tipo { color: var(--verde); }
+.ponentes { display: flex; flex-wrap: wrap; gap: 14px 40px; margin-top: 4px; }
+.ponentes .ponente { margin-top: 0; }
+.ponente { display: grid; grid-template-columns: 72px minmax(0, 1fr); gap: 16px; align-items: start; margin-top: 4px; }
+.ponente__foto { width: 72px; height: 72px; border-radius: 50%; object-fit: cover; background: var(--crema); }
+.ponente__txt { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.ponente__links { display: flex; gap: 14px; flex-wrap: wrap; font-size: 14px; font-weight: 700; }
+.ponente__links a { color: var(--magenta); }
+.ponente__semblanza summary { cursor: pointer; font-size: 14px; font-weight: 700; color: var(--verde); width: fit-content; }
+.ponente__semblanza summary:hover { color: var(--magenta); }
+.ponente__semblanza > div { margin-top: 10px; font-size: 15px; line-height: 1.6; color: var(--tinta-2); max-width: 70ch; }
+.ponente__semblanza > div p + p { margin-top: 10px; }
+@media (max-width: 620px) { .ponente { grid-template-columns: 56px minmax(0, 1fr); gap: 12px; } .ponente__foto { width: 56px; height: 56px; } }
 
 /* La nota del pie de la agenda. La rejilla sirve por si vuelve a haber
    más de una; con una sola, no se estira a todo el ancho. */

@@ -64,6 +64,7 @@
 
       <div class="agenda">
         {{- range $d.agenda }}
+        {{- $fila := . }}
         {{- /* Sin `tipo` la fila es logística: registro, break, networking. */}}
         {{- if .tipo }}
         <div class="ses{{ if .destacada }} ses--destacada{{ end }}">
@@ -71,7 +72,12 @@
           <div class="ses__body">
             <span class="ses__tipo">{{ .tipo }}</span>
             <h3>{{ if .slug }}<a href="{{ .slug | relURL }}">{{ .titulo }}</a>{{ else }}{{ .titulo }}{{ end }}</h3>
+            {{- with .ponente }}
+            {{- $p := index $d.ponentes . }}
+            {{ partial "c4d/ponente.html" (dict "p" $p "texto" $fila.por) }}
+            {{- else }}
             {{- with .por }}<p class="ses__por">{{ . }}</p>{{ end }}
+            {{- end }}
           </div>
         </div>
         {{- else }}
@@ -80,6 +86,14 @@
           <div class="ses__body">
             <p style="font-weight: 600">{{ .titulo }}</p>
             {{- with .por }}<p class="ses__por">{{ . }}</p>{{ end }}
+            {{- with .ponentes }}
+            <div class="ponentes">
+              {{- range . }}
+              {{- $p := index $d.ponentes . }}
+              {{ partial "c4d/ponente.html" (dict "p" $p "texto" (printf "%s · %s" $p.nombre $p.cargo)) }}
+              {{- end }}
+            </div>
+            {{- end }}
           </div>
         </div>
         {{- end }}
