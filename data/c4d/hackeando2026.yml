@@ -60,43 +60,131 @@ accesibilidad: >-
   todo el programa.
 
 
+# Ponentes. La clave es la que usa cada fila de la agenda en `ponente`.
+# Foto, LinkedIn y semblanza vienen de «HBxI26 - Tracker - Speakers.csv»;
+# las fotos están recortadas a 400×400 en static/images/speakers/hackeando-2026/.
+# Sin `semblanza`, la tarjeta muestra solo foto y LinkedIn.
+ponentes:
+  # Bienvenida. Llevan `cargo` porque la fila de bienvenida no tiene un
+  # `por` por persona. Fotos del comité (static/images/c4d/comite/).
+  laura-figueroa:
+    nombre: "Laura Figueroa"
+    cargo: "CEO de Impact Click"
+    foto: "/images/c4d/comite/laura-figueroa.jpg"
+    linkedin: "https://www.linkedin.com/in/laurafiglez/"
+  mara-ruvalcaba:
+    nombre: "Mara Ruvalcaba"
+    cargo: "Directora de Code 4 DEI"
+    foto: "/images/c4d/comite/mara-ruvalcaba.jpg"
+    linkedin: "https://www.linkedin.com/in/marayve/"
+
+  francesca-munda:
+    nombre: "Francesca Munda"
+    foto: "/images/speakers/hackeando-2026/francesca-munda.jpg"
+    linkedin: "https://www.linkedin.com/in/francesca-munda/"
+    semblanza: |-
+      La Dra. Francesca Munda Magill nació en Lima, Perú y ha vivido en Estados Unidos, España, Venezuela y la mayor parte de su vida en la Ciudad de México. Es licenciada en Psicología por la Universidad Iberoamericana, tiene un Máster en Integración de Personas con Discapacidad por la Universidad de Salamanca, una Maestría en Responsabilidad Social por la Universidad Anáhuac México y es Doctora en Educación por la University of Southern California. Su tesis de doctorado se tituló “Factors and Forces of Impact: Teaching Students with Disabilities in Mexican Universities”.
+
+      Cuenta con más de 25 años de experiencia profesional impulsando la educación inclusiva en instituciones educativas y organizaciones de la sociedad civil, ha impartido conferencias en varios países, así como publicado sobre el tema en diversos medios. Formó parte del Consejo Consultivo del Instituto Mexiquense para la Protección y Desarrollo de las Personas con Discapacidad del Estado de México del 2018 al 2021 y del Consejo Consultivo del Instituto de las Personas con Discapacidad de la CDMX del 2021 al 2024 y actualmente en la gestión del 2025 al 2028.
+
+      Lleva los últimos 16 años de su carrera colaborando en la Universidad Anáhuac México, donde ha sido coordinadora académica de licenciatura y posgrado, diseñó e impartió las materias de licenciatura “Inclusión Educativa y Laboral” y “Discapacidad, Comunicación e Inclusión en un Mundo Global”; diseñó y coordinó la Maestría en Inclusión de Personas con Discapacidad; creó y encabezó la Coordinación para la Atención a la Discapacidad así como el Diplomado en Desarrollo de Habilidades Sociales y Vocacionales, un programa universitario para jóvenes con discapacidad intelectual y del desarrollo.
+
+      Además, cofundó y presidió durante 8 años el Comité de Accesibilidad para Personas con Discapacidad en la misma institución. Del 2019 al 2026 fue directora de la Facultad de Educación y Humanidades de la Universidad Anáhuac México, desde donde lideró las iniciativas de inclusión y accesibilidad, además de encabezar los programas de licenciatura, posgrado, e investigación de la facultad. Actualmente es investigadora y dirige el Centro de Estudios e Innovación en Discapacidad e Inclusión (CEIDI) en la misma universidad.
+  itzel-molina:
+    nombre: "Itzel Molina"
+    foto: "/images/speakers/hackeando-2026/itzel-molina.jpg"
+    linkedin: "https://www.linkedin.com/in/itzelmolina-productdesign-accessibility/"
+    semblanza: |-
+      Itzel Molina es especialista en diseño de productos digitales, accesibilidad digital y DesignOps. Ingeniera Geomática por la UNAM, ha desarrollado una visión interdisciplinaria que integra investigación de usuarios, diseño de servicios y estrategia de producto, con experiencia en los sectores retail y financiero.
+
+      A lo largo de su trayectoria ha impulsado la incorporación de criterios de accesibilidad en productos y experiencias digitales mediante el desarrollo de lineamientos, documentación técnica, evaluación de componentes y formación de equipos multidisciplinarios.
+
+      Su enfoque conecta diseño, tecnología y procesos organizacionales para transformar la accesibilidad en una práctica transversal, colaborativa y sostenible, integrada desde las primeras etapas del desarrollo de productos digitales.
+  karina-barcena:
+    nombre: "Karina Bárcena Anguiano"
+    foto: "/images/speakers/hackeando-2026/karina-barcena.jpg"
+    linkedin: "https://www.linkedin.com/in/karina-barcena-anguiano/"
+    semblanza: |-
+      Es co-fundadora de HIT, Hagamos de la Inclusión un Todo, organización especializada en accesibilidad digital e inclusión de personas con discapacidad. También es consejera en Libre Acceso A.C., asociación civil con 36 años de vida trabajando por la inclusión de las personas con discapacidad.
+
+      Ha liderado proyectos con alcance internacional como la serie animada La vida secreta de tu mente, primera serie latinoamericana en ganar un Emmy Internacional.
+  jacques-tapie:
+    nombre: "Jacques Matthias Tapie Amione"
+    foto: "/images/speakers/hackeando-2026/jacques-tapie.jpg"
+    linkedin: "https://www.linkedin.com/in/jacques-matthias-tapie-amione/"
+  lourdes-arreola:
+    nombre: "Lou Arreola"
+    foto: "/images/speakers/hackeando-2026/lourdes-arreola.jpg"
+    linkedin: "https://www.linkedin.com/in/louarreola4inclusion2diversity/"
+    semblanza: |-
+      Lourdes es asesora internacional especializada en diversidad, inclusión y accesibilidad, y fundadora de Linkenium, firma desde la cual acompaña a instituciones y empresas a crear entornos verdaderamente inclusivos.
+
+      Ha participado como conferencista y asesora en foros nacionales e internacionales, compartiendo enfoques que ayudan a convertir la inclusión en acciones prácticas y a comprenderla como una parte esencial de nuestra humanidad.
+
+      Fue finalista en los Cartier Women’s Initiative Awards (2013) y recibió el Premio Estatal contra la Discriminación de la CODHEM (2015) por su trabajo a favor de la igualdad y la no discriminación. Participó en el comité que desarrolló el Estándar Mexicano para las TIC accesibles y ha liderado proyectos clave como la primera Guía de Turismo Accesible de la Ciudad de México, la implementación de estrategias de accesibilidad e inclusión en nueve aeropuertos del país entre otros.
+
+      Desde 2012, diseña e implementa cursos sobre inclusión social y laboral, accesibilidad y servicio al cliente inclusivo para gobiernos y empresas nacionales e internacionales. Entre 2021 y 2025 colaboró como consultora con la Asociación Internacional de Profesionales de la Accesibilidad (IAAP) y para the Global Initiative for Inclusive ICTs (G3ict).
+
+      Es Ingeniera Electrónica por la Universidad Iberoamericana y cuenta con un diplomado como Experta en Tecnologías de la Información y Discapacidad (Creática Fundación FREE – España / CETYS). Habla inglés, francés y portugués; tiene dominio avanzado de italiano, estudia alemán y comprende nivel básico de lengua de señas americana (ASL). Para ella, los idiomas son una forma de abrirse a la inclusión cultural.
+  martha-garcia:
+    nombre: "Martha Gabriela García"
+    foto: "/images/speakers/hackeando-2026/martha-garcia.jpg"
+    linkedin: "https://www.linkedin.com/in/martha-garc%C3%ADa/"
+    semblanza: |-
+      Mujer con discapacidad, activista por los derechos de las personas con discapacidad, fundadora y coordinadora general del Movimiento de Personas con Discapacidad y del proyecto conTextoS con Martha Garcia. Licenciada en Trabajo Social de la Facultad de Trabajo Social de la Universidad Nacional Autónoma de México (UNAM). Además, es integrante del colectivo Pumaccesible, que agrupa a estudiantes con alguna condición de discapacidad dentro de la comunidad universitaria. Es parte de la Asamblea Consultiva del Consejo para Prevenir y Eliminar la Discriminación de la Ciudad de México y COMUNE una comunidad que comunica, conecta e impulsa el cambio en los entornos laborales. Con una participación activa en diversos foros del ámbito público y privado, abordado temas clave como la toma de conciencia sobre la discapacidad, derechos humanos, la no discriminación, el uso de lenguaje incluyente, derechos de las mujeres con discapacidad, inclusión laboral, educación, entre otros. A través de su colaboración con las organizaciones y grupos que trabajan a favor de las personas con discapacidad, impulsa la creación de alianzas estratégicas tanto a nivel nacional como internacional para promover una inclusión efectiva y garantizar los derechos de esta comunidad.
+  carolina-salinas:
+    nombre: "Carolina Salinas"
+    foto: "/images/speakers/hackeando-2026/carolina-salinas.jpg"
+    linkedin: "https://www.linkedin.com/in/carolinacleverclick360/"
+    semblanza: |-
+      Carolina Salinas García es empresaria mexicana, CEO y cofundadora de CleverClick 360, compañía especializada en Performance Marketing y crecimiento basado en resultados. Desde 2018, ha impulsado un modelo de negocio innovador basado en riesgo compartido, integrando tecnología, inteligencia artificial y análisis de datos para transformar la manera en que las empresas adquieren clientes. Su visión va más allá de la rentabilidad: busca demostrar que es posible construir empresas altamente competitivas sin sacrificar la calidad de vida de sus colaboradores. Bajo su liderazgo, CleverClick 360 obtuvo el Distintivo ESR® 2026 y ha iniciado su expansión internacional. Es también cofundadora y Presidenta del Consejo de Fundación Impact Click, organización dedicada a promover la inclusión laboral de personas con discapacidad mediante capacitación en habilidades digitales. Carolina apuesta por un liderazgo que desafía los modelos tradicionales de hacer negocios y demuestra que la innovación, el crecimiento y el bienestar pueden ir de la mano.
+
 # tipo: el rótulo que va arriba del título. Sin tipo, la fila se pinta como
 # logística (registro, break, networking): sin tarjeta y con borde punteado.
 agenda:
   - hora: "9:00 a 9:20"
     titulo: "Bienvenida"
     por: "Impact Click, Code4DEI y BBVA"
+    # Falta quién da la bienvenida por BBVA: cuando llegue, se agrega su
+    # entrada en `ponentes` (con `cargo`) y su clave a esta lista.
+    ponentes: [laura-figueroa, mara-ruvalcaba]
 
   - hora: "9:20 a 9:35"
     tipo: "Ponencia"
     titulo: "Más allá del acceso: presencia, participación y pertenencia en la educación incluyente"
     por: "Francesca Munda · Directora del CEIDI, Universidad Anáhuac México"
+    ponente: francesca-munda
 
   - hora: "9:35 a 9:50"
     tipo: "Ponencia"
     titulo: "La accesibilidad no es una fase: cómo integrarla al diseño de software desde el primer día"
     por: "Itzel Molina · Especialista en accesibilidad digital y DesignOps"
+    ponente: itzel-molina
 
   - hora: "9:50 a 10:05"
     tipo: "Ponencia"
     titulo: "Publicar sin excluir: buenas prácticas, lineamientos y consejos para redes sociales accesibles"
     por: "Karina Bárcena Anguiano · Libre Acceso A.C."
+    ponente: karina-barcena
 
   - hora: "10:05 a 10:45"
     tipo: "Conferencia"
     destacada: true
     titulo: "Ajustes razonables: qué implican, qué le devuelven a la empresa y cómo la tecnología asistiva los hace posibles"
     por: "Jacques Matthias Tapie Amione · Grupo CREATA"
+    ponente: jacques-tapie
 
   - hora: "10:45 a 11:00"
     tipo: "Ponencia"
     titulo: "Reclutar sin barreras: consejos para cada etapa del proceso. Más talento, mejores equipos, cero barreras"
     por: "Lou Arreola · Linkenium Consulting"
+    ponente: lourdes-arreola
 
   - hora: "11:00 a 11:15"
     tipo: "Ponencia"
     titulo: "Inclusión laboral real: retos, oportunidades y el salto del discurso a la práctica"
     por: "Martha Gabriela García · com-une"
+    ponente: martha-garcia
 
   - hora: "11:15 a 11:35"
     titulo: "Break"
@@ -105,6 +193,7 @@ agenda:
     tipo: "Ponencia"
     titulo: "Nos cambió como empresa: lo que CleverClick 360 aprendió al contratar talento con discapacidad"
     por: "Carolina Salinas · CleverClick 360"
+    ponente: carolina-salinas
 
   - hora: "11:50 a 12:30"
     tipo: "Conversatorio"

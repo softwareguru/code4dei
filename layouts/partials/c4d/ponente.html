@@ -1,0 +1,20 @@
+{{- /* Tarjeta de ponente en la agenda de Hackeando barreras 2026.
+       Recibe dict "p" (la entrada de `ponentes` en el yml) y "texto" (la
+       línea de nombre y cargo). La foto lleva alt vacío: el nombre va justo
+       al lado y un lector de pantalla lo leería dos veces. */ -}}
+{{- $p := .p -}}
+<div class="ponente">
+  <img class="ponente__foto" src="{{ $p.foto | relURL }}" alt="" width="72" height="72" loading="lazy">
+  <div class="ponente__txt">
+    <p class="ses__por">{{ .texto }}</p>
+    {{- with $p.linkedin }}
+    <div class="ponente__links"><a href="{{ . }}" target="_blank" rel="noopener noreferrer">LinkedIn<span class="sr"> de {{ $p.nombre }} (abre en otra pestaña)</span></a></div>
+    {{- end }}
+    {{- with $p.semblanza }}
+    <details class="ponente__semblanza">
+      <summary>Semblanza<span class="sr"> de {{ $p.nombre }}</span></summary>
+      <div>{{ . | markdownify }}</div>
+    </details>
+    {{- end }}
+  </div>
+</div>
