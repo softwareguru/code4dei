@@ -12,6 +12,7 @@ linkedin: "https://www.linkedin.com/in/martha-garc%C3%ADa/"
 github: ""
 events: 
  - 2025
+ - 2026
 hackeando: true
 ---
 

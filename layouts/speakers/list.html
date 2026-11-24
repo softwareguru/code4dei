@@ -1,6 +1,7 @@
 {{- /* /speakers/ · ponentes de los eventos de Code 4 DEI, agrupados por edición. */ -}}
 {{- $todas := where .Data.Pages "Params.images" "!=" nil -}}
 {{- $grupos := slice
+    (dict "clave" "2026" "titulo" "Hackeando barreras por la inclusión 2026")  
     (dict "clave" "2025" "titulo" "Hackeando barreras por la inclusión 2025")
     (dict "clave" "2023" "titulo" "Code 4 DEI 2023") -}}
 {{ partial "c4d/head.html" . }}

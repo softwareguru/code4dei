@@ -12,6 +12,7 @@ linkedin: "https://www.linkedin.com/in/carolinacleverclick360/"
 github: ""
 events: 
  - 2025
+ - 2026
 ---
 
 Carolina Salinas, CEO y cofundadora de CleverClick 360 y cofundadora de Impact Click, es
