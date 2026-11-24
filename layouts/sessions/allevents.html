@@ -1,0 +1,48 @@
+{{- /* /sessions/ (lista de ediciones en tarjetas) y /sessions/2023/, /sessions/2025/ (lista de sesiones). */ -}}
+{{- $nombres := dict "2023" "Code 4 DEI 2023 · Conferencias de diversidad, equidad e inclusión" "2025" "Hackeando barreras por la inclusión 2025" -}}
+{{ partial "c4d/head.html" . }}
+<body>
+{{ partial "c4d/header.html" . }}
+<main id="contenido">
+  <section class="ph">
+    <div class="wrap ph__in">
+      <nav class="migas" aria-label="Ruta"><a href="{{ "/" | relURL }}">Inicio</a><span>›</span>{{ if .Sections }}<span>Sesiones</span>{{ else }}<a href="{{ "sessions/" | relURL }}">Sesiones</a>{{ end }}</nav>
+      {{- if .Sections }}
+      <span class="kicker">Lista de sesiones</span>
+      <h1>Conoce las sesiones anteriores de Code 4 DEI</h1>
+      {{- else }}
+      <span class="kicker">Sesiones</span>
+      <h1>{{ index $nombres .File.ContentBaseName | default (index $nombres (path.Base .File.Dir)) | default .Title }}</h1>
+      {{- end }}
+    </div>
+  </section>
+
+  <section style="padding-bottom: 96px">
+    <div class="wrap">
+      {{- if .Sections }}
+        {{- /* Índice: tarjetas de ediciones */ -}}
+        <div class="ed-list">
+          {{- range sort .Sections "File.Dir" "desc" }}
+          {{- $clave := path.Base .File.Dir }}
+          <a class="ed-card" href="{{ .RelPermalink }}">
+            <span class="ed-card__info">
+              <span class="ed-card__title">{{ index $nombres $clave | default .Title }}</span>
+              <span class="ed-card__count">{{ len .RegularPages }} sesiones</span>
+            </span>
+            <svg class="ed-card__arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+          {{- end }}
+        </div>
+      {{- else }}
+        {{- /* Página de una edición: lista de sesiones */ -}}
+        <div class="agenda">{{ range partial "c4d/ordenar-sesiones.html" .RegularPages }}{{ partial "c4d/sesion.html" . }}{{ end }}</div>
+      {{- end }}
+    </div>
+  </section>
+</main>
+{{ partial "c4d/footer.html" . }}
+</body>
+</html>

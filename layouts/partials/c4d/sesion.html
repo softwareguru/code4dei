@@ -1,10 +1,8 @@
 {{- /* Renglón de agenda/sesión. Recibe la página de la sesión. */ -}}
 {{- $s := . -}}
-{{- $hora := "" -}}
-{{- with $s.Params.time_start }}{{ $hora = (time .).Format "15:04" }}{{ end -}}
-<article class="ses">
-  <div class="ses__hora">{{ $hora | default $s.Params.track }}</div>
+<article class="ses{{ if $s.Params.destacada }} ses--destacada{{ end }}">
   <div class="ses__body">
+    {{- with $s.Params.tipo }}<span class="ses__tipo">{{ . }}</span>{{ end }}
     <h3><a href="{{ $s.RelPermalink }}">{{ $s.Title }}</a></h3>
     {{- with $s.GetTerms "speakers" }}
     <p class="ses__por">Por {{ range $i, $t := . }}{{ if $i }}, {{ end }}<a href="{{ $t.RelPermalink }}">{{ $t.Title }}</a>{{ end }}</p>
