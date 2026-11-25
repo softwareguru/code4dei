@@ -75,6 +75,11 @@ link="https://kit.fontawesome.com/a6f10b653b.js"
   url = "/#sumate"
   weight = 4
 
+  [[menu.main]]
+  name = "Agenda 2026"
+  url = "/hackeando-barreras-2026/"
+  weight = 5
+
 
   #[[menu.main]]
   #name = "Reconocimientos SG4W"

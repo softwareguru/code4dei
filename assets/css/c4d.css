@@ -455,7 +455,7 @@ p { margin: 0; }
 /* Lista de sesiones / agenda */
 .agenda { display: flex; flex-direction: column; gap: 12px; }
 .ses { display: grid; grid-template-columns: minmax(0, 1fr); gap: 8px; background: var(--blanco); border: 1px solid var(--linea); border-radius: 18px; padding: 20px 22px; align-items: start; }
-.ses--log { background: transparent; border-style: dashed; padding-block: 14px; }
+.ses--log { background: var(--blanco); border-left: 4px solid var(--magenta); padding-block: 14px; }
 .ses__hora { font-family: var(--display); font-weight: 600; font-size: 17px; color: var(--verde); }
 .ses__body { display: flex; flex-direction: column; gap: 8px; }
 .ses h3 { font-family: var(--body); font-size: 19px; font-weight: 700; line-height: 1.35; }

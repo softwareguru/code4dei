@@ -11,6 +11,7 @@
     </a>
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav-principal" data-menu>Menú</button>
     <nav class="nav" id="nav-principal" aria-label="Principal">
+      <a href="{{ "hackeando-barreras-2026//" | relURL }}"{{ if $enGaleria }} aria-current="page"{{ end }}>Agenda 2026</a>
       <a href="{{ $base }}#iniciativa">La iniciativa</a>
       <a href="{{ $base }}#eventos">Eventos</a>
       <a href="{{ "galeria/" | relURL }}"{{ if $enGaleria }} aria-current="page"{{ end }}>Galería</a>
