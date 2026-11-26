@@ -1,0 +1,13 @@
+/* Eventos pasados (dd4w2026/sede-card) */
+.sede { position: relative; display: flex; flex-direction: column; justify-content: flex-end; min-height: 420px; border-radius: 24px; overflow: hidden; color: var(--blanco); text-decoration: none; }
+.sede > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .4s; }
+.sede:hover > img { transform: scale(1.03); }
+.sede::after { content: ""; position: absolute; inset: 0; }
+.sede--morado::after { background: linear-gradient(0deg, rgba(29, 20, 60, .92) 0%, rgba(29, 20, 60, .55) 45%, rgba(29, 20, 60, 0) 75%); }
+.sede--verde::after { background: linear-gradient(0deg, rgba(20, 60, 54, .94) 0%, rgba(20, 60, 54, .55) 45%, rgba(20, 60, 54, 0) 75%); }
+.sede__badge { position: absolute; z-index: 1; top: 20px; left: 20px; background: var(--blanco); color: var(--tinta); font-weight: 700; font-size: 13px; padding: 6px 12px; border-radius: 999px; }
+.sede__txt { position: relative; z-index: 1; padding: 28px; display: flex; flex-direction: column; gap: 10px; }
+.sede__txt b { font-family: var(--display); font-weight: 600; font-size: 30px; line-height: 1.1; }
+.sede__txt .chip { background: rgba(255, 255, 255, .18); border: 1px solid rgba(255, 255, 255, .35); color: var(--blanco); }
+.sede__cta { margin-top: 6px; font-weight: 700; display: inline-flex; align-items: center; gap: 8px; }
+.sede__cta svg { width: 18px; height: 18px; }

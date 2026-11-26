@@ -1,0 +1,14 @@
+/* Páginas de texto (código de conducta, privacidad, quiénes somos…) */
+.pagina { padding-block: 64px 96px; }
+.pagina__head { display: flex; flex-direction: column; gap: 14px; margin-bottom: 40px; }
+.pagina__head h1 { font-size: clamp(34px, 5vw, 52px); }
+.prosa { background: var(--blanco); border-radius: 24px; padding: clamp(24px, 5vw, 56px); max-width: 860px; font-size: 18px; line-height: 1.75; }
+.prosa > * + * { margin-top: 1em; }
+.prosa h2, .prosa h3 { margin-top: 1.6em; line-height: 1.2; }
+.prosa h2 { font-size: 28px; } .prosa h3 { font-size: 22px; }
+.prosa a { color: var(--magenta); font-weight: 600; }
+.prosa ul, .prosa ol { padding-left: 1.3em; }
+.prosa iframe { max-width: 100%; border: 0; }
+.prosa img { border-radius: 12px; height: auto; }
+.volver { align-self: flex-start; font-size: 15px; font-weight: 600; text-decoration: none; color: var(--gris); }
+.volver:hover { color: var(--magenta); }

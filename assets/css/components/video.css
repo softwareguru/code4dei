@@ -1,0 +1,21 @@
+/* Videos y testimonios (dd4w2026/testimonios-video) */
+.vid { text-decoration: none; color: var(--tinta); background: var(--blanco); border-radius: 20px; overflow: hidden; display: flex; flex-direction: column; }
+.vid__media { position: relative; display: block; background: #2E2460; }
+.vid__media img { width: 100%; height: 100%; object-fit: cover; }
+.vid__media--yt { aspect-ratio: 16 / 9; }
+.vid__media--ig { aspect-ratio: 4 / 5; }
+.vid__play { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; }
+.vid__play span { display: flex; align-items: center; justify-content: center; }
+.vid__play--ig span { width: 64px; height: 64px; border-radius: 50%; background: rgba(255, 255, 255, .95); color: var(--morado); }
+.vid__play--yt span { width: 68px; height: 48px; border-radius: 14px; background: #D61F1F; color: var(--blanco); }
+.vid__play svg { width: 26px; height: 26px; }
+.vid__ig { position: absolute; top: 14px; right: 14px; width: 36px; height: 36px; border-radius: 10px; background: rgba(29, 29, 27, .55); color: var(--blanco); display: flex; align-items: center; justify-content: center; }
+.vid__ig svg { width: 18px; height: 18px; }
+.vid__body { padding: 20px 22px 24px; display: flex; flex-direction: column; gap: 8px; }
+.vid__q { font-family: var(--display); font-weight: 600; font-size: 19px; line-height: 1.3; }
+.vid__body b { font-size: 16px; color: var(--morado); }
+.vid__body .vid__t { font-size: 18px; font-weight: 700; line-height: 1.3; color: var(--tinta); }
+.vid__rol { font-size: 14px; color: var(--gris); line-height: 1.4; }
+.vid__body .chip { align-self: flex-start; font-size: 12px; padding: 3px 9px; }
+.chip--verde { background: var(--verde-suave); } .chip--morado { background: var(--morado-suave); } .chip--amarillo { background: var(--amarillo-suave); }
+.subt { font-size: 24px; }

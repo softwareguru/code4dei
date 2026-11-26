@@ -1,0 +1,25 @@
+/* Code 4 DEI · rediseño 2026
+   Colores del logo (magenta, amarillo, verde, morado, azul) sobre crema.
+   Estructura de componentes tomada de Dev Day 4 Women 2026 (dd4w2026). */
+
+:root {
+  --crema: #F6F6D6;
+  --blanco: #FFFFFF;
+  --tinta: #1D1D1B;
+  --tinta-2: #3B3A36;
+  --gris: #5A5952;
+  --magenta: #B8155F;      /* botones: el magenta del logo, oscurecido para contraste AA */
+  --amarillo: #FBB517;
+  --verde: #1B5E55;
+  --morado: #4A3A8C;
+  --azul: #4F63B0;
+  --lila: #7D69AE;
+  --rosa-suave: #FBD3E4;
+  --amarillo-suave: #FFE7A8;
+  --verde-suave: #CDEBDC;
+  --morado-suave: #DCD5EE;
+  --linea: rgba(29, 29, 27, .12);
+  --display: "Montserrat Alternates", "Trebuchet MS", sans-serif;
+  --body: "Hanken Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --maxw: 1440px;
+}

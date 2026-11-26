@@ -1,0 +1,23 @@
+/* Code4DEI · CSS modular
+   Mantener este orden para conservar la cascada original. */
+
+@import url("./base/tokens.css");
+@import url("./base/global.css");
+@import url("./layout/sections.css");
+@import url("./components/buttons.css");
+@import url("./layout/header.css");
+@import url("./pages/home/hero.css");
+@import url("./components/cards.css");
+@import url("./pages/home/events.css");
+@import url("./pages/home/metrics.css");
+@import url("./pages/home/past-events.css");
+@import url("./pages/home/why.css");
+@import url("./components/gallery.css");
+@import url("./components/video.css");
+@import url("./pages/home/team.css");
+@import url("./components/participate.css");
+@import url("./layout/footer.css");
+@import url("./pages/content.css");
+@import url("./responsive/home.css");
+@import url("./pages/internal.css");
+@import url("./pages/sessions.css");

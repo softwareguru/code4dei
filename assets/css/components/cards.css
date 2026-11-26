@@ -1,0 +1,14 @@
+/* Tarjetas de comunidad (dd4w2026/feature-card) */
+.grid { display: grid; gap: 22px; }
+.grid--4 { grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 20px; }
+.grid--3 { grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); }
+.grid--2 { grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); }
+.feat { border-radius: 20px; padding: 30px; display: flex; flex-direction: column; gap: 12px; }
+.feat h3 { font-size: 22px; }
+.feat p { color: #2B2A27; }
+.feat__ic { width: 52px; height: 52px; border-radius: 14px; background: var(--blanco); display: flex; align-items: center; justify-content: center; }
+.feat__ic svg { width: 26px; height: 26px; }
+.bg-rosa { background: var(--rosa-suave); } .bg-rosa .feat__ic { color: var(--magenta); }
+.bg-amarillo { background: var(--amarillo-suave); } .bg-amarillo .feat__ic { color: #8A5A00; }
+.bg-verde { background: var(--verde-suave); } .bg-verde .feat__ic { color: var(--verde); }
+.bg-morado { background: var(--morado-suave); } .bg-morado .feat__ic { color: var(--morado); }

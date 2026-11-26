@@ -1,0 +1,19 @@
+.wrap { max-width: var(--maxw); margin: 0 auto; padding-inline: max(20px, env(safe-area-inset-left, 0px)); }
+.sec { padding-block: 96px; }
+.sec--blanco { background: var(--blanco); }
+.sec--verde { background: var(--verde); color: var(--blanco); padding-block: 80px; }
+.sec--morado { background: var(--morado); color: var(--blanco); }
+.stack { display: flex; flex-direction: column; gap: 40px; }
+.skip { position: absolute; left: -999px; top: 0; background: var(--tinta); color: var(--blanco); padding: 12px 18px; z-index: 100; }
+.skip:focus { left: 0; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* Encabezado de sección (dd4w2026/section-head) */
+.head { display: flex; justify-content: space-between; align-items: flex-end; gap: 20px; flex-wrap: wrap; }
+.head__txt { display: flex; flex-direction: column; gap: 12px; max-width: 720px; }
+.head h2 { font-size: clamp(30px, 4vw, 42px); }
+.head p { font-size: 18px; color: var(--tinta-2); }
+.kicker { font-size: 13px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--magenta); }
+.sec--verde .kicker, .sec--morado .kicker { color: var(--amarillo-suave); }
+.sec--verde h2, .sec--morado h2, .sec--morado h3 { color: var(--blanco); }
+.sec--verde .head p, .sec--morado .head p { color: rgba(255, 255, 255, .85); }
