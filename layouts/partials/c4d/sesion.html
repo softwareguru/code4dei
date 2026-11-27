@@ -1,8 +1,19 @@
 {{- /* Renglón de agenda/sesión. Recibe la página de la sesión. */ -}}
 {{- $s := . -}}
+{{- /* Año: front matter `year` o, si no existe, la carpeta de la sesión (ej. 2026/ o 2026-online/) */ -}}
+{{- $anio := "" -}}
+{{- with $s.Params.year }}{{ $anio = . }}
+{{- else }}
+  {{- with $s.File }}
+    {{- $partes := split (strings.TrimSuffix "/" (replace .Dir "\\" "/")) "/" -}}
+    {{- $carpeta := index $partes (sub (len $partes) 1) -}}
+    {{- with findRE `^\d{4}` $carpeta }}{{ $anio = index . 0 }}{{ end }}
+  {{- end }}
+{{- end -}}
 <article class="ses{{ if $s.Params.destacada }} ses--destacada{{ end }}">
   <div class="ses__body">
     {{- with $s.Params.tipo }}<span class="ses__tipo">{{ . }}</span>{{ end }}
+    {{- with $anio }}<span class="ses__anio">{{ . }}</span>{{ end }}
     <h3><a href="{{ $s.RelPermalink }}">{{ $s.Title }}</a></h3>
     {{- with $s.GetTerms "speakers" }}
     <p class="ses__por">Por {{ range $i, $t := . }}{{ if $i }}, {{ end }}<a href="{{ $t.RelPermalink }}">{{ $t.Title }}</a>{{ end }}</p>
@@ -15,4 +26,4 @@
       {{- with $s.Params.slides }}<a href="{{ if hasPrefix . "http" }}{{ . }}{{ else }}{{ printf "slides/%s" . | relURL }}{{ end }}" target="_blank" rel="noopener noreferrer">Slides</a>{{ end }}
     </div>
   </div>
-</article>
+</article>  
